@@ -1,0 +1,21 @@
+{
+  "name": "@whitespace/components",
+  "version": "0.1.0",
+  "description": "Whitespace components library",
+  "main": "./index.js",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-react-jsx": "^7.12.5",
+    "@babel/preset-react": "^7.7.4",
+    "@emotion/core": "^11.0.0",
+    "react": "^17.0.1"
+  },
+  "scripts": {
+    "build": "babel -d . ./src",
+    "prepare": "yarn build"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  }
+}

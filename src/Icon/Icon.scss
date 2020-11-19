@@ -1,0 +1,27 @@
+:root {
+  --icon-color: currentColor;
+  --icon-size: 1em;
+}
+
+.icon {
+  display: inline-block;
+
+  @supports (--css: variables) {
+    font-size: var(--icon-size, 1em);
+    background-color: currentColor;
+    background-color: var(--icon-color);
+    width: 1em;
+    height: 1em;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+}
+
+.icon::after {
+  content: attr(aria-label);
+
+  // Reset ::after if browser support CSS vars
+  @supports (--css: variables) {
+    content: initial;
+  }
+}
