@@ -1,0 +1,68 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import Button from "./Button";
+import {
+  withHref,
+  withOnClick,
+  submitButton,
+  resetButton,
+  checkboxLabel,
+  radioLabel,
+} from "./Button.stories.js";
+
+<Meta
+  title="Button"
+  component={Button}
+  parameters={{ actions: { argTypesRegex: null } }}
+/>
+
+# Button
+
+The `<Button>` component can be used for links and other interactive elements
+that should _look_ like a buttton.
+
+## Link that looks like a button
+
+If you supply a `href` prop, the component will work like a link and render an
+`<a>` element.
+
+<Canvas>
+  <Story story={withHref} />
+</Canvas>
+
+## An actual button
+
+If you supply an `onClick` prop, the component will work like a button and
+render a `<buttton>` element.
+
+<Canvas>
+  <Story story={withOnClick} />
+</Canvas>
+
+## Form submit and reset buttons
+
+Setting `type` to `submit` or `reset` also renders a `<button>` element with the
+right `type`
+
+<Canvas>
+  <Story story={submitButton} />
+  <Story story={resetButton} />
+</Canvas>
+
+## Toggle buttons
+
+If the component is a label for an `<input>` element (checkbox or radio) it will
+look like a toggle buttton. This is done by setting the `htmlFor` prop. The
+component is then rendered as a `<label>` element. Be sure to hide the checkbox
+or radio button.
+
+### Checkbox
+
+<Canvas>
+  <Story story={checkboxLabel} />
+</Canvas>
+
+### Radios
+
+<Canvas>
+  <Story story={radioLabel} />
+</Canvas>

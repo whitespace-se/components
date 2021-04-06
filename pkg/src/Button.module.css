@@ -1,0 +1,78 @@
+:root {
+  --button-color: White;
+  --button-font-weight: medium;
+  --button-text-decoration: none;
+  --button-border-color: transparent;
+  --button-border: 1px solid var(--button-border-color);
+  --button-background: Black;
+  --button-padding: 0.5rem;
+  --button-border-radius: 0.5rem;
+  --button-brightness: 100%;
+  --button-grayscale: 0%;
+  --button-box-shadow: none;
+  --button-scale: 1;
+  --button-transition-duration: 125ms;
+
+  --button-hover-brightness: 1.125;
+  --button-hover-grayscale: var(--button-grayscale);
+
+  --button-pressed-scale: 0.9;
+
+  --button-active-background: dodgerblue;
+  --button-active-color: white;
+}
+
+.component {
+  display: inline-block;
+  color: var(--button-color);
+  text-decoration: var(--button-text-decoration);
+  font-weight: var(--button-font-weight);
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  border: var(--button-border);
+  background: var(--button-background);
+  filter: brightness(var(--button-brightness))
+    grayscale(var(--button-grayscale));
+  transform: scale(var(--button-scale));
+  cursor: pointer;
+  box-shadow: var(--button-box-shadow);
+  outline: none;
+  transition-duration: var(--button-transition-duration);
+}
+
+.component:hover:not(.component.inert, .component:disabled, .component[aria-disabled="true"], :disabled
+    + .component.label) {
+  filter: brightness(var(--button-hover-brightness))
+    grayscale(var(--button-hover-grayscale));
+}
+
+.component.active,
+.component[aria-checked="true"],
+.component[aria-pressed="true"],
+.component[aria-current],
+:checked + .component.label {
+  color: var(--button-active-color);
+  background: var(--button-active-background);
+}
+
+.component:focus,
+:focus + .component.label {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.component:active:not(.inert),
+:active + .component.label {
+  transform: scale(var(--button-pressed-scale));
+}
+
+.component.inert,
+.component:disabled,
+.component[aria-disabled="true"],
+:disabled + .component.label {
+  cursor: default;
+}
+
+button.component {
+  font: inherit;
+  -webkit-appearance: none;
+}

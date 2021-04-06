@@ -1,0 +1,65 @@
+:root {
+  --link-color: dodgerblue;
+  --link-text-decoration: underline;
+
+  --link-hover-color: var(--link-color);
+  --link-hover-text-decoration: var(--link-text-decoration);
+  --link-hover-background: var(--link-background);
+
+  --link-active-color: inherit;
+  --link-active-font-weight: bold;
+  --link-active-text-decoration: var(--link-text-decoration);
+  --link-active-background: var(--link-background);
+
+  --link-inert-color: inherit;
+  --link-inert-text-decoration: inherit;
+  --link-inert-background: var(--link-background);
+}
+
+.component {
+  color: var(--link-color);
+  text-decoration: var(--link-text-decoration);
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.component:hover {
+  color: var(--link-hover-color);
+  text-decoration: var(--link-hover-text-decoration);
+  background: var(--link-hover-background);
+}
+
+.component:focus,
+:focus + .component.label {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.component.active,
+.component[aria-checked="true"],
+.component[aria-pressed="true"],
+.component[aria-current],
+:checked + .component.label {
+  color: var(--link-active-color);
+  text-decoration: var(--link-active-text-decoration);
+  background: var(--link-active-background);
+  font-weight: var(--link-active-font-weight);
+}
+
+.component:not(.inert):not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
+.component.inert,
+.component:disabled,
+.component[aria-disabled="true"],
+:disabled + .component.label {
+  color: var(--link-inert-color);
+  text-decoration: var(--link-text-inert-decoration);
+  background: var(--link-inert-background);
+}
+
+button.component {
+  font: inherit;
+  -webkit-appearance: none;
+}

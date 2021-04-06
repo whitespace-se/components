@@ -1,0 +1,97 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import Link from "./Link";
+import { visuallyHidden } from "./utils.module.css";
+
+<Meta
+  title="Link"
+  component={Link}
+  parameters={{ actions: { argTypesRegex: null } }}
+/>
+
+# Link
+
+export const Template = ({ text, ...args }) => <Link {...args}>{text}</Link>;
+
+export const CheckboxTemplate = ({ text, ...args }) => (
+  <>
+    <input type="checkbox" className={visuallyHidden} id="checkbox" />
+    <Link {...args} htmlFor="checkbox">
+      {text}
+    </Link>
+  </>
+);
+
+export const RadioTemplate = ({ text, ...args }) => (
+  <>
+    <input
+      type="radio"
+      className={visuallyHidden}
+      id="radio1"
+      name="radios"
+      value="1"
+    />
+    <Link {...args} htmlFor="radio1">
+      {text}
+    </Link> <input
+      type="radio"
+      className={visuallyHidden}
+      id="radio2"
+      name="radios"
+      value="2"
+    />
+    <Link {...args} htmlFor="radio2">
+      {text}
+    </Link>
+  </>
+);
+
+<Canvas>
+  <Story name="With internal href" args={{ text: "Example", href: "/" }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With external href"
+    args={{ text: "Example", href: "https://www.example.com" }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story name="Anchor link" args={{ text: "Example", href: "#example" }}>
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Mailto link"
+    args={{ text: "Example", href: "mailto:hi@example.com" }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="With onClick"
+    args={{ text: "Example", onClick: () => {} }}
+    parameters={{
+      actions: { argTypesRegex: "^on[A-Z].*" },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Label for checkbox"
+    args={{ text: "Example" }}
+    parameters={{
+      actions: { argTypesRegex: "^on[A-Z].*" },
+    }}
+  >
+    {CheckboxTemplate.bind({})}
+  </Story>
+  <Story
+    name="Label for radio"
+    args={{ text: "Example" }}
+    parameters={{
+      actions: { argTypesRegex: "^on[A-Z].*" },
+    }}
+  >
+    {RadioTemplate.bind({})}
+  </Story>
+  <Story name="Inert" args={{ text: "Example" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
