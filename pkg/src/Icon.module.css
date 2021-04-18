@@ -3,7 +3,7 @@
   --icon-size: 1em;
 }
 
-.icon {
+.component {
   display: inline-block;
   vertical-align: middle;
   font-size: var(--icon-size, 1em);
