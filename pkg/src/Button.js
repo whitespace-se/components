@@ -1,12 +1,12 @@
 import React from "react";
 
-import * as buttonStyles from "./Button.module.css";
+import * as defaultStyles from "./Button.module.css";
 
 import Link from "./Link";
 
 export default function Button({
   children,
-  styles = buttonStyles,
+  styles = defaultStyles,
   ...restProps
 }) {
   return (

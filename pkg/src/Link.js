@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-import * as linkStyles from "./Link.module.css";
+import * as defaultStyles from "./Link.module.css";
 
 function getURLType(url) {
   if (url.startsWith("#")) {
@@ -33,7 +33,7 @@ export default function Link({
   labelComponent = "label",
   linkComponent = "a",
   onClick,
-  styles = linkStyles,
+  styles = defaultStyles,
   to,
   type,
   uri,
