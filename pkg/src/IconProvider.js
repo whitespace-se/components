@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { createContext, useContext } from "react";
 
 export const defaultContextValue = {
@@ -13,6 +14,11 @@ export default function IconProvider({ children, ...restProps }) {
     </IconContext.Provider>
   );
 }
+
+IconProvider.propTypes = {
+  children: PropTypes.node,
+  getIconSrc: PropTypes.func,
+};
 
 export function useIconContext() {
   return useContext(IconContext);

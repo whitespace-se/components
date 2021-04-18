@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import * as defaultStyles from "./Button.module.css";
 
@@ -15,3 +16,8 @@ export default function Button({
     </Link>
   );
 }
+
+Button.propTypes = {
+  children: PropTypes.node,
+  styles: PropTypes.objectOf(PropTypes.string),
+};
