@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Global, css } from "@emotion/react";
 
-import themeContext from "./themeContext";
-import themeToCssCustomProps from "./utils/themeToCssCustomProps";
+import themeContext from "../contexts/themeContext";
+import themeToCssCustomProps from "../utils/themeToCssCustomProps";
 
 export default function ThemeProvider({ theme, children, ...restProps }) {
   let cssProps = themeToCssCustomProps(theme);

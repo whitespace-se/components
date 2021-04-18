@@ -1,4 +1,4 @@
-import ThemeProvider from "../../pkg/src/ThemeProvider";
+import { ThemeProvider } from "../../pkg/src";
 import "./preview.css";
 
 export const parameters = {
