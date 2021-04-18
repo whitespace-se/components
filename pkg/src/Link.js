@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import clsx from "clsx";
 
 import * as linkStyles from "./Link.module.css";
 
@@ -76,7 +76,7 @@ export default function Link({
       href={href}
       onClick={onClick}
       htmlFor={htmlFor}
-      className={cx(className, styles.component, styles[type])}
+      className={clsx(className, styles.component, styles[type])}
       type={
         type === "button" || type === "submit" || type === "reset"
           ? type
