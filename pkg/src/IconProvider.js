@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from "react";
 
 export const defaultContextValue = {
-  getIconPath: (name) => `/icons/${name}.svg`,
+  getIconSrc: (name) => void name,
 };
 
 export const IconContext = createContext(defaultContextValue);
