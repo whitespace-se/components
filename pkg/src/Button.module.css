@@ -1,3 +1,4 @@
+/*
 :root {
   --button-color: White;
   --button-font-weight: medium;
@@ -21,29 +22,33 @@
   --button-active-background: dodgerblue;
   --button-active-color: white;
 }
+*/
 
 .component {
   display: inline-block;
-  color: var(--button-color);
-  text-decoration: var(--button-text-decoration);
-  font-weight: var(--button-font-weight);
-  padding: var(--button-padding);
-  border-radius: var(--button-border-radius);
-  border: var(--button-border);
-  background: var(--button-background);
-  filter: brightness(var(--button-brightness))
-    grayscale(var(--button-grayscale));
-  transform: scale(var(--button-scale));
+  color: var(--button-color, white);
+  text-decoration: var(--button-text-decoration, none);
+  font-weight: var(--button-font-weight, medium);
+  padding: var(--button-padding, 0.5rem);
+  border-radius: var(--button-border-radius, 0.5rem);
+  border: var(
+    --button-border,
+    1px solid var(--button-border-color, transparent)
+  );
+  background: var(--button-background, gray);
+  filter: brightness(var(--button-brightness, 100%))
+    grayscale(var(--button-grayscale, 0%));
+  transform: scale(var(--button-scale, 1));
   cursor: pointer;
-  box-shadow: var(--button-box-shadow);
+  box-shadow: var(--button-box-shadow, none);
   outline: none;
-  transition-duration: var(--button-transition-duration);
+  transition-duration: var(--button-transition-duration, 125ms);
 }
 
 .component:hover:not(.component.inert, .component:disabled, .component[aria-disabled="true"], :disabled
     + .component.label) {
-  filter: brightness(var(--button-hover-brightness))
-    grayscale(var(--button-hover-grayscale));
+  filter: brightness(var(--button-hover-brightness, 100%))
+    grayscale(var(--button-hover-grayscale, 0%));
 }
 
 .component.active,
@@ -70,6 +75,8 @@
 .component[aria-disabled="true"],
 :disabled + .component.label {
   cursor: default;
+  filter: brightness(var(--button-inert-brightness, 100%))
+    grayscale(var(--button-inert-grayscale, 0%));
 }
 
 button.component {

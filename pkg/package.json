@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "clsx": "^1.1.1",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "traverse": "^0.6.6"
   }
 }
