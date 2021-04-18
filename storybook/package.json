@@ -22,7 +22,6 @@
     "build": "build-storybook -s static"
   },
   "dependencies": {
-    "@whitespace/components": "*",
-    "prop-types": "^15.7.2"
+    "@whitespace/components": "*"
   }
 }
