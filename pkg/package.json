@@ -8,6 +8,14 @@
   "engines": {
     "node": ">=14.0.0"
   },
+  "files": [
+    "src/**/*",
+    "README.md",
+    "*.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "cp ../README.md ."
+  },
   "dependencies": {
     "clsx": "^1.1.1",
     "prop-types": "^15.7.2",
