@@ -3,16 +3,12 @@
   "version": "0.3.0",
   "description": "Whitespace components library",
   "license": "MIT",
-  "main": "./src/index.js",
+  "main": "./index.js",
+  "source": "./src",
   "type": "module",
   "engines": {
     "node": ">=14.0.0"
   },
-  "files": [
-    "src/**/*",
-    "README.md",
-    "*.js"
-  ],
   "scripts": {
     "prepublishOnly": "cp ../README.md ."
   },
@@ -23,19 +19,15 @@
   },
   "peerDependencies": {
     "@emotion/react": "^11.1.5",
-    "react": "^16.14.0 || ^17.0.2"
+    "react": "^16.14.0 || ^17.0.2",
+    "react-dom": "^16.14.0 || ^17.0.2"
   },
   "optionalDependencies": {
     "gatsby": "^3.3.0"
   },
   "devDependencies": {
     "@emotion/react": "^11.1.5",
-    "babel-loader": "^8.2.2",
-    "postcss": "^8.2.9",
-    "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.2.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "storybook-css-modules-preset": "^1.0.8"
+    "react-dom": "^17.0.2"
   }
 }

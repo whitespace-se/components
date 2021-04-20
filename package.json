@@ -6,15 +6,17 @@
       "storybook"
     ]
   },
+  "type": "module",
   "devDependencies": {
-    "@babel/core": "^7.13.14",
-    "@emotion/react": "^11.1.5",
-    "babel-loader": "^8.2.2",
+    "esbuild": "^0.11.12",
     "eslint": "^7.23.0",
     "eslint-plugin-react": "^7.23.1",
+    "fast-glob": "^3.2.5",
     "prettier": "^2.2.1"
   },
   "scripts": {
+    "build": "node scripts/build",
+    "dev": "node scripts/dev",
     "format": "prettier --write '**/*.{js,json,md,mdx,yml,css}'"
   }
 }
