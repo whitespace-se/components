@@ -25,7 +25,9 @@
 */
 
 .component {
-  display: inline-block;
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
   color: var(--button-color, white);
   text-decoration: var(--button-text-decoration, none);
   font-weight: var(--button-font-weight, medium);
