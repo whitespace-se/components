@@ -3,7 +3,11 @@
   "workspaces": {
     "packages": [
       "pkg",
-      "storybook"
+      "storybook",
+      "examples/*"
+    ],
+    "nohoist": [
+      "**/babel-loader"
     ]
   },
   "type": "module",
