@@ -7,9 +7,19 @@ export const defaultIconContextValue = {
 
 export const iconContext = createContext(defaultIconContextValue);
 
-export default function IconProvider({ children, ...restProps }) {
+export default function IconProvider({
+  children,
+  icons,
+  getIconSrc,
+  ...restProps
+}) {
+  if (!getIconSrc && icons) {
+    getIconSrc = (name) => icons[name];
+  }
   return (
-    <iconContext.Provider value={{ ...defaultIconContextValue, ...restProps }}>
+    <iconContext.Provider
+      value={{ ...defaultIconContextValue, icons, getIconSrc, ...restProps }}
+    >
       {children}
     </iconContext.Provider>
   );
@@ -18,6 +28,7 @@ export default function IconProvider({ children, ...restProps }) {
 IconProvider.propTypes = {
   children: PropTypes.node,
   getIconSrc: PropTypes.func,
+  icons: PropTypes.objectOf(PropTypes.string),
 };
 
 export function useIconContext() {
