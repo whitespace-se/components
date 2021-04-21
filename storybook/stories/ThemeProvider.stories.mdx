@@ -1,0 +1,61 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import ThemeProvider from "@whitespace/components/src/components/ThemeProvider";
+
+<Meta title="ThemeProvider" component={ThemeProvider} argTypes={{}} />
+
+# ThemeProvider
+
+export const Box = ({ children, style, ...props }) => {
+  return (
+    <pre
+      style={{ ...style, padding: "1rem", background: "var(--box-background)" }}
+      {...props}
+    >
+      {children}
+    </pre>
+  );
+};
+
+<Canvas>
+  <Story
+    name="Subtheme"
+    args={{
+      theme: { box: { background: "lavender" } },
+    }}
+  >
+    {({ theme }) => (
+      <ThemeProvider theme={theme}>
+        {({ cssProps, theme }) => (
+          <Box style={{ ...cssProps }}>{JSON.stringify(theme, null, 2)}</Box>
+        )}
+      </ThemeProvider>
+    )}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Nested subthemes"
+    args={{
+      theme: { box: { background: "lavender" } },
+      subTheme: { box: { background: "honeydew" } },
+    }}
+  >
+    {({ theme, subTheme }) => (
+      <ThemeProvider theme={theme}>
+        {({ cssProps, theme }) => (
+          <Box style={{ ...cssProps }}>
+            {JSON.stringify(theme, null, 2)}
+            <ThemeProvider theme={subTheme}>
+              {({ cssProps, theme }) => (
+                <Box style={{ ...cssProps }}>
+                  {JSON.stringify(theme, null, 2)}
+                </Box>
+              )}
+            </ThemeProvider>
+          </Box>
+        )}
+      </ThemeProvider>
+    )}
+  </Story>
+</Canvas>
