@@ -6,13 +6,16 @@ export default function themeToCssCustomProps(
   { defaultName = "default" } = {},
 ) {
   let props = {};
-  traverse(theme).forEach(function (node) {
-    if (this.isLeaf) {
+  traverse(theme).forEach(function (value) {
+    if (
+      this.isLeaf &&
+      (typeof value === "string" || typeof value === "number") &&
+      value !== ""
+    ) {
       let prop = `--${this.path
         .filter((name) => name !== defaultName)
         .map(kebabCase)
         .join("-")}`;
-      let value = node;
       props[prop] = value;
     }
   });
