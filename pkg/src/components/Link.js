@@ -33,7 +33,9 @@ export default function Link({
   labelComponent = "label",
   linkComponent = "a",
   onClick,
+  rel,
   styles = defaultStyles,
+  target,
   to,
   type,
   uri,
@@ -71,12 +73,23 @@ export default function Link({
       ? buttonComponent
       : linkComponent);
 
+  /**
+   * Add rel="noopener noreferrer" to links with target="_blank"
+   */
+  if (target === "_blank") {
+    rel = [
+      ...new Set([...(rel ? rel.split(/\s+/g) : []), "noopener", "noreferrer"]),
+    ].join(" ");
+  }
+
   return (
     <Component
       href={href}
       onClick={onClick}
       htmlFor={htmlFor}
       className={clsx(className, styles.component, styles[type])}
+      target={target}
+      rel={rel}
       type={
         type === "button" || type === "submit" || type === "reset"
           ? type
@@ -100,7 +113,9 @@ Link.propTypes = {
   labelComponent: PropTypes.elementType,
   linkComponent: PropTypes.elementType,
   onClick: PropTypes.func,
+  rel: PropTypes.string,
   styles: PropTypes.objectOf(PropTypes.string),
+  target: PropTypes.string,
   to: PropTypes.string,
   type: PropTypes.string,
   uri: PropTypes.string,
