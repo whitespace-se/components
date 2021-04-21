@@ -3,13 +3,20 @@
   "version": "0.3.1",
   "description": "Whitespace components library",
   "license": "MIT",
-  "main": "./index.js",
-  "source": "./src",
+  "main": "dist",
+  "source": "src",
   "type": "module",
+  "files": [
+    "dist/**/*",
+    "src/**/*"
+  ],
   "engines": {
     "node": ">=14.0.0"
   },
   "scripts": {
+    "build": "node ../scripts/build",
+    "dev": "node ../scripts/dev",
+    "prepare": "yarn build",
     "prepublishOnly": "cp ../README.md ."
   },
   "dependencies": {

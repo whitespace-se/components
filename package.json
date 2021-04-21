@@ -7,7 +7,8 @@
       "examples/*"
     ],
     "nohoist": [
-      "**/babel-loader"
+      "**/babel-loader",
+      "**/webpack"
     ]
   },
   "type": "module",
@@ -16,11 +17,12 @@
     "eslint": "^7.23.0",
     "eslint-plugin-react": "^7.23.1",
     "fast-glob": "^3.2.5",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2"
   },
   "scripts": {
-    "build": "node scripts/build",
-    "dev": "node scripts/dev",
+    "build": "cd pkg && yarn build",
+    "dev": "cd pkg && yarn dev",
     "format": "prettier --write '**/*.{js,json,md,mdx,yml,css}'"
   }
 }

@@ -1,22 +1,29 @@
 import glob from "fast-glob";
 import { build } from "esbuild";
+import rimraf from "rimraf";
+import { promisify } from "util";
 
-const entry = ["pkg/src/**/*.{js,css}"];
-const outdir = "pkg";
+const rimrafAsync = promisify(rimraf);
 
-glob(entry)
-  .then((entryPoints) => {
-    return build({
-      entryPoints,
-      outdir,
-      bundle: false,
-      loader: { ".js": "jsx" },
-      watch: {
-        onRebuild(error, result) {
-          if (error) console.error("watch build failed:", error);
-          else console.log("watch build succeeded:", result);
-        },
+const entry = ["src/**/*.{js,css}"];
+const outdir = "dist";
+
+async function run() {
+  await rimrafAsync(outdir);
+  const entryPoints = await glob(entry);
+  await build({
+    entryPoints,
+    outdir,
+    bundle: false,
+    loader: { ".js": "jsx" },
+    watch: {
+      onRebuild(error, result) {
+        void result;
+        if (error) console.error("watch build failed:", error);
+        else console.log("watch build succeeded");
       },
-    });
-  })
-  .catch(() => process.exit(1));
+    },
+  });
+}
+
+run().catch(() => process.exit(1));
