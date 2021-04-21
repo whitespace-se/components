@@ -1,14 +1,8 @@
-:root {
-  --icon-color: currentColor;
-  --icon-size: 1em;
-  --icon-vertical-align: -15%;
-}
-
 .component {
   display: inline-block;
-  vertical-align: var(--icon-vertical-align);
+  vertical-align: var(--icon-vertical-align, -15%);
   font-size: var(--icon-size, 1em);
-  background-color: var(--icon-color);
+  background-color: var(--icon-color, currentColor);
   width: 1em;
   height: 1em;
   mask-repeat: no-repeat;

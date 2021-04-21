@@ -8,14 +8,17 @@ export const parameters = {
 export const decorators = [
   (storyFn) => (
     <ThemeProvider
-      theme={
-        {
-          // button: {
-          //   default: { background: "red" },
-          //   active: { background: "green" },
-          // },
-        }
-      }
+      theme={{
+        // button: {
+        //   default: { background: "red" },
+        //   active: { background: "green" },
+        // },
+        icon: {
+          color: "red",
+          size: "1em",
+          verticalAlign: "-15%",
+        },
+      }}
     >
       {storyFn()}
     </ThemeProvider>

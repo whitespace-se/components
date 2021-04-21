@@ -6,7 +6,7 @@ const sourceDir = path.resolve(
 );
 
 module.exports = {
-  stories: [sourceDir + "/**/*.stories.mdx"],
+  stories: ["../stories/**/*.stories.mdx"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",

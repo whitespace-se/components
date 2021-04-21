@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import Button from "./Button";
+import Button from "@whitespace/components/src/components/Button";
 
 import { visuallyHidden } from "./utils.module.css";
 
@@ -70,7 +70,7 @@ export const radioLabel = ({ ...args }) => (
 radioLabel.args = {};
 radioLabel.storyName = "Toggle buttons with radios";
 
-/* 
+/*
 
 <Canvas>
   <Story

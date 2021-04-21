@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import Icon from "@whitespace/components/src/components/Icon";
+import IconProvider from "@whitespace/components/src/components/IconProvider";
+import alertIcon from "../static/icons/alert.svg";
+import searchIcon from "../static/icons/search.svg";
+
+<Meta
+  title="Icon"
+  component={Icon}
+  argTypes={{
+    name: {
+      type: "string",
+      control: {
+        type: "select",
+        options: ["alert", "search"],
+      },
+    },
+    src: {
+      type: "string",
+      control: {
+        type: "select",
+        options: [alertIcon, searchIcon],
+      },
+    },
+  }}
+/>
+
+# Icon
+
+<Canvas>
+  <Story
+    name="With src"
+    args={{
+      src: alertIcon,
+    }}
+  >
+    {(args) => <Icon {...args} />}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="With name"
+    args={{
+      name: "alert",
+    }}
+  >
+    {(args) => (
+      <IconProvider getIconSrc={(name) => `/icons/${name}.svg`}>
+        <Icon {...args} />
+      </IconProvider>
+    )}
+  </Story>
+</Canvas>
