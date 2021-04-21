@@ -23,6 +23,8 @@
   "scripts": {
     "build": "cd pkg && yarn build",
     "dev": "cd pkg && yarn dev",
-    "format": "prettier --write '**/*.{js,json,md,mdx,yml,css}'"
+    "format": "prettier --write '**/*.{js,json,md,mdx,yml,css}'",
+    "start": "yarn dev",
+    "watch": "yarn dev"
   }
 }
