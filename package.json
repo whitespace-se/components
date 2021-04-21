@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "cd pkg && yarn build",
+    "build:storybook": "cd storybook && yarn build",
     "dev": "cd pkg && yarn dev",
     "format": "prettier --write '**/*.{js,json,md,mdx,yml,css}'",
     "start": "yarn dev",
