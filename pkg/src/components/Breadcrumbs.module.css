@@ -22,9 +22,14 @@
 }
 
 .item:not(:last-child)::after {
-  content: "/";
-  margin: 0 0.5rem;
+  /* content: "/"; */
   /* @include var-support(color, false, var(--color-neutral-400), $neutral-400); */
+}
+
+.separator {
+  margin: 0 0.5rem;
+  position: relative;
+  display: inline-block;
 }
 
 .link {
@@ -45,14 +50,14 @@
   ); */
 }
 
-.displayAsList {
+.component.displayAsList {
   border-bottom: 0;
 }
 
-.displayAsList .item:not(:last-child)::after {
+.component.displayAsList .item:not(:last-child)::after {
   content: " > ";
 }
 
-.displayAsList .item:not(:last-child) .link {
+.component.displayAsList .item:not(:last-child) .link {
   /* @include var-support(color, false, var(--color-location), $location); */
 }
