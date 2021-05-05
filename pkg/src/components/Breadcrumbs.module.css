@@ -1,0 +1,63 @@
+/* @import "../../styles/tools"; */
+/* @import "../../styles/tokens"; */
+
+.component {
+  font-size: 0.75rem;
+}
+
+.description {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  list-style: none;
+}
+
+.item {
+  display: inline;
+}
+
+.item:not(:last-child)::after {
+  /* content: "/"; */
+  /* @include var-support(color, false, var(--color-neutral-400), $neutral-400); */
+}
+
+.separator {
+  margin: 0 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.link {
+}
+
+.link[aria-current] {
+  text-decoration: none;
+  /* @include var-support(color, false, var(--color-text), $text); */
+}
+
+.link:hover {
+  text-decoration: underline;
+  /* @include var-support(
+    color,
+    false,
+    var(--color-action-active),
+    $action-active
+  ); */
+}
+
+.component.displayAsList {
+  border-bottom: 0;
+}
+
+.component.displayAsList .item:not(:last-child)::after {
+  content: " > ";
+}
+
+.component.displayAsList .item:not(:last-child) .link {
+  /* @include var-support(color, false, var(--color-location), $location); */
+}
