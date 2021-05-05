@@ -8,7 +8,7 @@
     ],
     "nohoist": [
       "**/babel-loader",
-      "**/webpack"
+      "**/webpack**"
     ]
   },
   "type": "module",
