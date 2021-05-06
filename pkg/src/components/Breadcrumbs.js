@@ -2,12 +2,14 @@ import clsx from "clsx";
 import React from "react";
 import PropTypes from "prop-types";
 
-import Link from "./Link";
+import DefaultLink from "./Link";
 
 import * as defaultStyles from "./Breadcrumbs.module.css";
 
 Breadcrumbs.propTypes = {
-  label: PropTypes.string,
+  components: PropTypes.exact({
+    Link: PropTypes.elementType,
+  }),
   description: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -15,14 +17,16 @@ Breadcrumbs.propTypes = {
       url: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  label: PropTypes.string,
+  className: PropTypes.string,
   separator: PropTypes.node,
   styles: PropTypes.objectOf(PropTypes.string),
-  className: PropTypes.string,
 };
 
 export default function Breadcrumbs({
   label = "Brödsmulor",
   description = "Du är här:",
+  components: { Link } = { Link: DefaultLink },
   items,
   separator = "/",
   styles = defaultStyles,

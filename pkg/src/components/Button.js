@@ -3,10 +3,19 @@ import PropTypes from "prop-types";
 
 import * as defaultStyles from "./Button.module.css";
 
-import Link from "./Link";
+import DefaultLink from "./Link";
+
+Button.propTypes = {
+  children: PropTypes.node,
+  components: PropTypes.exact({
+    Link: PropTypes.elementType,
+  }),
+  styles: PropTypes.objectOf(PropTypes.string),
+};
 
 export default function Button({
   children,
+  components: { Link } = { Link: DefaultLink },
   styles = defaultStyles,
   ...restProps
 }) {
@@ -16,8 +25,3 @@ export default function Button({
     </Link>
   );
 }
-
-Button.propTypes = {
-  children: PropTypes.node,
-  styles: PropTypes.objectOf(PropTypes.string),
-};
