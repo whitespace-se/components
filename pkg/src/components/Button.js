@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import * as defaultStyles from "./Button.module.css";
 
 import DefaultLink from "./Link";
+import withComponentDefaults from "../withComponentDefaults";
 
 Button.propTypes = {
   children: PropTypes.node,
@@ -13,9 +14,11 @@ Button.propTypes = {
   styles: PropTypes.objectOf(PropTypes.string),
 };
 
-export default function Button({
+export default withComponentDefaults(Button);
+
+function Button({
   children,
-  components: { Link } = { Link: DefaultLink },
+  components: { Link = DefaultLink } = { Link: DefaultLink },
   styles = defaultStyles,
   ...restProps
 }) {

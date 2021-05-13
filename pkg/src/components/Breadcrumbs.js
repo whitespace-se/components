@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import DefaultLink from "./Link";
 
 import * as defaultStyles from "./Breadcrumbs.module.css";
+import withComponentDefaults from "../withComponentDefaults";
 
 Breadcrumbs.propTypes = {
   components: PropTypes.exact({
@@ -23,10 +24,12 @@ Breadcrumbs.propTypes = {
   styles: PropTypes.objectOf(PropTypes.string),
 };
 
-export default function Breadcrumbs({
+export default withComponentDefaults(Breadcrumbs);
+
+function Breadcrumbs({
   label = "Brödsmulor",
   description = "Du är här:",
-  components: { Link } = { Link: DefaultLink },
+  components: { Link = DefaultLink } = { Link: DefaultLink },
   items,
   separator = "/",
   styles = defaultStyles,

@@ -6,8 +6,11 @@ import PropTypes from "prop-types";
 
 import * as defaultStyles from "./Icon.module.css";
 import { useIconContext } from "./IconProvider";
+import withComponentDefaults from "../withComponentDefaults";
 
-export default function Icon({
+export default withComponentDefaults(Icon);
+
+function Icon({
   children,
   className,
   color,

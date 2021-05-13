@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 
 import * as defaultStyles from "./Link.module.css";
+import withComponentDefaults from "../withComponentDefaults";
 
 function getURLType(url) {
   if (url.startsWith("#")) {
@@ -22,7 +23,9 @@ function getURLType(url) {
   return "internal";
 }
 
-export default function Link({
+export default withComponentDefaults(Link);
+
+function Link({
   as,
   buttonComponent = "button",
   children,
