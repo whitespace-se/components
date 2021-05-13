@@ -14,7 +14,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <IconProvider icons={{ arrow: arrowIcon }}>
-        <div className={test}>TEST</div>
         <div className="App">
           <Breadcrumbs
             items={[
