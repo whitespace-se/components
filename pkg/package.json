@@ -1,6 +1,6 @@
 {
   "name": "@whitespace/components",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Whitespace components library",
   "repository": "git@github.com:whitespace-se/components.git",
   "author": "Whitespace Dev <code@whitespace.se>",
