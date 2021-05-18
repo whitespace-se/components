@@ -3,6 +3,7 @@ import Button from "@whitespace/components/src/components/Button";
 import {
   withHref,
   withOnClick,
+  disabled,
   submitButton,
   resetButton,
   checkboxLabel,
@@ -32,10 +33,19 @@ If you supply a `href` prop, the component will work like a link and render an
 ## An actual button
 
 If you supply an `onClick` prop, the component will work like a button and
-render a `<buttton>` element.
+render a `<button>` element.
 
 <Canvas>
   <Story story={withOnClick} />
+</Canvas>
+
+## A disabled button
+
+If you don't supply an `onClick`, `href`, `url`, `uri`, or `to` prop the
+component will be inert and render a `<span>` element.
+
+<Canvas>
+  <Story story={disabled} />
 </Canvas>
 
 ## Form submit and reset buttons

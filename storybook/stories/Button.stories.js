@@ -19,6 +19,15 @@ withOnClick.parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
 };
 
+export const disabled = ({ text, ...args }) => (
+  <Button {...args}>{text}</Button>
+);
+disabled.args = { text: "Example" };
+disabled.storyName = "Disabled";
+disabled.parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+};
+
 export const submitButton = ({ text, ...args }) => (
   <Button {...args}>{text}</Button>
 );
