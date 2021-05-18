@@ -28,7 +28,7 @@ export default withComponentDefaults(Breadcrumbs);
 
 function Breadcrumbs({
   label = "Brödsmulor",
-  description = "Du är här:",
+  description,
   components: { Link = DefaultLink } = { Link: DefaultLink },
   items,
   separator = "/",
@@ -46,7 +46,7 @@ function Breadcrumbs({
       )}
       {...restProps}
     >
-      <p className={styles.description}>{description}</p>
+      {description && <p className={styles.description}>{description}</p>}
       <ol className={clsx(styles.list)}>
         {items.map((item, index) => {
           return (
