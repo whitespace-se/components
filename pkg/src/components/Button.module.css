@@ -19,8 +19,8 @@
 
   --button-pressed-scale: 0.9;
 
-  --button-active-background: dodgerblue;
-  --button-active-color: white;
+  --button-current-background: dodgerblue;
+  --button-current-color: white;
 }
 */
 
@@ -28,7 +28,9 @@
   display: inline-flex;
   gap: 0.25rem;
   align-items: center;
-  color: var(--button-color, white);
+  cursor: pointer;
+  outline: none;
+  color: var(--button-color, black);
   text-decoration: var(--button-text-decoration, none);
   font-weight: var(--button-font-weight, medium);
   padding: var(--button-padding, 0.5rem);
@@ -37,48 +39,71 @@
     --button-border,
     1px solid var(--button-border-color, transparent)
   );
-  background: var(--button-background, gray);
-  filter: brightness(var(--button-brightness, 100%))
-    grayscale(var(--button-grayscale, 0%));
-  transform: scale(var(--button-scale, 1));
-  cursor: pointer;
+  background: var(--button-background, lightgray);
+  /* filter: brightness(var(--button-brightness, 100%)) grayscale(var(--button-grayscale, 0%)); */
+  /* transform: scale(var(--button-scale, 1)); */
   box-shadow: var(--button-box-shadow, none);
-  outline: none;
   transition-duration: var(--button-transition-duration, 125ms);
+  font-size: var(--button-font-size, 1rem);
 }
 
+/* Hover */
 .component:hover:not(.component.inert, .component:disabled, .component[aria-disabled="true"], :disabled
     + .component.label) {
-  filter: brightness(var(--button-hover-brightness, 100%))
-    grayscale(var(--button-hover-grayscale, 0%));
+  /* filter: brightness(var(--button-hover-brightness, 100%)) grayscale(var(--button-hover-grayscale, 0%)); */
+  color: var(--button-hover-color, white);
+  text-decoration: var(--button-hover-text-decoration, none);
+  border: var(
+    --button-hover-border,
+    1px solid var(--button-hover-border-color, transparent)
+  );
+  background: var(--button-hover-background, black);
+  box-shadow: var(--button-hover-box-shadow, none);
 }
 
-.component.active,
-.component[aria-checked="true"],
-.component[aria-pressed="true"],
-.component[aria-current],
-:checked + .component.label {
-  color: var(--button-active-color);
-  background: var(--button-active-background);
-}
-
-.component:focus,
-:focus + .component.label {
-  outline: -webkit-focus-ring-color auto 1px;
-}
-
-.component:active:not(.inert),
-:active + .component.label {
-  transform: scale(var(--button-pressed-scale));
-}
-
+/* Disabled */
 .component.inert,
 .component:disabled,
 .component[aria-disabled="true"],
 :disabled + .component.label {
   cursor: default;
-  filter: brightness(var(--button-inert-brightness, 100%))
-    grayscale(var(--button-inert-grayscale, 0%));
+  /* filter: brightness(var(--button-inert-brightness, 100%)) grayscale(var(--button-inert-grayscale, 0%)); */
+  color: var(--button-disabled-color, gray);
+  text-decoration: var(--button-disabled-text-decoration, none);
+  border: var(
+    --button-disabled-border,
+    1px solid var(--button-disabled-border-color, transparent)
+  );
+  background: var(--button-disabled-background, lightgray);
+  box-shadow: var(--button-disabled-box-shadow, none);
+}
+
+/* Current */
+.component.current,
+.component[aria-checked="true"],
+.component[aria-pressed="true"],
+.component[aria-current],
+:checked + .component.label {
+  color: var(--button-current-color, white);
+  text-decoration: var(--button-current-text-decoration, none);
+  border: var(
+    --button-current-border,
+    1px solid var(--button-current-border-color, transparent)
+  );
+  background: var(--button-current-background, black);
+  box-shadow: var(--button-current-box-shadow, none);
+}
+
+/* Focus */
+.component:focus,
+:focus + .component.label {
+  outline: none;
+  box-shadow: var(--button-focus-box-shadow, 0 0 0 3px blue);
+}
+
+.component:active:not(.inert),
+:active + .component.label {
+  /* transform: scale(var(--button-pressed-scale)); */
 }
 
 button.component {

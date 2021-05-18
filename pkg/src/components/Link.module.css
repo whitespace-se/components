@@ -6,10 +6,10 @@
   --link-hover-text-decoration: var(--link-text-decoration);
   --link-hover-background: var(--link-background);
 
-  --link-active-color: inherit;
-  --link-active-font-weight: bold;
-  --link-active-text-decoration: var(--link-text-decoration);
-  --link-active-background: var(--link-background);
+  --link-current-color: inherit;
+  --link-current-font-weight: bold;
+  --link-current-text-decoration: var(--link-text-decoration);
+  --link-current-background: var(--link-background);
 
   --link-inert-color: inherit;
   --link-inert-text-decoration: inherit;
@@ -35,15 +35,15 @@
   outline: -webkit-focus-ring-color auto 1px;
 }
 
-.component.active,
+.component.current,
 .component[aria-checked="true"],
 .component[aria-pressed="true"],
 .component[aria-current],
 :checked + .component.label {
-  color: var(--link-active-color);
-  text-decoration: var(--link-active-text-decoration);
-  background: var(--link-active-background);
-  font-weight: var(--link-active-font-weight);
+  color: var(--link-current-color);
+  text-decoration: var(--link-current-text-decoration);
+  background: var(--link-current-background);
+  font-weight: var(--link-current-font-weight);
 }
 
 .component:not(.inert):not([aria-disabled="true"]) {
