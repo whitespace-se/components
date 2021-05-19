@@ -19,7 +19,8 @@
 }
 
 .separator {
-  margin: 0 var(--breadcrumbs-margin, 0.5rem);
+  margin: 0 var(--breadcrumbs-separator-margin, 0.5rem);
+  color: var(--breadcrumbs-separator-color, #999);
   position: relative;
   display: inline-block;
 }
@@ -38,5 +39,15 @@
 
 .link:hover {
   text-decoration: var(--breadcrumbs-text-decoration-link, underline);
-  color: var(--breadcrumbs-color-hover, "#f00");
+  color: var(--breadcrumbs-color-hover, "#999");
+}
+
+.sronly:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
