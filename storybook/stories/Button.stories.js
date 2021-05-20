@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import Button from "@whitespace/components/src/components/Button";
+import { Button } from "@whitespace/components";
 
 import { visuallyHidden } from "./utils.module.css";
 

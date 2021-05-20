@@ -11,7 +11,7 @@
       "**/webpack**"
     ]
   },
-  "type": "module",
+  "type": "commonjs",
   "devDependencies": {
     "esbuild": "^0.11.12",
     "eslint": "^7.23.0",
