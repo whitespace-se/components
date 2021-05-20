@@ -12,7 +12,7 @@ Button.propTypes = {
   styles: PropTypes.objectOf(PropTypes.string),
 };
 
-export default withComponentDefaults(Button);
+export default withComponentDefaults(Button, "button");
 
 function Button({
   children,

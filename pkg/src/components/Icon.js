@@ -8,7 +8,7 @@ import * as defaultStyles from "./Icon.module.css";
 import { useIconContext } from "./IconProvider";
 import withComponentDefaults from "../withComponentDefaults";
 
-export default withComponentDefaults(Icon);
+export default withComponentDefaults(Icon, "icon");
 
 function Icon({
   children,

@@ -1,18 +1,16 @@
 import useComponentDefaults from "./hooks/useComponentDefaults";
 import React from "react";
 
-export default function withComponentDefaults(Component, { name } = {}) {
-  let componentName = name || Component.displayName || Component.name;
-  if (!componentName) {
-    console.error(
-      `withComponentDefaults could not infer wrapped component’s name`,
-    );
+export default function withComponentDefaults(Component, namespace) {
+  if (!namespace) {
+    console.error(`withComponentDefaults requires namespace`);
     return Component;
   }
   const WrappedComponent = (props) => {
-    let extendedProps = useComponentDefaults(componentName, props);
+    let extendedProps = useComponentDefaults(namespace, props);
     return <Component {...extendedProps}></Component>;
   };
+  let componentName = Component.displayName || Component.name;
   WrappedComponent.displayName = `WithComponentDefaults(${componentName})`;
   return WrappedComponent;
 }

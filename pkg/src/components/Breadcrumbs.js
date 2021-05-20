@@ -23,7 +23,7 @@ Breadcrumbs.propTypes = {
   styles: PropTypes.objectOf(PropTypes.string),
 };
 
-export default withComponentDefaults(Breadcrumbs);
+export default withComponentDefaults(Breadcrumbs, "breadcrumbs");
 
 function Breadcrumbs({
   label = "Brödsmulor",

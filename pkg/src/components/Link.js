@@ -27,7 +27,7 @@ function getURLType(url) {
   return "internal";
 }
 
-export default withComponentDefaults(Link);
+export default withComponentDefaults(Link, "link");
 
 function Link({
   as,
