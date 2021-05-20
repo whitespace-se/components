@@ -12,6 +12,7 @@ Breadcrumbs.propTypes = {
     Link: PropTypes.elementType,
   }),
   description: PropTypes.string,
+  hideDescription: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -29,6 +30,7 @@ export default withComponentDefaults(Breadcrumbs);
 function Breadcrumbs({
   label = "Brödsmulor",
   description = "Du är här:",
+  hideDescription = false,
   components: { Link = DefaultLink } = { Link: DefaultLink },
   items,
   separator = "/",
@@ -46,7 +48,9 @@ function Breadcrumbs({
       )}
       {...restProps}
     >
-      <p className={styles.description}>{description}</p>
+      <p className={clsx(styles.description, hideDescription && styles.sronly)}>
+        {description}
+      </p>
       <ol className={clsx(styles.list)}>
         {items.map((item, index) => {
           return (

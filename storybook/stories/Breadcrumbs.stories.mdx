@@ -21,3 +21,23 @@ import { Breadcrumbs } from "@whitespace/components";
     {(args) => <Breadcrumbs {...args} />}
   </Story>
 </Canvas>
+
+# Without description
+
+<Canvas>
+  <Story
+    name="Without description"
+    args={{
+      hideDescription: true,
+      items: [
+        { label: "Hem", url: "#" },
+        { label: "Nyhetsarkiv", url: "#" },
+        { label: "2020", url: "#" },
+        { label: "Mars", url: "#" },
+        { label: "Badhuset stängt från och med idag", url: "#" },
+      ],
+    }}
+  >
+    {(args) => <Breadcrumbs {...args} />}
+  </Story>
+</Canvas>
