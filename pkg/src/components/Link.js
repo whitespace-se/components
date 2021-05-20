@@ -5,6 +5,10 @@ import clsx from "clsx";
 import * as defaultStyles from "./Link.module.css";
 import withComponentDefaults from "../withComponentDefaults";
 
+function upperFirst(string) {
+  return string[0].toUpperCase() + string.slice(1);
+}
+
 function getURLType(url) {
   if (url.startsWith("#")) {
     return "anchor";
@@ -27,14 +31,22 @@ export default withComponentDefaults(Link);
 
 function Link({
   as,
-  buttonComponent = "button",
+  components: {
+    ButtonElement = "button",
+    InertElement = "span",
+    LabelElement = "label",
+    DefaultElement = "a",
+    ...components
+  } = {
+    ButtonElement: "button",
+    InertElement: "span",
+    LabelElement: "label",
+    DefaultElement: "a",
+  },
   children,
   className,
   href,
   htmlFor,
-  inertComponent = "span",
-  labelComponent = "label",
-  linkComponent = "a",
   onClick,
   rel,
   styles = defaultStyles,
@@ -68,13 +80,15 @@ function Link({
 
   let Component =
     as ||
-    (type === "inert"
-      ? inertComponent
-      : type === "label"
-      ? labelComponent
-      : type === "button" || type === "submit" || type === "reset"
-      ? buttonComponent
-      : linkComponent);
+    (type === "inert" && InertElement) ||
+    (type === "label" && LabelElement) ||
+    (type === "submit" &&
+      (components["SubmitButtonElement"] || ButtonElement)) ||
+    (type === "reset" &&
+      (components["ResetButtonElement"] ||
+        (type === "button" && ButtonElement))) ||
+    components[upperFirst(type) + "LinkElement"] ||
+    DefaultElement;
 
   /**
    * Add rel="noopener noreferrer" to links with target="_blank"
@@ -110,6 +124,7 @@ Link.propTypes = {
   buttonComponent: PropTypes.elementType,
   children: PropTypes.node,
   className: PropTypes.string,
+  components: PropTypes.objectOf(PropTypes.elementType),
   href: PropTypes.string,
   htmlFor: PropTypes.string,
   inertComponent: PropTypes.elementType,
