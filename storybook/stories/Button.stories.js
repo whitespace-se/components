@@ -59,7 +59,7 @@ export const radioLabel = ({ ...args }) => (
       id="radio-a"
       name="radios"
       value="A"
-      checked={true}
+      defaultChecked={true}
     />
     <Button {...args} htmlFor="radio-a">
       Option A
