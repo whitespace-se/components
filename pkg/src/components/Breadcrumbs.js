@@ -8,9 +8,7 @@ import * as defaultStyles from "./Breadcrumbs.module.css";
 import withComponentDefaults from "../withComponentDefaults";
 
 Breadcrumbs.propTypes = {
-  components: PropTypes.exact({
-    Link: PropTypes.elementType,
-  }),
+  components: PropTypes.objectOf(PropTypes.elementType),
   description: PropTypes.string,
   hideDescription: PropTypes.bool,
   items: PropTypes.arrayOf(

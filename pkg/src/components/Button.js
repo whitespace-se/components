@@ -8,9 +8,7 @@ import withComponentDefaults from "../withComponentDefaults";
 
 Button.propTypes = {
   children: PropTypes.node,
-  components: PropTypes.exact({
-    Link: PropTypes.elementType,
-  }),
+  components: PropTypes.objectOf(PropTypes.elementType),
   styles: PropTypes.objectOf(PropTypes.string),
 };
 
