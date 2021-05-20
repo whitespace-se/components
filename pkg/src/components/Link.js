@@ -4,6 +4,7 @@ import clsx from "clsx";
 
 import * as defaultStyles from "./Link.module.css";
 import withComponentDefaults from "../withComponentDefaults";
+import { useURLTransformer } from "../hooks";
 
 function upperFirst(string) {
   return string[0].toUpperCase() + string.slice(1);
@@ -67,6 +68,10 @@ function Link({
       : uri != null && uri !== ""
       ? uri
       : null;
+
+  const transformURL = useURLTransformer();
+
+  href = transformURL(href);
 
   type =
     type ||

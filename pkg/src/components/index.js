@@ -15,3 +15,6 @@ export * from "./Link";
 
 export { default as ThemeProvider } from "./ThemeProvider";
 export * from "./ThemeProvider";
+
+export { default as URLTransformerProvider } from "./URLTransformerProvider";
+export * from "./URLTransformerProvider";
