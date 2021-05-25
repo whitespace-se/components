@@ -89,9 +89,8 @@ function Link({
     (type === "label" && LabelElement) ||
     (type === "submit" &&
       (components["SubmitButtonElement"] || ButtonElement)) ||
-    (type === "reset" &&
-      (components["ResetButtonElement"] ||
-        (type === "button" && ButtonElement))) ||
+    (type === "reset" && (components["ResetButtonElement"] || ButtonElement)) ||
+    (type === "button" && ButtonElement) ||
     components[upperFirst(type) + "LinkElement"] ||
     DefaultElement;
 
