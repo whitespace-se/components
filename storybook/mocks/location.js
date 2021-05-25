@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  memo,
+} from "react";
 
 export const locationContext = createContext({});
 
@@ -15,8 +21,8 @@ export function LocationProvider({ children, ...restProps }) {
   );
 }
 
-export const InternalLinkElement = React.forwardRef(
-  function InternalLinkElement({ href, onClick, children, ...restProps }, ref) {
+export const InternalLinkElement = memo(
+  React.forwardRef(({ href, onClick, children, ...restProps }, ref) => {
     const [location, setPathname] = useContext(locationContext);
     return (
       <a
@@ -35,7 +41,7 @@ export const InternalLinkElement = React.forwardRef(
         {children}
       </a>
     );
-  },
+  }),
 );
 
 export function useLocation() {
