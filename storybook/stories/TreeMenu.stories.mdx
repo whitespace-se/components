@@ -1,0 +1,49 @@
+import { useRef, useState } from "react";
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import { TreeMenu } from "@whitespace/components";
+import { useLocation } from "../mocks/location";
+
+<Meta
+  title="TreeMenu"
+  component={TreeMenu}
+  parameters={{ actions: { argTypesRegex: null } }}
+/>
+
+# TreeMenu
+
+export const Template = ({ ...args }) => {
+  const [location] = useLocation();
+  return <TreeMenu {...args} location={location} />;
+};
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      items: [
+        { label: "Hem", url: "/" },
+        {
+          label: "Nyhetsarkiv",
+          url: "/nyheter",
+          children: [
+            { label: "2020", url: "/nyheter/2020" },
+            { label: "Mars", url: "/nyheter/mars" },
+            {
+              label: "Badhuset stängt från och med idag",
+              url: "/nyheter/badhuset-stangt",
+            },
+          ],
+        },
+        { label: "2020", url: "/nyheter/2020" },
+        { label: "Mars", url: "/nyheter/mars" },
+        {
+          label: "Badhuset stängt från och med idag",
+          url: "/nyheter/badhuset-stangt",
+        },
+      ],
+    }}
+  >
+    {(args) => <Template {...args} />}
+  </Story>
+</Canvas>

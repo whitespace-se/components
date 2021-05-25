@@ -1,0 +1,39 @@
+.component {
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.sublist {
+  grid-area: sublist;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  grid-template-rows: 2.5rem 1fr;
+  grid-template-areas: "row row" ". sublist";
+  gap: 0.125rem;
+}
+
+.row {
+  grid-area: row;
+  display: grid;
+  grid-template-columns: inherit;
+  grid-template-areas: "toggle link";
+  gap: 0.125rem;
+}
+
+.row:focus {
+  box-shadow: var(--tree-menu-row-focus-box-shadow: 0 0 0 3px blue);
+}
+
+.link {
+  grid-area: link;
+  --button-color: var(--tree-menu-link-color, inherit);
+  --button-background: var(--tree-menu-link-background, transparent);
+  --button-current-background: var(--tree-menu-link-current-background, black);
+  --button-current-color: var(--tree-menu-link-current-color, white);
+}
