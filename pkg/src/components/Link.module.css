@@ -32,7 +32,8 @@
 
 .component:focus,
 :focus + .component.label {
-  outline: -webkit-focus-ring-color auto 1px;
+  outline: var(--link-focus-outline, none);
+  box-shadow: var(--link-focus-box-shadow, 0 0 0 3px blue);
 }
 
 .component.current,
