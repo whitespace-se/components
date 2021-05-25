@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@whitespace/components/src";
+import { ThemeProvider } from "@whitespace/components";
 import React from "react";
 import { LocationProvider, InternalLinkElement } from "../mocks/location";
 
