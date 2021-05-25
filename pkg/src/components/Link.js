@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, memo } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
@@ -28,7 +28,7 @@ function getURLType(url) {
   return "internal";
 }
 
-export default withComponentDefaults(Link, "link");
+export default memo(withComponentDefaults(Link, "link"));
 
 function Link({
   as,
@@ -117,8 +117,8 @@ function Link({
           ? type
           : undefined
       }
-      ref={innerRef}
       {...restProps}
+      ref={innerRef}
     >
       {children}
     </Component>
@@ -137,7 +137,12 @@ Link.propTypes = {
     // Either a function
     PropTypes.func,
     // Or the instance of a DOM native element (see the note about SSR)
-    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+    PropTypes.shape({
+      current:
+        typeof Element !== "undefined"
+          ? PropTypes.instanceOf(Element)
+          : PropTypes.any,
+    }),
   ]),
   inertComponent: PropTypes.elementType,
   labelComponent: PropTypes.elementType,

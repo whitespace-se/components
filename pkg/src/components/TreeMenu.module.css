@@ -4,6 +4,7 @@
 .list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sublist {
@@ -12,8 +13,8 @@
 
 .item {
   display: grid;
-  grid-template-columns: 2.5rem 1fr;
-  grid-template-rows: 2.5rem 1fr;
+  grid-template-columns: 1.5rem 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas: "row row" ". sublist";
   gap: 0.125rem;
 }
@@ -26,14 +27,28 @@
   gap: 0.125rem;
 }
 
-.row:focus {
+.row:focus-within {
   box-shadow: var(--tree-menu-row-focus-box-shadow: 0 0 0 3px blue);
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 0.75em;
+}
+
+.toggle.collapsed:after {
+  content: "►";
+}
+
+.toggle.expanded:after {
+  content: "▼";
 }
 
 .link {
   grid-area: link;
-  --button-color: var(--tree-menu-link-color, inherit);
-  --button-background: var(--tree-menu-link-background, transparent);
-  --button-current-background: var(--tree-menu-link-current-background, black);
-  --button-current-color: var(--tree-menu-link-current-color, white);
+  --link-focus-box-shadow: none;
+  padding: var(--tree-menu-link-padding, 0.25rem 0);
 }

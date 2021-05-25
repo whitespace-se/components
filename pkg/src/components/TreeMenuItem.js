@@ -3,7 +3,7 @@ import Link from "./Link";
 import Button from "./Button";
 
 import { treeMenuContext } from "../contexts";
-import React, { useContext, useEffect, useRef } from "react";
+import React, { useCallback, useContext, useEffect, useRef } from "react";
 import Icon from "./Icon";
 import TreeMenuList from "./TreeMenuList";
 import PropTypes from "prop-types";
@@ -20,18 +20,25 @@ TreeMenuItem.propTypes = {
 export default function TreeMenuItem({ item, path, ...restProps }) {
   const { children = [], url, label } = item;
 
-  const linkRef = useRef();
-
   const {
     isCurrentItem,
+    isFocusedPath,
     isItemExpanded,
+    registerItemElement,
+    setFocusedPath,
     styles,
     toggleExpandedItem,
-    setFocus,
-    registerItemRef,
   } = useContext(treeMenuContext);
 
-  useEffect(() => registerItemRef(path, linkRef), []);
+  const refCallback = useCallback((element) => {
+    registerItemElement(path, element);
+  }, []);
+
+  const handleLinkClick = useCallback(() => {
+    setFocusedPath(path);
+  }, []);
+
+  let isExpanded = isItemExpanded(path);
 
   return (
     <li
@@ -44,25 +51,33 @@ export default function TreeMenuItem({ item, path, ...restProps }) {
             onClick={() => {
               toggleExpandedItem(path);
             }}
+            onFocus={() => {
+              setFocusedPath(path);
+            }}
+            key="toggle"
             as="span"
-          >
-            <Icon name="search" />
-          </Button>
+            styles={{}}
+            className={clsx(
+              styles.toggle,
+              isExpanded ? styles.expanded : styles.collapsed,
+            )}
+            tabIndex={-1}
+          ></Button>
         )}
-        <Button
-          innerRef={linkRef}
+        <Link
+          innerRef={refCallback}
+          // innerRef={linkRef}
           to={url}
-          tabIndex={-1}
+          key="link"
+          tabIndex={isFocusedPath(path) ? 0 : -1}
           className={clsx(styles.link)}
-          onFocus={() => {
-            console.log(linkRef.current);
-            setFocus(path);
-          }}
+          onClick={handleLinkClick}
+          aria-expanded={isExpanded}
         >
           {label}
-        </Button>
+        </Link>
       </div>
-      {!!children.length && isItemExpanded(path) && (
+      {!!children.length && isExpanded && (
         <TreeMenuList items={children} parentPath={path} />
       )}
     </li>
