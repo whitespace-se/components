@@ -33,7 +33,7 @@
   color: var(--button-color, black);
   text-decoration: var(--button-text-decoration, none);
   font-weight: var(--button-font-weight, medium);
-  padding: var(--button-padding, 0.5rem);
+  padding: var(--button-padding, calc(0.5rem - 1px));
   border-radius: var(--button-border-radius, 0.5rem);
   border: var(
     --button-border,
@@ -45,6 +45,7 @@
   box-shadow: var(--button-box-shadow, none);
   transition-duration: var(--button-transition-duration, 125ms);
   font-size: var(--button-font-size, 1rem);
+  box-sizing: border-box;
 }
 
 /* Hover */
