@@ -48,6 +48,7 @@ function Link({
   className,
   href,
   htmlFor,
+  innerRef,
   onClick,
   rel,
   styles = defaultStyles,
@@ -116,6 +117,7 @@ function Link({
           ? type
           : undefined
       }
+      ref={innerRef}
       {...restProps}
     >
       {children}
@@ -131,6 +133,12 @@ Link.propTypes = {
   components: PropTypes.objectOf(PropTypes.elementType),
   href: PropTypes.string,
   htmlFor: PropTypes.string,
+  innerRef: PropTypes.oneOfType([
+    // Either a function
+    PropTypes.func,
+    // Or the instance of a DOM native element (see the note about SSR)
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
   inertComponent: PropTypes.elementType,
   labelComponent: PropTypes.elementType,
   linkComponent: PropTypes.elementType,
