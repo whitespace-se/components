@@ -134,7 +134,7 @@ export default function TreeMenu({
   ]);
 
   useEffect(() => {
-    currentItemPath.reduce((path, index) => {
+    (currentItemPath || []).reduce((path, index) => {
       path = [...path, index];
       expandItem(path);
       return path;
