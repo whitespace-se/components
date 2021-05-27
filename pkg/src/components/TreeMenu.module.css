@@ -64,8 +64,7 @@
   --link-focus-box-shadow: none;
 }
 
-
-.link:before{
+.link:before {
   background: transparent;
   position: absolute;
   content: "";
