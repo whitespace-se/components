@@ -47,11 +47,11 @@ export default function TreeMenuItem({ item, path, ...restProps }) {
     key: "link",
     tabIndex: isFocusedPath(path) ? 0 : -1,
     className: clsx(styles.link),
-    onClick: handleLinkClick
+    onClick: handleLinkClick,
   };
 
   if (isExpanded) {
-    linkProps["aria-expanded"] = isExpanded
+    linkProps["aria-expanded"] = isExpanded;
   }
 
   return (
