@@ -31,7 +31,6 @@
   padding: var(--tree-menu-link-padding, 0.25rem 0);
   border-radius: var(--tree-menu-item-border-radius, 0);
   position: relative;
-  /* padding-left: 0; */
 }
 
 .item:not(:last-child) .row {
@@ -62,18 +61,12 @@
 
 .link {
   grid-area: link;
-  /* border: 3px solid transparent; */
   --link-text-decoration: var(--tree-menu-link-text-decoration, none);
   --link-color: var(--tree-menu-link-color, black);
   --link-font-weight: var(--tree-menu-link-font-weight, 500);
   --link-focus-box-shadow: none;
 }
 
-
-
-/* .link:focus-within:before, .link:hover:before, .link:focus:before {
-  box-shadow: var(--tree-menu-row-focus-box-shadow, 0 0 0 3px red inside);
-} */
 
 .link:before{
   background: transparent;
@@ -104,22 +97,11 @@
 .link:hover:before {
   background: var(--tree-menu-link-hover-background, blue);
   color: var(--tree-menu-link-hover-color, white);
-  /* position: absolute;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -99;
-  position: absolute;
-  border-radius: var(--tree-menu-item-border-radius, 0); */
 }
 
 .link[aria-expanded="true"]:before {
   background: var(--tree-menu-link-expanded-background, lightgrey);
   color: var(--tree-menu-link-expanded-color, black);
-  /* position: relative; */
 }
 
 .link[aria-expanded="true"]:not([aria-current]):hover {
@@ -135,6 +117,4 @@
   color: var(--tree-menu-link-active-color, white);
   --link-current-text-decoration: var(--tree-menu-current-text-decoration, none);
   --link-current-font-weight: var(--tree-menu-current-font-weight, 500);
-
-  /* position: relative; */
 }
