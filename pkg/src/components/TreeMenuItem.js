@@ -40,12 +40,27 @@ export default function TreeMenuItem({ item, path, ...restProps }) {
 
   let isExpanded = isItemExpanded(path);
 
+  let linkProps = {
+    innerRef: refCallback,
+    // innerRef={linkRef}
+    to: url,
+    key: "link",
+    tabIndex: isFocusedPath(path) ? 0 : -1,
+    className: clsx(styles.link),
+    onClick: handleLinkClick,
+  };
+
+  if (isExpanded) {
+    linkProps["aria-expanded"] = isExpanded;
+  }
+
   return (
     <li
       {...restProps}
       className={clsx(styles.item, isCurrentItem(item) && styles.current)}
     >
       <div className={styles.row}>
+        <Link {...linkProps}> {label}</Link>
         {!!children.length && (
           <Button
             onClick={() => {
@@ -64,18 +79,6 @@ export default function TreeMenuItem({ item, path, ...restProps }) {
             tabIndex={-1}
           ></Button>
         )}
-        <Link
-          innerRef={refCallback}
-          // innerRef={linkRef}
-          to={url}
-          key="link"
-          tabIndex={isFocusedPath(path) ? 0 : -1}
-          className={clsx(styles.link)}
-          onClick={handleLinkClick}
-          aria-expanded={isExpanded}
-        >
-          {label}
-        </Link>
       </div>
       {!!children.length && isExpanded && (
         <TreeMenuList items={children} parentPath={path} />
