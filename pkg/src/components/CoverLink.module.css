@@ -1,0 +1,66 @@
+.component,
+.component:any-link {
+  background: var(--cover-link-background, transparent);
+  border: none;
+  color: var(--cover-link-color, inherit);
+  font-weight: var(--cover-link-font-weight, inherit);
+  padding: 0;
+  text-decoration: var(--cover-link-text-decoration, inherit);
+}
+
+.component:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.component:hover {
+  background: var(
+    --cover-link-hover-background,
+    var(--cover-link-background, transparent)
+  );
+  color: var(--cover-link-hover-color, var(--cover-link-color, inherit));
+  font-weight: var(
+    --cover-link-hover-font-weight,
+    var(--cover-link-font-weight, inherit)
+  );
+  text-decoration: var(--cover-link-hover-text-decoration, underline);
+}
+
+.component:focus,
+:focus + .component.label {
+  outline: var(--cover-link-focus-outline, none);
+}
+
+.component.current,
+.component[aria-checked="true"],
+.component[aria-pressed="true"],
+.component[aria-current],
+:checked + .component.label {
+  background: var(
+    --cover-link-current-background,
+    var(--cover-link-background, transparent)
+  );
+  color: var(--cover-link-current-color, var(--cover-link-color, inherit));
+  font-weight: var(
+    --cover-link-current-font-weight,
+    var(--cover-link-font-weight, inherit)
+  );
+  text-decoration: var(
+    --cover-link-current-text-decoration,
+    var(--cover-link-hover-text-decoration, underline)
+  );
+}
+
+.component:not(.inert):not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
+button.component {
+  font: inherit;
+  -webkit-appearance: none;
+}
