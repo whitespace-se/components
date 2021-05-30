@@ -1,33 +1,15 @@
-:root {
-  --link-color: dodgerblue;
-  --link-text-decoration: underline;
-
-  --link-hover-color: var(--link-color);
-  --link-hover-text-decoration: var(--link-text-decoration);
-  --link-hover-background: var(--link-background);
-
-  --link-current-color: inherit;
-  --link-current-font-weight: bold;
-  --link-current-text-decoration: var(--link-text-decoration);
-  --link-current-background: var(--link-background);
-
-  --link-inert-color: inherit;
-  --link-inert-text-decoration: inherit;
-  --link-inert-background: var(--link-background);
-}
-
 .component {
-  color: var(--link-color);
-  text-decoration: var(--link-text-decoration);
+  color: var(--link-color, inherit);
+  text-decoration: var(--link-text-decoration, underline);
   padding: 0;
   border: none;
   background: transparent;
 }
 
 .component:hover {
-  color: var(--link-hover-color);
-  text-decoration: var(--link-hover-text-decoration);
-  background: var(--link-hover-background);
+  color: var(--link-hover-color, inherit);
+  text-decoration: var(--link-hover-text-decoration, none);
+  background: var(--link-hover-background, transparent);
 }
 
 .component:focus,
@@ -44,10 +26,10 @@
 .component[aria-pressed="true"],
 .component[aria-current],
 :checked + .component.label {
-  color: var(--link-current-color);
-  text-decoration: var(--link-current-text-decoration);
-  background: var(--link-current-background);
-  font-weight: var(--link-current-font-weight);
+  color: var(--link-current-color, inherit);
+  text-decoration: var(--link-current-text-decoration, underline);
+  background: var(--link-current-background, transparent);
+  font-weight: var(--link-current-font-weight, normal);
 }
 
 .component:not(.inert):not([aria-disabled="true"]) {
@@ -58,9 +40,9 @@
 .component:disabled,
 .component[aria-disabled="true"],
 :disabled + .component.label {
-  color: var(--link-inert-color);
-  text-decoration: var(--link-text-inert-decoration);
-  background: var(--link-inert-background);
+  color: var(--link-inert-color, inherit);
+  text-decoration: var(--link-text-inert-decoration, inherit);
+  background: var(--link-inert-background, transparent);
 }
 
 button.component {
