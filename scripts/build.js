@@ -10,7 +10,7 @@ const readFileAsync = promisify(readFile);
 
 async function run() {
   let packageJSON = await readFileAsync(resolve("./package.json"));
-  const { main: outdir, source } = JSON.parse(packageJSON);
+  const { main: outdir, source, esbuild = {} } = JSON.parse(packageJSON);
   const entry = `${source}/**/*.{js,css}`;
   console.log(`Transpiling from ${source} to ${outdir}`);
   await rimrafAsync(outdir);
@@ -20,6 +20,7 @@ async function run() {
     outdir,
     bundle: false,
     loader: { ".js": "jsx" },
+    ...esbuild,
   });
 }
 

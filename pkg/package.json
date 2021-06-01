@@ -15,6 +15,9 @@
   "engines": {
     "node": ">=14.0.0"
   },
+  "esbuild": {
+    "target": "node14"
+  },
   "scripts": {
     "build": "node ../scripts/build",
     "dev": "node ../scripts/dev",

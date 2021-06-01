@@ -1,14 +1,17 @@
-import glob from "fast-glob";
 import { build } from "esbuild";
-import rimraf from "rimraf";
 import { promisify } from "util";
+import { readFile } from "fs";
+import glob from "fast-glob";
+import { resolve } from "path";
+import rimraf from "rimraf";
 
 const rimrafAsync = promisify(rimraf);
-
-const entry = ["src/**/*.{js,css}"];
-const outdir = "dist";
+const readFileAsync = promisify(readFile);
 
 async function run() {
+  let packageJSON = await readFileAsync(resolve("./package.json"));
+  const { main: outdir, source, esbuild = {} } = JSON.parse(packageJSON);
+  const entry = `${source}/**/*.{js,css}`;
   await rimrafAsync(outdir);
   const entryPoints = await glob(entry);
   await build({
@@ -16,6 +19,7 @@ async function run() {
     outdir,
     bundle: false,
     loader: { ".js": "jsx" },
+    ...esbuild,
     watch: {
       onRebuild(error, result) {
         void result;

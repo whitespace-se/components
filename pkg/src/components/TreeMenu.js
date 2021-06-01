@@ -112,7 +112,7 @@ export default function TreeMenu({
     (path) => {
       return path.reduce(
         (item, index) =>
-          item?.children?.[index >= 0 ? index : item.children.length + index],
+          item?.children?.[index >= 0 ? index : item?.children?.length + index],
         {
           children: items,
         },
