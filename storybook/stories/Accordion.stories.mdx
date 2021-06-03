@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Accordion } from "@whitespace/components";
+
+<Meta
+  title="Accordion"
+  component={Accordion}
+  parameters={{ actions: { argTypesRegex: null } }}
+/>
+
+# Accordion
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      items: [
+        {
+          title: "Vart vänder jag mig om jag vill testa mig för covid-19?",
+          content: <p>Hej</p>
+        },
+        {
+          title: "Vilka olika tester finns det för covid-19?",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum, neque non convallis consectetur, mauris ex finibus elit, et varius ante lectus bibendum justo. Nam sapien nisl, suscipit ut lorem eget, dignissim maximus arcu. Vestibulum sollicitudin aliquet quam, in efficitur risus auctor id. In venenatis erat eu nisl tristique interdum. Sed varius lacinia dolor. Suspendisse faucibus justo diam, a laoreet lacus tristique ut. Nunc tristique enim eu suscipit vestibulum. Vivamus fermentum dui nec libero dignissim, nec placerat mauris vulputate. Aenean tincidunt lacus nisl, quis luctus sapien tristique molestie. Nulla placerat erat tellus, et sagittis diam volutpat at. Suspendisse faucibus nulla nibh, quis ullamcorper libero dapibus ut. Fusce tempus a ex ac elementum.",
+        },
+        {
+          title: "Vilka personer bör testas för pågående covid-19-infektion?",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum, neque non convallis consectetur, mauris ex finibus elit, et varius ante lectus bibendum justo. Nam sapien nisl, suscipit ut lorem eget, dignissim maximus arcu. Vestibulum sollicitudin aliquet quam, in efficitur risus auctor id. In venenatis erat eu nisl tristique interdum. Sed varius lacinia dolor. Suspendisse faucibus justo diam, a laoreet lacus tristique ut. Nunc tristique enim eu suscipit vestibulum. Vivamus fermentum dui nec libero dignissim, nec placerat mauris vulputate. Aenean tincidunt lacus nisl, quis luctus sapien tristique molestie. Nulla placerat erat tellus, et sagittis diam volutpat at. Suspendisse faucibus nulla nibh, quis ullamcorper libero dapibus ut. Fusce tempus a ex ac elementum.",
+        },
+        {
+          title: "Vad innebär det om jag är positiv i ett PCR-test eller ett antigentest?",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum, neque non convallis consectetur, mauris ex finibus elit, et varius ante lectus bibendum justo. Nam sapien nisl, suscipit ut lorem eget, dignissim maximus arcu. Vestibulum sollicitudin aliquet quam, in efficitur risus auctor id. In venenatis erat eu nisl tristique interdum. Sed varius lacinia dolor. Suspendisse faucibus justo diam, a laoreet lacus tristique ut. Nunc tristique enim eu suscipit vestibulum. Vivamus fermentum dui nec libero dignissim, nec placerat mauris vulputate. Aenean tincidunt lacus nisl, quis luctus sapien tristique molestie. Nulla placerat erat tellus, et sagittis diam volutpat at. Suspendisse faucibus nulla nibh, quis ullamcorper libero dapibus ut. Fusce tempus a ex ac elementum.",
+        },
+      ],
+    }}
+  >
+    {(args) => <Accordion {...args} />}
+  </Story>
+</Canvas>
