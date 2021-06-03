@@ -13,6 +13,9 @@ export * from "./Icon";
 export { default as IconProvider } from "./IconProvider";
 export * from "./IconProvider";
 
+export { default as CoverLink } from "./CoverLink";
+export * from "./CoverLink";
+
 export { default as Link } from "./Link";
 export * from "./Link";
 

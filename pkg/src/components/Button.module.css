@@ -12,7 +12,6 @@
   --button-grayscale: 0%;
   --button-box-shadow: none;
   --button-scale: 1;
-  --button-transition-duration: 125ms;
 
   --button-hover-brightness: 1.125;
   --button-hover-grayscale: var(--button-grayscale);
@@ -43,7 +42,6 @@
   /* filter: brightness(var(--button-brightness, 100%)) grayscale(var(--button-grayscale, 0%)); */
   /* transform: scale(var(--button-scale, 1)); */
   box-shadow: var(--button-box-shadow, none);
-  transition-duration: var(--button-transition-duration, 125ms);
   font-size: var(--button-font-size, 1rem);
   box-sizing: border-box;
 }
@@ -99,7 +97,10 @@
 .component:focus,
 :focus + .component.label {
   outline: none;
-  box-shadow: var(--button-focus-box-shadow, 0 0 0 3px blue);
+  box-shadow: var(
+    --button-focus-box-shadow,
+    var(--focus-box-shadow, 0 0 0 3px black)
+  );
 }
 
 .component:active:not(.inert),
