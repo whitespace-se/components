@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@whitespace/components";
+import { ThemeProvider, IconProvider } from "@whitespace/components";
 import React from "react";
 import { LocationProvider, InternalLinkElement } from "../mocks/location";
 
@@ -14,18 +14,11 @@ export const decorators = [
       <ThemeProvider
         theme={{
           link: { components: { InternalLinkElement } },
-          // button: {
-          //   default: { background: "red" },
-          //   active: { background: "green" },
-          // },
-          icon: {
-            color: "red",
-            size: "1em",
-            verticalAlign: "-15%",
-          },
         }}
       >
-        {storyFn()}
+        <IconProvider getIconSrc={(name) => `/icons/${name}.svg`}>
+          {storyFn()}
+        </IconProvider>
       </ThemeProvider>
     </LocationProvider>
   ),

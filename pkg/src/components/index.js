@@ -1,3 +1,6 @@
+export { default as Accordion } from "./Accordion";
+export * from "./Accordion";
+
 export { default as Breadcrumbs } from "./Breadcrumbs";
 export * from "./Breadcrumbs";
 

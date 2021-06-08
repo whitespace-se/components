@@ -1,0 +1,59 @@
+.component {
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin: 0;
+}
+
+.item {
+  list-style: none;
+  border-bottom: 1px solid var(--accordion-color-divider, #dedede);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0;
+  cursor: pointer;
+  border: 0;
+  background: var(--accordion-button-background-color, transparent);
+  color: var(--accordion-color, #000);
+  font-weight: var(--accordion-button-font-weight, 700);
+  text-align: left;
+}
+
+.button:hover {
+  background: var(--accordion-button-background-color-hover, #dedede);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  --icon-size: var(--accordion-icon-size, 1em);
+  --icon-color: var(--accordion-icon-color, #666);
+}
+
+.content {
+  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  @media print {
+    background: transparent;
+  }
+}
+
+.content.hidden {
+  padding: 0;
+}
