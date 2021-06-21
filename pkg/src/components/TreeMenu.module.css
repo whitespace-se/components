@@ -5,6 +5,8 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  gap: var(--tree-menu-list-gap, 1px);
 }
 
 .sublist {
@@ -13,7 +15,7 @@
 
 .item {
   display: grid;
-  grid-template-columns: 1.5rem 1fr;
+  grid-template-columns: var(--tree-menu-item-grid-template-columns, 1rem 1fr);
   grid-template-rows: auto 1fr;
   grid-template-areas: "row row" ". sublist";
   gap: 0;
@@ -23,22 +25,20 @@
 .row {
   grid-area: row;
   display: grid;
-  grid-template-columns: inherit;
+  grid-template-columns: var(--tree-menu-row-grid-template-columns, 1.5rem 1fr);
   grid-template-areas: "toggle link";
   gap: 0;
-  padding: var(--tree-menu-link-padding, 0.25rem 0);
+  padding: var(--tree-menu-row-padding, 0.25rem);
+  margin: var(--tree-menu-row-margin, 0);
   border-radius: var(--tree-menu-item-border-radius, 0);
   position: relative;
-}
-
-.item:not(:last-child) .row {
-  margin-bottom: var(--tree-menu-row-margin-bottom, 3px);
+  min-height: var(--tree-menu-row-min-height, 1.875rem);
 }
 
 .row:focus-within .link:before {
   box-shadow: var(
     --tree-menu-row-focus-box-shadow,
-    var(--focus-box-shadow, 0 0 0 3px black)
+    var(--focus-box-shadow, 0 0 0 3px black inset)
   );
 }
 
@@ -62,7 +62,7 @@
 .link {
   grid-area: link;
   --link-text-decoration: var(--tree-menu-link-text-decoration, none);
-  --link-color: var(--tree-menu-link-color, black);
+  --link-color: var(--tree-menu-link-color, inherit);
   --link-font-weight: var(--tree-menu-link-font-weight, 500);
   --link-focus-box-shadow: none;
 }
@@ -102,7 +102,7 @@
 
 .link[aria-expanded="true"]:before {
   background: var(--tree-menu-link-expanded-background, lightgrey);
-  color: var(--tree-menu-link-expanded-color, black);
+  color: var(--tree-menu-link-expanded-color, inherit);
 }
 
 .link[aria-expanded="true"]:not([aria-current]):hover {
