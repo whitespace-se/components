@@ -25,8 +25,22 @@ import { Accordion } from "@whitespace/components";
         },
         {
           title: "Vilka personer bör testas för pågående covid-19-infektion?",
-          content:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum, neque non convallis consectetur, mauris ex finibus elit, et varius ante lectus bibendum justo. Nam sapien nisl, suscipit ut lorem eget, dignissim maximus arcu. Vestibulum sollicitudin aliquet quam, in efficitur risus auctor id. In venenatis erat eu nisl tristique interdum. Sed varius lacinia dolor. Suspendisse faucibus justo diam, a laoreet lacus tristique ut. Nunc tristique enim eu suscipit vestibulum. Vivamus fermentum dui nec libero dignissim, nec placerat mauris vulputate. Aenean tincidunt lacus nisl, quis luctus sapien tristique molestie. Nulla placerat erat tellus, et sagittis diam volutpat at. Suspendisse faucibus nulla nibh, quis ullamcorper libero dapibus ut. Fusce tempus a ex ac elementum.",
+          content: (
+            <Accordion
+              items={[
+                {
+                  title: "Vestibulum sollicitudin",
+                  content:
+                    "Vivamus fermentum dui nec libero dignissim, nec placerat mauris vulputate.",
+                },
+                {
+                  title: "Nunc tristique enim",
+                  content:
+                    "Suspendisse faucibus nulla nibh, quis ullamcorper libero dapibus ut.",
+                },
+              ]}
+            />
+          ),
         },
         {
           title:

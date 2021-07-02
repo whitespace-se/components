@@ -2,7 +2,7 @@
 
 import { H } from "@jfrk/react-heading-levels";
 import clsx from "clsx";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Icon } from "@whitespace/components";
 
@@ -46,12 +46,25 @@ function Accordion({
   const [expandedRowIndexes, setExpandedRowIndexes] = useState([]);
   const id = useID();
 
-  function isExpanded(index) {
+  function rowIsExpanded(index) {
     return expandedRowIndexes.indexOf(index) !== -1;
   }
 
+  const onExpandAllButtonClick = () => {
+    const atLeastOneRowIsExpanded = expandedRowIndexes.length;
+    if (atLeastOneRowIsExpanded) {
+      setExpandedRowIndexes([]);
+    } else {
+      const allRowIndexes = Array.from(Array(items.length).keys());
+      setExpandedRowIndexes(allRowIndexes);
+    }
+  };
+
   return (
     <div className={clsx(styles.component, className)} {...restProps}>
+      <button onClick={onExpandAllButtonClick}>
+        {expandedRowIndexes.length ? <>STÄNG</> : <>ÖPPNA</>}
+      </button>
       <ul className={clsx(styles.list)} id={id(`accordion`)}>
         {items.map((row, index) => {
           return (
@@ -59,11 +72,11 @@ function Accordion({
               <H className={clsx(styles.title)}>
                 <button
                   id={id(`accordion-header-${index}`)}
-                  aria-expanded={isExpanded(index)}
+                  aria-expanded={rowIsExpanded(index)}
                   aria-controls={id(`accordion-panel-${index}`)}
                   className={clsx(styles.button)}
                   onClick={() => {
-                    if (!isExpanded(index)) {
+                    if (!rowIsExpanded(index)) {
                       setExpandedRowIndexes([...expandedRowIndexes, index]);
                     } else {
                       setExpandedRowIndexes(
@@ -75,7 +88,7 @@ function Accordion({
                   }}
                 >
                   <span className={clsx(styles.icon)} aria-hidden="true">
-                    {!isExpanded(index) ? <ExpandIcon /> : <CollapseIcon />}
+                    {!rowIsExpanded(index) ? <ExpandIcon /> : <CollapseIcon />}
                   </span>
                   {row.title}
                 </button>
@@ -83,7 +96,7 @@ function Accordion({
               <section
                 id={id(`accordion-panel-${index}`)}
                 aria-labelledby={id(`accordion-header-${index}`)}
-                hidden={!isExpanded(index)}
+                hidden={!rowIsExpanded(index)}
                 className={clsx(styles.content)}
               >
                 {row.content}
