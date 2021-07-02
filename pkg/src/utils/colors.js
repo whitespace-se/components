@@ -1,2 +1,1 @@
-export {default} from "tailwindcss/colors";
-
+export { default } from "tailwindcss/colors";

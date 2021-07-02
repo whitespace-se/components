@@ -14,7 +14,7 @@ export const decorators = [
       <ThemeProvider
         theme={{
           link: { components: { InternalLinkElement } },
-          color: colors
+          color: colors,
         }}
       >
         <IconProvider getIconSrc={(name) => `/icons/${name}.svg`}>

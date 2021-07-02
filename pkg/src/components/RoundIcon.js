@@ -5,7 +5,7 @@ import Icon from "./Icon";
 import withComponentDefaults from "../withComponentDefaults";
 import clsx from "clsx";
 import { css, jsx } from "@emotion/react";
-import PropTypes  from "prop-types";
+import PropTypes from "prop-types";
 
 import * as defaultStyles from "./RoundIcon.module.css";
 
@@ -19,8 +19,8 @@ RoundIcon.propTypes = {
   name: PropTypes.string,
   size: PropTypes.string,
   src: PropTypes.string,
-  styles: PropTypes.objectOf(PropTypes.string)
-}
+  styles: PropTypes.objectOf(PropTypes.string),
+};
 
 function RoundIcon({
   className,
@@ -40,7 +40,8 @@ function RoundIcon({
         "--round-icon-background-color": backgroundColor,
         "--round-icon-size": size,
       })}
-      {...restProps}>
+      {...restProps}
+    >
       <Icon name={name} src={src} color={color} {...iconProps} />
     </span>
   );
