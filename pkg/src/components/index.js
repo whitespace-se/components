@@ -7,6 +7,9 @@ export * from "./Breadcrumbs";
 export { default as Button } from "./Button";
 export * from "./Button";
 
+export { default as DashboardMenu } from "./DashboardMenu";
+export * from "./DashboardMenu";
+
 export { default as Icon } from "./Icon";
 export * from "./Icon";
 
@@ -18,6 +21,9 @@ export * from "./CoverLink";
 
 export { default as Link } from "./Link";
 export * from "./Link";
+
+export { default as RoundIcon } from "./RoundIcon";
+export * from "./RoundIcon";
 
 export { default as ThemeProvider } from "./ThemeProvider";
 export * from "./ThemeProvider";

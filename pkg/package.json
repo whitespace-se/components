@@ -28,6 +28,7 @@
     "@jfrk/react-heading-levels": "^1.0.0",
     "clsx": "^1.1.1",
     "prop-types": "^15.7.2",
+    "tailwindcss": "^2.2.4",
     "traverse": "^0.6.6"
   },
   "peerDependencies": {

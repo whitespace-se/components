@@ -1,4 +1,4 @@
-import { ThemeProvider, IconProvider } from "@whitespace/components";
+import { ThemeProvider, IconProvider, colors } from "@whitespace/components";
 import React from "react";
 import { LocationProvider, InternalLinkElement } from "../mocks/location";
 
@@ -14,6 +14,7 @@ export const decorators = [
       <ThemeProvider
         theme={{
           link: { components: { InternalLinkElement } },
+          color: colors
         }}
       >
         <IconProvider getIconSrc={(name) => `/icons/${name}.svg`}>

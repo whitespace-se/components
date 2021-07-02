@@ -1,17 +1,29 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
-import { Icon, IconProvider } from "@whitespace/components";
+import { RoundIcon, IconProvider } from "@whitespace/components";
 import alertIcon from "../static/icons/alert-circle.svg";
 import searchIcon from "../static/icons/search.svg";
 
 <Meta
-  title="Icon"
-  component={Icon}
+  title="RoundIcon"
+  component={RoundIcon}
   argTypes={{
     name: {
       type: "string",
       control: {
         type: "select",
         options: ["alert-circle", "search"],
+      },
+    },
+    backgroundColor: {
+      type: "string",
+      control: {
+        type: "color",
+      },
+    },
+    color: {
+      type: "string",
+      control: {
+        type: "color",
       },
     },
     src: {
@@ -31,9 +43,11 @@ import searchIcon from "../static/icons/search.svg";
     name="With src"
     args={{
       src: alertIcon,
+      backgroundColor: "#d9d9d9",
+      color: "#000000",
     }}
   >
-    {(args) => <Icon {...args} />}
+    {(args) => <RoundIcon {...args} />}
   </Story>
 </Canvas>
 
@@ -42,11 +56,13 @@ import searchIcon from "../static/icons/search.svg";
     name="With name"
     args={{
       name: "alert-circle",
+      backgroundColor: "#d9d9d9",
+      color: "#000000",
     }}
   >
     {(args) => (
       <IconProvider getIconSrc={(name) => `/icons/${name}.svg`}>
-        <Icon {...args} />
+        <RoundIcon {...args} />
       </IconProvider>
     )}
   </Story>

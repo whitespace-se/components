@@ -1,0 +1,34 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { DashboardMenu, IconProvider } from "@whitespace/components";
+import alertIcon from "../static/icons/alert-circle.svg";
+import searchIcon from "../static/icons/search.svg";
+
+<Meta
+  title="DashboardMenu"
+  component={DashboardMenu}
+  argTypes={{
+    items: {
+      type: "array",
+      control: {
+        type: "object",
+      },
+    },
+  }}
+/>
+
+# Icon
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      items: [
+        { label: "Home", url: "/", icon: { name: "home" } },
+        { label: "Search", url: "/search", icon: { name: "search" } },
+        { label: "Warnings", url: "/warnings", icon: { name: "alert-circle" } },
+      ],
+    }}
+  >
+    {(args) => <DashboardMenu {...args} />}
+  </Story>
+</Canvas>

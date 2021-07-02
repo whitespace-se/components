@@ -6,6 +6,7 @@ import { merge } from "lodash/fp";
 import themeContext from "../contexts/themeContext";
 import themeToCssCustomProps from "../utils/themeToCssCustomProps";
 
+
 export default function ThemeProvider({ theme, children, ...restProps }) {
   let { global, theme: parentTheme } = useContext(themeContext);
   let cssProps = themeToCssCustomProps(theme);
@@ -19,6 +20,8 @@ export default function ThemeProvider({ theme, children, ...restProps }) {
       `Children of a nested <ThemeProvider> must be inside a function.`,
     );
   }
+
+
   return (
     <>
       {global && (
