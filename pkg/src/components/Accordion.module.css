@@ -1,53 +1,59 @@
 .component {
+  border-top: var(--accordion-border, 1px solid #dedede);
 }
 
 .list {
-  margin: 0;
-  padding: 0;
+  margin: var(--accordion-list-margin, 0);
+  padding: var(--accordion-list-padding, 0);
+}
+
+.row {
+  list-style: none;
+  border-bottom: var(--accordion-border, 1px solid #dedede);
+  margin: var(--accordion-row-margin, 0);
+  padding: var(--accordion-row-padding, 0);
 }
 
 .title {
-  margin: 0;
-}
-
-.item {
-  list-style: none;
-  border-bottom: 1px solid var(--accordion-color-divider, #dedede);
+  margin: var(--accordion-title-margin, 0);
 }
 
 .button {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 0;
-  padding: 1rem 0;
+  margin: var(--accordion-button-margin, 0);
+  padding: var(--accordion-button-padding, 1rem 0);
   cursor: pointer;
   border: 0;
   background: var(--accordion-button-background-color, transparent);
   color: var(--accordion-color, #000);
   font-weight: var(--accordion-button-font-weight, 700);
   text-align: left;
+  font: inherit;
 }
 
 .button:hover {
-  background: var(--accordion-button-background-color-hover, #dedede);
+  background: var(--accordion-button-background-color-hover, #f2f2f2);
+  color: var(--accordion-button-color-hover, #000);
 }
 
 .icon {
   display: flex;
   align-items: center;
+  align-self: center;
   justify-content: center;
   flex-shrink: 0;
-  margin-right: 0.5rem;
-  --icon-size: var(--accordion-icon-size, 1em);
+  margin-top: -2px;
+  margin-top: calc(var(--accordion-icon-size, 1rem) * 0.25 * -1);
+  width: calc(var(--accordion-icon-size, 1rem) * 2);
+  --icon-size: var(--accordion-icon-size, 1rem);
   --icon-color: var(--accordion-icon-color, #666);
 }
 
 .content {
-  padding-right: 1rem;
-  padding-left: 2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: var(--accordion-content-padding, 0rem 1rem 1rem 2rem);
+  padding-left: calc(var(--accordion-icon-size, 1rem) * 2);
 
   @media print {
     background: transparent;

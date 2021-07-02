@@ -55,7 +55,7 @@ function Accordion({
       <ul className={clsx(styles.list)} id={id(`accordion`)}>
         {items.map((row, index) => {
           return (
-            <li className={clsx(styles.item)} key={index}>
+            <li className={clsx(styles.row)} key={index}>
               <H className={clsx(styles.title)}>
                 <button
                   id={id(`accordion-header-${index}`)}
