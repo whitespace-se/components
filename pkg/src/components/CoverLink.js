@@ -16,12 +16,12 @@ export default withComponentDefaults(CoverLink, "coverLink");
 
 function CoverLink({
   children,
-  components: { Link = DefaultLink } = { Link: DefaultLink },
+  components: { Link = DefaultLink, ...components } = { Link: DefaultLink },
   styles = defaultStyles,
   ...restProps
 }) {
   return (
-    <Link styles={styles} {...restProps}>
+    <Link styles={styles} components={components} {...restProps}>
       {children}
     </Link>
   );
