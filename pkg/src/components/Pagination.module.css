@@ -1,0 +1,32 @@
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  gap: 0.5rem;
+}
+
+.button {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  --button-padding: 0.5rem;
+}
+
+.item.firstInRange {
+  margin-left: auto;
+}
+
+.item.lastInRange {
+  margin-right: auto;
+}
+
+.itemText {
+  display: none;
+}
+@media screen and (min-width: 40em) {
+  .itemText {
+    display: block;
+  }
+}

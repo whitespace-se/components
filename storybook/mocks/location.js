@@ -6,7 +6,10 @@ import React, {
   memo,
 } from "react";
 
-export const locationContext = createContext({});
+export const locationContext = createContext([
+  new URL(location.origin),
+  () => {},
+]);
 
 LocationProvider.propTypes = {};
 

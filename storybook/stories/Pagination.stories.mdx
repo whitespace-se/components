@@ -1,0 +1,47 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Pagination } from "@whitespace/components";
+import { useLocation } from "../mocks/location";
+
+export const Template = (args) => {
+  const [location] = useLocation();
+  let page = Number(location.searchParams.get("page"));
+  console.log(location.href);
+  return (
+    <Pagination
+      {...args}
+      buttonUrl={(page) => {
+        let url = new URL(location.href);
+        let qs = url.searchParams;
+        qs.set("page", page);
+        return `/?${qs}`;
+        return url.href;
+      }}
+      page={page || 0}
+    />
+  );
+};
+
+<Meta
+  title="Pagination"
+  component={Pagination}
+  argTypes={{
+    page: {
+      type: "number",
+      defaultValue: 0,
+    },
+    totalPages: {
+      type: "number",
+      defaultValue: 10,
+    },
+    range: {
+      type: "number",
+      defaultValue: 5,
+    },
+  }}
+/>
+
+# Pagination
+
+<Canvas>
+  <Story name="Default">{Template.bind({})}</Story>
+</Canvas>

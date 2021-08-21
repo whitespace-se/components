@@ -22,6 +22,9 @@ export * from "./CoverLink";
 export { default as Link } from "./Link";
 export * from "./Link";
 
+export { default as Pagination } from "./Pagination";
+export * from "./Pagination";
+
 export { default as RoundIcon } from "./RoundIcon";
 export * from "./RoundIcon";
 

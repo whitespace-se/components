@@ -27,6 +27,8 @@
   display: inline-flex;
   gap: 0.25rem;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   cursor: pointer;
   outline: none;
   color: var(--button-color, black);
