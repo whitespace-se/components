@@ -1,3 +1,4 @@
+export { default as useComponentWidth } from "./useComponentWidth";
 export { default as useID } from "./useID";
 export { default as useSet } from "./useSet";
 export { default as useTheme } from "./useTheme";
