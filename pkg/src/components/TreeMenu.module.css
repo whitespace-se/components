@@ -65,6 +65,9 @@
   --link-color: var(--tree-menu-link-color, inherit);
   --link-font-weight: var(--tree-menu-link-font-weight, 500);
   --link-focus-box-shadow: none;
+  word-break: break-word;
+  display: flex;
+  align-items: center;
 }
 
 .link:before {
