@@ -2,7 +2,7 @@
 /** @jsx jsx */
 
 import Icon from "./Icon";
-import withComponentDefaults from "../withComponentDefaults";
+import withComponentDefaults from "../utils/withComponentDefaults";
 import clsx from "clsx";
 import { css, jsx } from "@emotion/react";
 import PropTypes from "prop-types";

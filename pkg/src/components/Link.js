@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 
 import * as defaultStyles from "./Link.module.css";
-import withComponentDefaults from "../withComponentDefaults";
+import withComponentDefaults from "../utils/withComponentDefaults";
 import { useURLTransformer } from "../hooks";
 
 function upperFirst(string) {

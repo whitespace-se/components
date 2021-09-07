@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import * as defaultStyles from "./Button.module.css";
 
 import DefaultLink from "./Link";
-import withComponentDefaults from "../withComponentDefaults";
+import withComponentDefaults from "../utils/withComponentDefaults";
 
 Button.propTypes = {
   children: PropTypes.node,

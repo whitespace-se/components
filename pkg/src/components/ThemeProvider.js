@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { Global } from "@emotion/react";
 import { merge } from "lodash/fp";
 
-import themeContext from "../contexts/themeContext";
-import themeToCssCustomProps from "../utils/themeToCssCustomProps";
+import { themeContext } from "../contexts";
+import { themeToCssCustomProps } from "../utils";
 
 export default function ThemeProvider({ theme, children, ...restProps }) {
   let { global, theme: parentTheme } = useContext(themeContext);

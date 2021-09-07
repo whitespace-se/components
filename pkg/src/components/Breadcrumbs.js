@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import DefaultLink from "./Link";
 
 import * as defaultStyles from "./Breadcrumbs.module.css";
-import withComponentDefaults from "../withComponentDefaults";
+import withComponentDefaults from "../utils/withComponentDefaults";
 
 Breadcrumbs.propTypes = {
   components: PropTypes.objectOf(PropTypes.elementType),

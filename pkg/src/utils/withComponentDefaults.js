@@ -1,4 +1,4 @@
-import useComponentDefaults from "./hooks/useComponentDefaults";
+import useComponentDefaults from "../hooks/useComponentDefaults";
 import React from "react";
 
 export default function withComponentDefaults(Component, namespace) {

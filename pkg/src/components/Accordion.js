@@ -10,7 +10,7 @@ import { useID } from "../hooks";
 // import { navigateOnKeyUp } from "../../../../utils/keyboardNavigation";
 
 import * as defaultStyles from "./Accordion.module.css";
-import withComponentDefaults from "../withComponentDefaults";
+import withComponentDefaults from "../utils/withComponentDefaults";
 
 Accordion.propTypes = {
   components: PropTypes.objectOf(PropTypes.elementType),
