@@ -59,6 +59,10 @@
 .component:not(.inert):not([aria-disabled="true"]) {
   cursor: pointer;
 }
+.component.inert,
+.component[aria-disabled="true"] {
+  text-decoration: var(--cover-link-disabled-text-decoration, inherit);
+}
 
 button.component {
   font: inherit;
