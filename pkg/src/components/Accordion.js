@@ -64,9 +64,11 @@ function Accordion({
 
   return (
     <div className={clsx(styles.component, className)} {...restProps}>
-      {showExpandAll && <button onClick={onExpandAllButtonClick}>
-        {expandedRowIndexes.length ? <>STÄNG</> : <>ÖPPNA</>}
-      </button>}
+      {showExpandAll && (
+        <button onClick={onExpandAllButtonClick}>
+          {expandedRowIndexes.length ? <>STÄNG</> : <>ÖPPNA</>}
+        </button>
+      )}
       <ul className={clsx(styles.list)} id={id(`accordion`)}>
         {items.map((row, index) => {
           return (

@@ -39,7 +39,10 @@
 }
 
 .button[aria-expanded="true"] {
-  --accordion-button-background-color: var(--accordion-button-expanded-background-color, #fff);
+  --accordion-button-background-color: var(
+    --accordion-button-expanded-background-color,
+    #fff
+  );
 }
 
 .icon {
@@ -57,7 +60,10 @@
 
 .content {
   padding: var(--accordion-content-padding, 1.5rem 1rem 1.5rem 3rem);
-  padding-left: var(--accordion-content-padding-left, calc(var(--accordion-icon-size, 1rem) * 2));
+  padding-left: var(
+    --accordion-content-padding-left,
+    calc(var(--accordion-icon-size, 1rem) * 2)
+  );
   background: var(--accordion-content-background-color, #fff);
 
   @media print {
