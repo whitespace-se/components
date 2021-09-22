@@ -23,6 +23,7 @@ Accordion.propTypes = {
   icons: PropTypes.objectOf(PropTypes.elementType),
   styles: PropTypes.objectOf(PropTypes.string),
   className: PropTypes.string,
+  showExpandAll: PropTypes.bool,
 };
 
 export default withComponentDefaults(Accordion, "accordion");
@@ -41,6 +42,7 @@ function Accordion({
   items,
   styles = defaultStyles,
   className,
+  showExpandAll,
   ...restProps
 }) {
   const [expandedRowIndexes, setExpandedRowIndexes] = useState([]);
@@ -62,9 +64,9 @@ function Accordion({
 
   return (
     <div className={clsx(styles.component, className)} {...restProps}>
-      <button onClick={onExpandAllButtonClick}>
+      {showExpandAll && <button onClick={onExpandAllButtonClick}>
         {expandedRowIndexes.length ? <>STÄNG</> : <>ÖPPNA</>}
-      </button>
+      </button>}
       <ul className={clsx(styles.list)} id={id(`accordion`)}>
         {items.map((row, index) => {
           return (
