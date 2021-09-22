@@ -82,7 +82,7 @@ export default function Pagination({
               <Button
                 className={styles.button}
                 url={buttonUrl && buttonUrl(pageIndex)}
-                aria-current={pageIndex == page ? "page" : ""}
+                aria-current={pageIndex == page ? "page" : null}
                 onClick={
                   onButtonClick &&
                   (() => {
