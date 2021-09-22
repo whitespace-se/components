@@ -28,14 +28,18 @@
   border: 0;
   background: var(--accordion-button-background-color, transparent);
   color: var(--accordion-color, #000);
-  font-weight: var(--accordion-button-font-weight, 700);
+  font-weight: var(--accordion-button-font-weight, 500);
   text-align: left;
-  font: inherit;
+  font-size: var(--accordion-button-font-size, 1.125rem);
 }
 
 .button:hover {
   background: var(--accordion-button-background-color-hover, #f2f2f2);
   color: var(--accordion-button-color-hover, #000);
+}
+
+.button[aria-expanded="true"] {
+  --accordion-button-background-color: var(--accordion-button-expanded-background-color, #fff);
 }
 
 .icon {
@@ -52,8 +56,9 @@
 }
 
 .content {
-  padding: var(--accordion-content-padding, 0rem 1rem 1rem 2rem);
-  padding-left: calc(var(--accordion-icon-size, 1rem) * 2);
+  padding: var(--accordion-content-padding, 1.5rem 1rem 1.5rem 3rem);
+  padding-left: var(--accordion-content-padding-left, calc(var(--accordion-icon-size, 1rem) * 2));
+  background: var(--accordion-content-background-color, #fff);
 
   @media print {
     background: transparent;
