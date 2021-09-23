@@ -1,4 +1,6 @@
 {
+  "name": "@whitespace/components",
+  "author": "Whitespace AB <code@whitespace.se>",
   "private": true,
   "workspaces": {
     "packages": [

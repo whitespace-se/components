@@ -3,7 +3,7 @@
   "version": "0.12.3",
   "description": "Whitespace components library",
   "repository": "git@github.com:whitespace-se/components.git",
-  "author": "Whitespace Dev <code@whitespace.se>",
+  "author": "Whitespace AB <code@whitespace.se>",
   "license": "MIT",
   "main": "dist",
   "source": "src",
