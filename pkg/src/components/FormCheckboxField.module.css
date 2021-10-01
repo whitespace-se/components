@@ -28,7 +28,7 @@
   border-radius: var(--form-checkbox-radii);
   background: var(--form-checkbox-background);
   box-shadow: var(--form-checkbox-shadow);
-  transition:  var(--form-checkbox-transition);
+  transition: var(--form-checkbox-transition);
 }
 
 .item::before {

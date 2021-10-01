@@ -10,11 +10,11 @@ export * from "./Button";
 export { default as DashboardMenu } from "./DashboardMenu";
 export * from "./DashboardMenu";
 
-export {default as FormCheckboxField} from './FormCheckboxField'
-export { default as FormInputField } from './FormInputField'
-export {default as FormRadioGroupField} from './FormRadioGroupField'
-export {default as FormSelectField} from './FormSelectField'
-export {default as FormTextField} from './FormTextField'
+export { default as FormCheckboxField } from "./FormCheckboxField";
+export { default as FormInputField } from "./FormInputField";
+export { default as FormRadioGroupField } from "./FormRadioGroupField";
+export { default as FormSelectField } from "./FormSelectField";
+export { default as FormTextField } from "./FormTextField";
 
 export { default as Icon } from "./Icon";
 export * from "./Icon";
