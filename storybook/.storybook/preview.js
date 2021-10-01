@@ -3,6 +3,7 @@ import React from "react";
 import { LocationProvider, InternalLinkElement } from "../mocks/location";
 
 import "./preview.css";
+import "../theme/index.js";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

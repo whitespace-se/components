@@ -22,6 +22,8 @@
     "build": "build-storybook -s static"
   },
   "dependencies": {
-    "@whitespace/components": "*"
+    "@whitespace/components": "*",
+    "formik": "^2.2.9",
+    "yup": "^0.32.9"
   }
 }

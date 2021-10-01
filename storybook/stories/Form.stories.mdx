@@ -1,0 +1,75 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Button,FormCheckboxField,  FormInputField, FormRadioGroupField, FormTextField, FormSelectField } from "@whitespace/components";
+import {Formik } from 'formik'
+import * as yup from 'yup'
+
+<Meta
+  title="Form fields"
+  parameters={{ actions: { argTypesRegex: null } }}
+/>
+
+# Form fields
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+    }}
+  >
+    {(args) => <Formik
+        initialValues={{}}
+        validationSchema={yup.object().shape({
+          input: yup.string().required(),
+        })}
+        onSubmit={async (values, { setSubmitting }) => {
+          await new Promise((resolve) => setTimeout(resolve, 2000));
+          setSubmitting(false);
+        }}
+      >
+        {({ isSubmitting, status: { success, failure } = {} }) => (
+          <Form>
+            <FormInputField
+              name={'input'}
+              label={"Input"}
+              type={"text"}
+              required={true}
+              description={"description"}
+            />
+            <FormCheckboxField
+              name={'checkbox'}
+              label={"Checkboxes"}
+              required={true}
+              description={"description"}
+              options={['Foo', 'Bar']}
+            />
+            <FormRadioGroupField
+              name={'radios'}
+              label={"Radio group"}
+              required={true}
+              description={"description"}
+              options={['Foo', 'Bar']}
+            />
+            <FormSelectField
+              name={'select'}
+              label={"Select"}
+              required={true}
+              description={"description"}
+              options={['Foo', 'Bar']}
+            />
+            <FormTextField
+              name={'message'}
+              label={"Message"}
+              required={true}
+              description={"description"}
+            />
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+            >
+              {"Skicka"}
+            </Button>
+          </Form>
+        )}
+      </Formik>}
+  </Story>
+</Canvas>

@@ -1,0 +1,110 @@
+:root {
+
+  /* FormFieldWrapper */
+  --form-wrapper-flow: 1rem;
+  --form-wrapper-border: 1px solid #d5d9dd;
+  --form-wrapper-spacing: 1em;
+  --form-wrapper-radii: 0.25rem;
+  --form-wrapper-shadow: 1px 1px 2px 0 #0001;
+
+  /* FormFieldLabel */
+  --form-label-display-behavior: block;
+  --form-label-size: inherit;
+  --form-label-weight: 700;
+  --form-label-distance: 0.25em;
+
+  /* FormInputField */
+  --form-input-width: 100%;
+  --form-input-height: auto;
+  --form-input-border: 1px solid #d5d9dd;
+  --form-input-font-family: inherit;
+  --form-input-font-weight: 400;
+  --form-input-font-size: 100%;
+  --form-input-letter-spacing: 0;
+  --form-input-line-height: 1.5;
+  --form-input-color: inherit;
+  --form-input-box-sizing: border-box;
+  --form-input-spacing: 0.5rem 1rem;
+  --form-input-distance: 0;
+  --form-input-radii: 0.25rem;
+  --form-input-background: #fff;
+  --form-input-shadow: none;
+
+  /* FormTextField */
+  --form-text-width: 100%;
+  --form-text-height: auto;
+  --form-text-min-height: 10rem;
+  --form-text-border: 1px solid #d5d9dd;
+  --form-text-font-family: inherit;
+  --form-text-font-weight: 400;
+  --form-text-font-size: 100%;
+  --form-text-letter-spacing: 0;
+  --form-text-line-height: 1.5;
+  --form-text-color: inherit;
+  --form-text-box-sizing: border-box;
+  --form-text-spacing: 0.5rem 1rem;
+  --form-text-distance: 0;
+  --form-text-radii: 0.25rem;
+  --form-text-background: #fff;
+  --form-text-shadow: none;
+
+
+  /* FormRadioGroupField */
+  --form-radio-control-background: transparent;
+  --form-radio-control-spacing: inherit;
+  --form-radio-control-border: 0;
+  --form-radio-direction: row;
+  --form-radio-list-gap: 1em;
+  --form-radio-background: #fff;
+  --form-radio-border: 1px solid #d5d9dd;
+  --form-radio-width: 1.5em;
+  --form-radio-height: 1.5em;
+  --form-radio-radii: 100%;
+  --form-radio-checked: blue;
+  --form-radio-gap: 0.25em;
+  --form-radio-shadow: none;
+  --form-radio-transition: none;
+
+  /* FormCheckboxField */
+  --form-checkbox-control-background: transparent;
+  --form-checkbox-control-spacing: inherit;
+  --form-checkbox-control-border: 0;
+
+  --form-checkbox-direction: row;
+  --form-checkbox-list-gap: 1em;
+  --form-checkbox-background: #fff;
+  --form-checkbox-border: 1px solid #d5d9dd;
+  --form-checkbox-width: 1.5em;
+  --form-checkbox-height: 1.5em;
+  --form-checkbox-radii: 10%;
+  --form-checkbox-checked: blue;
+  --form-checkbox-gap: 0.25em;
+  --form-checkbox-shadow: none;
+  --form-checkbox-transition: none;
+
+  /* FormFieldDescription */
+  --form-description-max-lenght: 70ch;
+  --form-description-distance-top: 0;
+  --form-description-distance-bottom: 1rem;
+  --form-description-spacing-top:0 ;
+  --form-description-spacing-bottom: 0;
+  --form-description-font-family: inherit;
+  --form-description-font-weight: 400;
+  --form-description-font-size: inherit;
+  --form-description-letter-spacing: 0;
+  --form-description-line-height: 1.5;
+  --form-description-color: inherit;
+
+  /* FormFieldError */
+  --form-error-border: 1px solid darkred;
+  --form-error-radii: 4px;
+  --form-error-background: red;
+  --form-error-spacing: 0.125em 1em;
+  --form-error-distance: 1em 0;
+  --form-error-font-family: inherit;
+  --form-error-font-weight: 400;
+  --form-error-font-size: inherit;
+  --form-error-letter-spacing: 0;
+  --form-error-line-height: 1;
+  --form-error-color: #fff;
+}
