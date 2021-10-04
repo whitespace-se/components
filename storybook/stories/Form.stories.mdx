@@ -28,7 +28,13 @@ import * as yup from "yup";
         }}
       >
         {({ isSubmitting, status: { success, failure } = {} }) => (
-          <Form style={{display: "flex", flexDirection: "column", gap: "var(--form-gutter)"}}>
+          <Form
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "var(--form-gutter)",
+            }}
+          >
             <FormInputField
               name={"input"}
               label={"Input"}
@@ -64,10 +70,7 @@ import * as yup from "yup";
               description={"description"}
             />
             <div>
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-              >
+              <Button type="submit" disabled={isSubmitting}>
                 {"Skicka"}
               </Button>
             </div>

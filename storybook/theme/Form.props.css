@@ -1,5 +1,4 @@
 :root {
-
   /* Form Gap */
   --form-gutter: 1rem;
 
@@ -103,7 +102,7 @@
   --form-description-max-lenght: 70ch;
   --form-description-margin-top: 0;
   --form-description-margin-bottom: 1rem;
-  --form-description-padding-top:0 ;
+  --form-description-padding-top: 0;
   --form-description-padding-bottom: 0;
   --form-description-font-family: inherit;
   --form-description-font-weight: 400;
