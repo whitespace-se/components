@@ -1,22 +1,22 @@
 .control {
   background: var(--form-input-control-background);
-  padding: var(--form-input-control-spacing);
+  padding: var(--form-input-control-padding);
   border: var(--form-input-control-border);
 }
 
 .input {
   width: var(--form-input-width);
   height: var(--form-input-height);
-  margin: var(--form-input-distance);
-  padding: var(--form-input-spacing);
+  margin: var(--form-input-margin);
+  padding: var(--form-input-padding);
   border: var(--form-input-border);
-  border-radius: var(--form-input-radii);
+  border-radius: var(--form-input-border-radius);
   background: var(--form-input-background);
   box-shadow: var(--form-input-shadow);
   font-family: var(--form-input-font-family);
   font-weight: var(--form-input-font-weight);
   font-size: var(--form-input-font-size);
-  letter-spacing: var(--form-input-letter-spacing);
+  letter-padding: var(--form-input-letter-padding);
   line-height: var(--form-input-line-height);
   color: var(--form-input-color);
   box-sizing: var(--form-input-box-sizing);

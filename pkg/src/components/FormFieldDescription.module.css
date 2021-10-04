@@ -1,13 +1,13 @@
 .component {
   max-width: var(--form-description-max-lenght);
-  margin-top: var(--form-description-distance-top);
-  margin-bottom: var(--form-description-distance-bottom);
-  padding-top: var(--form-description-spacing-top);
-  padding-bottom: var(--form-description-spacing-bottom);
+  margin-top: var(--form-description-margin-top);
+  margin-bottom: var(--form-description-margin-bottom);
+  padding-top: var(--form-description-padding-top);
+  padding-bottom: var(--form-description-padding-bottom);
   font-family: var(--form-description-font-family);
   font-weight: var(--form-description-font-weight);
   font-size: var(--form-description-font-size);
-  letter-spacing: var(--form-description-letter-spacing);
+  letter-padding: var(--form-description-letter-padding);
   line-height: var(--form-description-line-height);
   color: var(--form-description-color);
 }

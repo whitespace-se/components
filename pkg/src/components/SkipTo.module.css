@@ -2,10 +2,10 @@
   position: absolute;
   top: var(--skip-to-offset-top);
   left: var(--skip-to-offset-left);
-  margin: var(--skip-to-distance);
-  padding: var(--skip-to-spacing);
+  margin: var(--skip-to-margin);
+  padding: var(--skip-to-padding);
   border: var(--skip-to-border);
-  border-radius: var(--skip-to-radii);
+  border-radius: var(--skip-to-border-radius);
   box-shadow: var(--skip-to-shadow);
   font-family: var(--skip-to-font-family);
   font-weight: var(--skip-to-font-weight);

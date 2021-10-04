@@ -1,6 +1,6 @@
 .control {
   background: var(--form-radio-control-background);
-  padding: var(--form-radio-control-spacing);
+  padding: var(--form-radio-control-padding);
   border: var(--form-radio-control-border);
 }
 
@@ -25,7 +25,7 @@
   height: var(--form-radio-height);
   margin: 0;
   border: var(--form-radio-border);
-  border-radius: var(--form-radio-radii);
+  border-radius: var(--form-radio-border-radius);
   background: var(--form-radio-background);
   box-shadow: var(--form-radio-shadow);
   transition: var(--form-radio-transition);

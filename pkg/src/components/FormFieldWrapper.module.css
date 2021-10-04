@@ -1,7 +1,6 @@
-.component + * {
-  margin-bottom: var(--form-wrapper-flow);
+.component {
   border: var(--form-wrapper-border);
-  padding: var(--form-wrapper-spacing);
-  border-radius: var(--form-wrapper-radii);
+  padding: var(--form-wrapper-padding);
+  border-radius: var(--form-wrapper-border-radius);
   box-shadow: var(--form-wrapper-shadow);
 }

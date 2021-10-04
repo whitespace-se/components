@@ -27,7 +27,7 @@ import * as yup from 'yup'
         }}
       >
         {({ isSubmitting, status: { success, failure } = {} }) => (
-          <Form>
+          <Form style={{display: "flex", flexDirection: "column", gap: "var(--form-gutter)"}}>
             <FormInputField
               name={'input'}
               label={"Input"}
@@ -62,12 +62,14 @@ import * as yup from 'yup'
               required={true}
               description={"description"}
             />
-            <Button
-              type="submit"
-              disabled={isSubmitting}
-            >
-              {"Skicka"}
-            </Button>
+            <div>
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+              >
+                {"Skicka"}
+              </Button>
+            </div>
           </Form>
         )}
       </Formik>}
