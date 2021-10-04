@@ -1,5 +1,4 @@
 :root {
-
   /* FormFieldWrapper */
   --form-wrapper-flow: 1rem;
   --form-wrapper-border: 1px solid #d5d9dd;
@@ -48,7 +47,6 @@
   --form-text-background: #fff;
   --form-text-shadow: none;
 
-
   /* FormRadioGroupField */
   --form-radio-control-background: transparent;
   --form-radio-control-spacing: inherit;
@@ -86,7 +84,7 @@
   --form-description-max-lenght: 70ch;
   --form-description-distance-top: 0;
   --form-description-distance-bottom: 1rem;
-  --form-description-spacing-top:0 ;
+  --form-description-spacing-top: 0;
   --form-description-spacing-bottom: 0;
   --form-description-font-family: inherit;
   --form-description-font-weight: 400;

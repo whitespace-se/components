@@ -1,4 +1,4 @@
-import  Button  from "./Button";
+import Button from "./Button";
 import clsx from "clsx";
 import { Field } from "formik";
 import PropTypes from "prop-types";

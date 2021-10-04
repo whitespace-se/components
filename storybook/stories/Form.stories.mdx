@@ -1,22 +1,23 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
-import { Button,FormCheckboxField,  FormInputField, FormRadioGroupField, FormTextField, FormSelectField } from "@whitespace/components";
-import {Formik } from 'formik'
-import * as yup from 'yup'
+import {
+  Button,
+  FormCheckboxField,
+  FormInputField,
+  FormRadioGroupField,
+  FormTextField,
+  FormSelectField,
+} from "@whitespace/components";
+import { Formik } from "formik";
+import * as yup from "yup";
 
-<Meta
-  title="Form fields"
-  parameters={{ actions: { argTypesRegex: null } }}
-/>
+<Meta title="Form fields" parameters={{ actions: { argTypesRegex: null } }} />
 
 # Form fields
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-    }}
-  >
-    {(args) => <Formik
+  <Story name="Default" args={{}}>
+    {(args) => (
+      <Formik
         initialValues={{}}
         validationSchema={yup.object().shape({
           input: yup.string().required(),
@@ -29,47 +30,45 @@ import * as yup from 'yup'
         {({ isSubmitting, status: { success, failure } = {} }) => (
           <Form>
             <FormInputField
-              name={'input'}
+              name={"input"}
               label={"Input"}
               type={"text"}
               required={true}
               description={"description"}
             />
             <FormCheckboxField
-              name={'checkbox'}
+              name={"checkbox"}
               label={"Checkboxes"}
               required={true}
               description={"description"}
-              options={['Foo', 'Bar']}
+              options={["Foo", "Bar"]}
             />
             <FormRadioGroupField
-              name={'radios'}
+              name={"radios"}
               label={"Radio group"}
               required={true}
               description={"description"}
-              options={['Foo', 'Bar']}
+              options={["Foo", "Bar"]}
             />
             <FormSelectField
-              name={'select'}
+              name={"select"}
               label={"Select"}
               required={true}
               description={"description"}
-              options={['Foo', 'Bar']}
+              options={["Foo", "Bar"]}
             />
             <FormTextField
-              name={'message'}
+              name={"message"}
               label={"Message"}
               required={true}
               description={"description"}
             />
-            <Button
-              type="submit"
-              disabled={isSubmitting}
-            >
+            <Button type="submit" disabled={isSubmitting}>
               {"Skicka"}
             </Button>
           </Form>
         )}
-      </Formik>}
+      </Formik>
+    )}
   </Story>
 </Canvas>
