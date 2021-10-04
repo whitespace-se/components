@@ -16,7 +16,7 @@
   gap: var(--form-radio-gap);
 }
 
-.item{
+.item {
   -webkit-appearance: none;
   appearance: none;
   position: relative;
@@ -48,8 +48,8 @@
 }
 
 .item:checked {
-  background: #5046E4;
-  border: #5046E4;
+  background: #5046e4;
+  border: #5046e4;
 }
 
 .item:checked::before {
