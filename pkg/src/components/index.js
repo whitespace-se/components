@@ -34,6 +34,8 @@ export * from "./Pagination";
 export { default as RoundIcon } from "./RoundIcon";
 export * from "./RoundIcon";
 
+export { default as SkipTo } from "./SkipTo";
+
 export { default as ThemeProvider } from "./ThemeProvider";
 export * from "./ThemeProvider";
 

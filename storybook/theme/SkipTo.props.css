@@ -1,0 +1,20 @@
+:root {
+  --skip-to-background: #222;
+  --skip-to-border: 1px solid #111;
+  --skip-to-color: #fff;
+  --skip-to-distance: 1rem;
+  --skip-to-font-family: inherit;
+  --skip-to-font-size: 100%;
+  --skip-to-font-weight: 400;
+  --skip-to-line-height: 1.5;
+  --skip-to-letter-spacing: 0;
+  --skip-to-level: 1;
+  --skip-to-outline: inherit;
+  --skip-to-offset-top: -10rem;
+  --skip-to-offset-left: -10rem;
+  --skip-to-radii: 4px;
+  --skip-to-shadow: 0 0 8px 00 #0001;
+  --skip-to-spacing: 1rem;
+  --skip-to-text-decoration: none;
+  --skip-to-transition: transform 0.3s;
+}
