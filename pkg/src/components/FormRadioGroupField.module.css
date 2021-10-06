@@ -27,7 +27,7 @@
   border: var(--form-radio-border);
   border-radius: var(--form-radio-border-radius);
   background: var(--form-radio-background);
-  box-shadow: var(--form-radio-shadow);
+  box-shadow: var(--form-radio-box-shadow);
   transition: var(--form-radio-transition);
 }
 

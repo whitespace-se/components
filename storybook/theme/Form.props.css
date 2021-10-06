@@ -7,13 +7,13 @@
   --form-wrapper-border: 1px solid #d5d9dd;
   --form-wrapper-padding: 1em;
   --form-wrapper-border-radius: 0.25rem;
-  --form-wrapper-shadow: 1px 1px 2px 0 #0001;
+  --form-wrapper-box-shadow: 1px 1px 2px 0 #0001;
 
   /* FormFieldLabel */
-  --form-label-display-behavior: block;
-  --form-label-size: inherit;
+  --form-label-display: block;
+  --form-label-font-size: inherit;
   --form-label-weight: 700;
-  --form-label-margin: 0.25em;
+  --form-label-margin-bottom: 0.25em;
 
   /* FormInputField */
   --form-input-width: 100%;
@@ -22,7 +22,7 @@
   --form-input-font-family: inherit;
   --form-input-font-weight: 400;
   --form-input-font-size: 100%;
-  --form-input-letter-padding: 0;
+  --form-input-letter-spacing: 0;
   --form-input-line-height: 1.5;
   --form-input-color: inherit;
   --form-input-box-sizing: border-box;
@@ -30,7 +30,7 @@
   --form-input-margin: 0;
   --form-input-border-radius: 0.25rem;
   --form-input-background: #fff;
-  --form-input-shadow: none;
+  --form-input-box-shadow: none;
 
   /* FormTextField */
   --form-text-width: 100%;
@@ -40,7 +40,7 @@
   --form-text-font-family: inherit;
   --form-text-font-weight: 400;
   --form-text-font-size: 100%;
-  --form-text-letter-padding: 0;
+  --form-text-letter-spacing: 0;
   --form-text-line-height: 1.5;
   --form-text-color: inherit;
   --form-text-box-sizing: border-box;
@@ -48,7 +48,7 @@
   --form-text-margin: 0;
   --form-text-border-radius: 0.25rem;
   --form-text-background: #fff;
-  --form-text-shadow: none;
+  --form-text-box-shadow: none;
 
   /* FormRadioGroupField */
   --form-radio-control-background: transparent;
@@ -63,7 +63,7 @@
   --form-radio-border-radius: 100%;
   --form-radio-checked: blue;
   --form-radio-gap: 0.25em;
-  --form-radio-shadow: none;
+  --form-radio-box-shadow: none;
   --form-radio-transition: none;
 
   /* FormCheckboxField */
@@ -89,13 +89,12 @@
   --form-select-height: auto;
   --form-select-padding: 1rem 1rem;
   --form-select-border-radius: 0.25rem;
-  --form-select-shadow: none;
+  --form-select-box-shadow: none;
   --form-select-transition: none;
   --form-select-font-family: inherit;
   --form-select-font-size: 100%;
-  --form-select-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPHBhdGggc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0ibTYgOSA2IDYgNi02Ii8+Cjwvc3ZnPgo=");
-  --form-select-image-position: calc(100% - 1rem) 50%;
-  --form-select-image-size: 1rem;
+  --form-select-icon-position: calc(100% - 1rem) 50%;
+  --form-select-icon-size: 1rem;
 
   /* FormFieldDescription */
   --form-description-max-lenght: 70ch;
@@ -106,7 +105,7 @@
   --form-description-font-family: inherit;
   --form-description-font-weight: 400;
   --form-description-font-size: inherit;
-  --form-description-letter-padding: 0;
+  --form-description-letter-spacing: 0;
   --form-description-line-height: 1.5;
   --form-description-color: inherit;
 
@@ -118,7 +117,7 @@
   --form-error-font-family: inherit;
   --form-error-font-weight: 400;
   --form-error-font-size: inherit;
-  --form-error-letter-padding: 0;
+  --form-error-letter-spacing: 0;
   --form-error-line-height: 1;
   --form-error-color: #fff;
   --form-error-border: 1px solid darkred;

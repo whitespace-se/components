@@ -2,5 +2,5 @@
   border: var(--form-wrapper-border);
   padding: var(--form-wrapper-padding);
   border-radius: var(--form-wrapper-border-radius);
-  box-shadow: var(--form-wrapper-shadow);
+  box-shadow: var(--form-wrapper-box-shadow);
 }

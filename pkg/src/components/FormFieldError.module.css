@@ -14,7 +14,7 @@
   font-family: var(--form-error-font-family);
   font-weight: var(--form-error-font-weight);
   font-size: var(--form-error-font-size);
-  letter-padding: var(--form-error-letter-padding);
+  letter-spacing: var(--form-error-letter-spacing);
   line-height: var(--form-error-line-height);
   color: var(--form-error-color);
 }

@@ -12,11 +12,11 @@
   border: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   background: var(--form-input-background);
-  box-shadow: var(--form-input-shadow);
+  box-shadow: var(--form-input-box-shadow);
   font-family: var(--form-input-font-family);
   font-weight: var(--form-input-font-weight);
   font-size: var(--form-input-font-size);
-  letter-padding: var(--form-input-letter-padding);
+  letter-spacing: var(--form-input-letter-spacing);
   line-height: var(--form-input-line-height);
   color: var(--form-input-color);
   box-sizing: var(--form-input-box-sizing);
