@@ -22,12 +22,15 @@ import * as yup from "yup";
         validationSchema={yup.object().shape({
           input: yup.string().required(),
         })}
-        onSubmit={async (values, { setSubmitting }) => {
+        onSubmit={async (values) => {
           await new Promise((resolve) => setTimeout(resolve, 2000));
-          setSubmitting(false);
         }}
       >
-        {({ isSubmitting, status: { success, failure } = {} }) => (
+        {({
+          isSubmitting,
+          handleSubmit,
+          status: { success, failure } = {},
+        }) => (
           <Form
             style={{
               display: "flex",
@@ -45,32 +48,32 @@ import * as yup from "yup";
             <FormCheckboxField
               name={"checkbox"}
               label={"Checkboxes"}
-              required={true}
               description={"description"}
               options={["Foo", "Bar"]}
             />
             <FormRadioGroupField
               name={"radios"}
               label={"Radio group"}
-              required={true}
               description={"description"}
               options={["Foo", "Bar"]}
             />
             <FormSelectField
               name={"select"}
               label={"Select"}
-              required={true}
               description={"description"}
               options={["Foo", "Bar"]}
             />
             <FormTextField
               name={"message"}
               label={"Message"}
-              required={true}
               description={"description"}
             />
             <div>
-              <Button type="submit" disabled={isSubmitting}>
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                onClick={handleSubmit}
+              >
                 {"Skicka"}
               </Button>
             </div>
