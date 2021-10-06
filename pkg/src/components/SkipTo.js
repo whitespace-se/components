@@ -15,7 +15,6 @@ SkipTo.propTypes = {
 export default withComponentDefaults(SkipTo, "skipTo");
 
 function SkipTo({
-  children,
   components: { Link = DefaultLink, ...components } = { Link: DefaultLink },
   styles = defaultStyles,
   ...restProps
