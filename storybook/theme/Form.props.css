@@ -81,7 +81,6 @@
   --form-checkbox-gap: 0.25em;
   --form-checkbox-shadow: none;
   --form-checkbox-transition: none;
-  --form-checkbox-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxNSAxNSI+CiAgPHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS40NyAzLjczYy4yOS4xOS4zNy41Ny4xOC44Nkw3LjQgMTEuMWEuNjIuNjIgMCAwIDEtLjk1LjEyTDMuNyA4LjcxYS42Mi42MiAwIDAgMSAuODUtLjkybDIuMiAyIDMuODUtNS44OGEuNjIuNjIgMCAwIDEgLjg3LS4xOFoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPgo8L3N2Zz4K");
 
   /* FormSelectField */
   --form-select-background: #fff;

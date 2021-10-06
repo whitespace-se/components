@@ -46,6 +46,8 @@
 .item::before {
   width: 0;
   height: 0;
+  background: white;
+  mask-image: var(--form-checkbox-image);
 }
 
 .item:checked {
@@ -56,6 +58,4 @@
 .item:checked::before {
   width: var(--form-checkbox-width);
   height: var(--form-checkbox-height);
-  background: white;
-  mask-image: var(--form-checkbox-image);
 }
