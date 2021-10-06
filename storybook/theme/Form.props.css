@@ -79,7 +79,7 @@
   --form-checkbox-border-radius: 10%;
   --form-checkbox-checked: blue;
   --form-checkbox-gap: 0.25em;
-  --form-checkbox-shadow: none;
+  --form-checkbox-box-shadow: none;
   --form-checkbox-transition: none;
 
   /* FormSelectField */

@@ -27,7 +27,7 @@
   border: var(--form-checkbox-border);
   border-radius: var(--form-checkbox-border-radius);
   background: var(--form-checkbox-background);
-  box-shadow: var(--form-checkbox-shadow);
+  box-shadow: var(--form-checkbox-box-shadow);
   transition: var(--form-checkbox-transition);
 }
 
