@@ -54,7 +54,6 @@ export default function FormCheckboxField({
                     className={styles.item}
                     type="checkbox"
                     name={name}
-                    indeterminate="indeterminate"
                     value={option}
                   />
                   {option}
