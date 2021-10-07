@@ -6,7 +6,7 @@
 
 .list {
   display: flex;
-  gap: 1em;
+  gap: var(--form-checkbox-gap);
   flex-direction: var(--form-checkbox-direction);
 }
 
@@ -40,7 +40,6 @@
   bottom: 0;
   left: 0;
   overflow: hidden;
-  transition: all 80ms ease-in-out;
 }
 
 .item::before {
@@ -51,11 +50,13 @@
 }
 
 .item:checked {
-  background: #5046e4;
-  border: #5046e4;
+  background: var(--form-checkbox-checked-icon-background);
+  border: var(--form-checkbox-checked-icon-border);
 }
 
 .item:checked::before {
   width: var(--form-checkbox-width);
   height: var(--form-checkbox-height);
+  background: var(--form-checkbox-checked-background);
+  mask-image: var(--form-checkbox-image);
 }

@@ -61,12 +61,18 @@
   --form-radio-width: 1.5em;
   --form-radio-height: 1.5em;
   --form-radio-border-radius: 100%;
-  --form-radio-checked: blue;
+  --form-radio-checked: #5046e4;
   --form-radio-gap: 0.25em;
   --form-radio-box-shadow: none;
   --form-radio-transition: none;
+  --form-radio-checked-bakground: #5046e4;
+  --form-radio-checked-border: 1px solid #5046e4;
+  --form-radio-checked-icon-border: 4px solid transparent;
+  --form-radio-checked-icon-border-radius: 100%;
+  --form-radio-checked-icon-background: #fff;
 
   /* FormCheckboxField */
+  --form-checkbox-gap: 1em;
   --form-checkbox-control-background: transparent;
   --form-checkbox-control-padding: inherit;
   --form-checkbox-control-border: 0;
@@ -77,10 +83,13 @@
   --form-checkbox-width: 1.5em;
   --form-checkbox-height: 1.5em;
   --form-checkbox-border-radius: 10%;
-  --form-checkbox-checked: blue;
+  --form-checkbox-checked: #5046e4;
   --form-checkbox-gap: 0.25em;
   --form-checkbox-box-shadow: none;
   --form-checkbox-transition: none;
+  --form-checkbox-checked-background: #fff;
+  --form-checkbox-checked-icon-border: 1px solid #5046e4;
+  --form-checkbox-checked-icon-background: #5046e4;
 
   /* FormSelectField */
   --form-select-background: #fff;
