@@ -1,0 +1,12 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { SkipTo } from "@whitespace/components";
+
+<Meta title="Skip to" parameters={{ actions: { argTypesRegex: null } }} />
+
+# Skip to
+
+<Canvas>
+  <Story name="Default" args={{}}>
+    {(args) => <SkipTo {...args} />}
+  </Story>
+</Canvas>

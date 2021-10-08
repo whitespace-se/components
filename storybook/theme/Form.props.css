@@ -1,0 +1,131 @@
+:root {
+  /* Form Gap */
+  --form-gutter: 1rem;
+
+  /* FormFieldWrapper */
+  --form-wrapper-flow: 1rem;
+  --form-wrapper-border: 1px solid #d5d9dd;
+  --form-wrapper-padding: 1em;
+  --form-wrapper-border-radius: 0.25rem;
+  --form-wrapper-box-shadow: 1px 1px 2px 0 #0001;
+
+  /* FormFieldLabel */
+  --form-label-display: block;
+  --form-label-font-size: inherit;
+  --form-label-weight: 700;
+  --form-label-margin-bottom: 0.25em;
+
+  /* FormInputField */
+  --form-input-width: 100%;
+  --form-input-height: auto;
+  --form-input-border: 1px solid #d5d9dd;
+  --form-input-font-family: inherit;
+  --form-input-font-weight: 400;
+  --form-input-font-size: 100%;
+  --form-input-letter-spacing: 0;
+  --form-input-line-height: 1.5;
+  --form-input-color: inherit;
+  --form-input-box-sizing: border-box;
+  --form-input-padding: 0.5rem 1rem;
+  --form-input-margin: 0;
+  --form-input-border-radius: 0.25rem;
+  --form-input-background: #fff;
+  --form-input-box-shadow: none;
+
+  /* FormTextField */
+  --form-text-width: 100%;
+  --form-text-height: auto;
+  --form-text-min-height: 10rem;
+  --form-text-border: 1px solid #d5d9dd;
+  --form-text-font-family: inherit;
+  --form-text-font-weight: 400;
+  --form-text-font-size: 100%;
+  --form-text-letter-spacing: 0;
+  --form-text-line-height: 1.5;
+  --form-text-color: inherit;
+  --form-text-box-sizing: border-box;
+  --form-text-padding: 0.5rem 1rem;
+  --form-text-margin: 0;
+  --form-text-border-radius: 0.25rem;
+  --form-text-background: #fff;
+  --form-text-box-shadow: none;
+
+  /* FormRadioGroupField */
+  --form-radio-control-background: transparent;
+  --form-radio-control-padding: inherit;
+  --form-radio-control-border: 0;
+  --form-radio-direction: row;
+  --form-radio-list-gap: 1em;
+  --form-radio-background: #fff;
+  --form-radio-border: 1px solid #d5d9dd;
+  --form-radio-width: 1.5em;
+  --form-radio-height: 1.5em;
+  --form-radio-border-radius: 100%;
+  --form-radio-checked: #5046e4;
+  --form-radio-gap: 0.25em;
+  --form-radio-box-shadow: none;
+  --form-radio-transition: none;
+  --form-radio-checked-bakground: #5046e4;
+  --form-radio-checked-border: 1px solid #5046e4;
+  --form-radio-checked-icon-border: 4px solid transparent;
+  --form-radio-checked-icon-border-radius: 100%;
+  --form-radio-checked-icon-background: #fff;
+
+  /* FormCheckboxField */
+  --form-checkbox-gap: 1em;
+  --form-checkbox-control-background: transparent;
+  --form-checkbox-control-padding: inherit;
+  --form-checkbox-control-border: 0;
+  --form-checkbox-direction: row;
+  --form-checkbox-list-gap: 1em;
+  --form-checkbox-background: #fff;
+  --form-checkbox-border: 1px solid #d5d9dd;
+  --form-checkbox-width: 1.5em;
+  --form-checkbox-height: 1.5em;
+  --form-checkbox-border-radius: 10%;
+  --form-checkbox-checked: #5046e4;
+  --form-checkbox-gap: 0.25em;
+  --form-checkbox-box-shadow: none;
+  --form-checkbox-transition: none;
+  --form-checkbox-checked-background: #fff;
+  --form-checkbox-checked-icon-border: 1px solid #5046e4;
+  --form-checkbox-checked-icon-background: #5046e4;
+
+  /* FormSelectField */
+  --form-select-background: #fff;
+  --form-select-border: 1px solid #d5d9dd;
+  --form-select-width: 100%;
+  --form-select-height: auto;
+  --form-select-padding: 1rem 1rem;
+  --form-select-border-radius: 0.25rem;
+  --form-select-box-shadow: none;
+  --form-select-transition: none;
+  --form-select-font-family: inherit;
+  --form-select-font-size: 100%;
+  --form-select-icon-position: calc(100% - 1rem) 50%;
+  --form-select-icon-size: 1rem;
+
+  /* FormFieldDescription */
+  --form-description-max-lenght: 70ch;
+  --form-description-margin-top: 0;
+  --form-description-margin-bottom: 1rem;
+  --form-description-font-family: inherit;
+  --form-description-font-weight: 400;
+  --form-description-font-size: inherit;
+  --form-description-letter-spacing: 0;
+  --form-description-line-height: 1.5;
+  --form-description-color: inherit;
+
+  /* FormFieldError */
+  --form-error-border-radius: 4px;
+  --form-error-background: red;
+  --form-error-padding: 0.125em 1em;
+  --form-error-margin: 1em 0;
+  --form-error-font-family: inherit;
+  --form-error-font-weight: 400;
+  --form-error-font-size: inherit;
+  --form-error-letter-spacing: 0;
+  --form-error-line-height: 1;
+  --form-error-color: #fff;
+  --form-error-border: 1px solid darkred;
+}

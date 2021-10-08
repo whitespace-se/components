@@ -1,0 +1,18 @@
+.select {
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--form-select-width);
+  height: var(--form-select-height);
+  padding: var(--form-select-padding);
+  border: var(--form-select-border);
+  border-radius: var(--form-select-border-radius);
+  background: var(--form-select-background);
+  box-shadow: var(--form-select-box-shadow);
+  transition: var(--form-select-transition);
+  font-family: var(--form-select-font-family);
+  font-size: var(--form-select-font-size);
+  background-image: var(--form-select-icon);
+  background-position: var(--form-select-icon-position);
+  background-size: var(--form-select-icon-size);
+  background-repeat: no-repeat;
+}

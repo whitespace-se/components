@@ -1,0 +1,25 @@
+.component {
+  position: absolute;
+  top: -10rem;
+  left: -10rem;
+  margin: var(--skip-to-margin);
+  padding: var(--skip-to-padding);
+  border: var(--skip-to-border);
+  border-radius: var(--skip-to-border-radius);
+  box-shadow: var(--skip-to-box-shadow);
+  font-family: var(--skip-to-font-family);
+  font-weight: var(--skip-to-font-weight);
+  font-size: var(--skip-to-font-size);
+  text-decoration: var(--skip-to-text-decoration);
+  line-height: var(--skip-to-line-height);
+  background: var(--skip-to-background);
+  color: var(--skip-to-color);
+  outline: var(--skip-to-outline);
+  transition: var(--skip-to-transition);
+  z-index: var(--skip-to-z-index);
+}
+
+.component:focus {
+  left: 0;
+  top: 0;
+}

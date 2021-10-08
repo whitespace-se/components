@@ -1,0 +1,24 @@
+.control {
+  background: var(--form-text-control-background);
+  padding: var(--form-text-control-padding);
+  border: var(--form-text-control-border);
+}
+
+.textarea {
+  width: var(--form-text-width);
+  height: var(--form-text-height);
+  min-height: var(--form-text-min-height);
+  margin: var(--form-text-margin);
+  padding: var(--form-text-padding);
+  border: var(--form-text-border);
+  border-radius: var(--form-text-border-radius);
+  background: var(--form-text-background);
+  box-shadow: var(--form-text-box-shadow);
+  font-family: var(--form-text-font-family);
+  font-weight: var(--form-text-font-weight);
+  font-size: var(--form-text-font-size);
+  letter-spacing: var(--form-text-letter-spacing);
+  line-height: var(--form-text-line-height);
+  color: var(--form-text-color);
+  box-sizing: var(--form-text-box-sizing);
+}

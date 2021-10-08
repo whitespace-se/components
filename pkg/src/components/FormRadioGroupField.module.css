@@ -1,0 +1,59 @@
+.control {
+  background: var(--form-radio-control-background);
+  padding: var(--form-radio-control-padding);
+  border: var(--form-radio-control-border);
+}
+
+.list {
+  display: flex;
+  gap: var(--form-radio-list-gap);
+  flex-direction: var(--form-radio-direction);
+}
+
+.itemLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--form-radio-gap);
+}
+
+.item {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  width: var(--form-radio-width);
+  height: var(--form-radio-height);
+  margin: 0;
+  border: var(--form-radio-border);
+  border-radius: var(--form-radio-border-radius);
+  background: var(--form-radio-background);
+  box-shadow: var(--form-radio-box-shadow);
+  transition: var(--form-radio-transition);
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.item::before {
+  width: 0;
+  height: 0;
+}
+
+.item:checked {
+  background: var(--form-radio-checked-bakground);
+  border: var(--form-radio-checked-border);
+}
+
+.item:checked::before {
+  border: var(--form-radio-checked-icon-border);
+  border-radius: var(--form-radio-checked-icon-border-radius);
+  background: var(--form-radio-checked-icon-background);
+}
