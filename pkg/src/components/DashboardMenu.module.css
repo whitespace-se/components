@@ -24,17 +24,25 @@
   --link-hover-color: var(--dashboard-menu-item-hover-color);
   --link-hover-background: var(--dashboard-menu-item-hover-background);
   --link-text-decoration: var(--dashboard-menu-item-text-decoration);
-  --link-hover-text-decoration: var(--dashboard-menu-item-hover-text-decoration);
+  --link-hover-text-decoration: var(
+    --dashboard-menu-item-hover-text-decoration
+  );
   --link-font-weight: var(--dashboard-menu-item-font-weight);
   --link-current-background: var(--dashboard-menu-item-current-background);
   --link-current-color: var(--dashboard-menu-item-current-color);
-  --link-current-text-decoration: var(--dashboard-menu-item-current-text-decoration);
+  --link-current-text-decoration: var(
+    --dashboard-menu-item-current-text-decoration
+  );
 }
 
 .link:hover,
 .link:focus {
-  --dashboard-menu-round-icon-background-color: var(--dashboard-menu-round-icon-hover-background-color);
-  --dashboard-menu-round-icon-color: var(--dashboard-menu-round-icon-hover-color);
+  --dashboard-menu-round-icon-background-color: var(
+    --dashboard-menu-round-icon-hover-background-color
+  );
+  --dashboard-menu-round-icon-color: var(
+    --dashboard-menu-round-icon-hover-color
+  );
   --dashboard-menu-item-icon-color: var(--dashboard-menu-item-icon-hover-color);
 }
 
@@ -43,13 +51,21 @@
 .link[aria-pressed="true"],
 .link[aria-current],
 :checked + .link.label {
-  --dashboard-menu-round-icon-background-color: var(--dashboard-menu-round-icon-current-background-color);
-  --dashboard-menu-round-icon-color: var(--dashboard-menu-round-icon-current-color);
-  --dashboard-menu-item-icon-color: var(--dashboard-menu-item-icon-current-color);
+  --dashboard-menu-round-icon-background-color: var(
+    --dashboard-menu-round-icon-current-background-color
+  );
+  --dashboard-menu-round-icon-color: var(
+    --dashboard-menu-round-icon-current-color
+  );
+  --dashboard-menu-item-icon-color: var(
+    --dashboard-menu-item-icon-current-color
+  );
 }
 
 .roundIcon {
-  --round-icon-background-color: var(--dashboard-menu-round-icon-background-color);
+  --round-icon-background-color: var(
+    --dashboard-menu-round-icon-background-color
+  );
   --icon-color: var(--dashboard-menu-round-icon-color);
   --round-icon-size: var(--dashboard-menu-round-icon-size);
 }
