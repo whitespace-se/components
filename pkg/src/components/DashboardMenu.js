@@ -4,7 +4,7 @@ import React from "react";
 
 import * as defaultStyles from "./DashboardMenu.module.css";
 import Icon from "./Icon";
-import DefaultLink from "./Link";
+import DashboardMenuLink from "./DashboardMenuLink";
 import RoundIcon from "./RoundIcon";
 
 DashboardMenu.propTypes = {
@@ -26,8 +26,12 @@ function DefaultArrow({ ...restProps }) {
 }
 
 export default function DashboardMenu({
-  components: { Link = DefaultLink, Icon = RoundIcon, Arrow = DefaultArrow } = {
-    Link: DefaultLink,
+  components: {
+    Link = DashboardMenuLink,
+    Icon = RoundIcon,
+    Arrow = DefaultArrow,
+  } = {
+    Link: DashboardMenuLink,
     Icon: RoundIcon,
     Arrow: DefaultArrow,
   },
@@ -44,9 +48,9 @@ export default function DashboardMenu({
           return (
             <li className={clsx(styles.item)} key={index}>
               <Link to={item.url} className={clsx(styles.link)}>
-                <Icon className={clsx(styles.roundIcon)} {...item.icon} />
+                <Icon className={clsx(styles.icon)} {...item.icon} />
                 {item.label}
-                <Arrow className={clsx(styles.linkIcon)} />
+                <Arrow className={clsx(styles.arrow)} />
               </Link>
             </li>
           );

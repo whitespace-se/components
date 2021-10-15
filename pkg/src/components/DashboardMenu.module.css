@@ -6,71 +6,13 @@
   grid-gap: var(--dashboard-menu-list-gap);
 }
 
-.link {
-  display: grid;
-  grid-template-columns: max-content 1fr max-content;
-  grid-gap: var(--dashboard-menu-item-gap);
-  padding: var(--dashboard-menu-item-padding);
-  align-items: center;
-  background: var(--dashboard-menu-item-background);
-  font-size: var(--dashboard-menu-item-font-size);
-  line-height: var(--dashboard-menu-item-line-height);
-  border-radius: var(--dashboard-menu-item-border-radius);
-  border: var(--dashboard-menu-item-border);
-  transition: var(--dashboard-menu-item-transition);
-  box-shadow: var(--dashboard-menu-item-box-shadow);
-
-  --link-color: var(--dashboard-menu-item-color);
-  --link-hover-color: var(--dashboard-menu-item-hover-color);
-  --link-hover-background: var(--dashboard-menu-item-hover-background);
-  --link-text-decoration: var(--dashboard-menu-item-text-decoration);
-  --link-hover-text-decoration: var(
-    --dashboard-menu-item-hover-text-decoration
-  );
-  --link-font-weight: var(--dashboard-menu-item-font-weight);
-  --link-current-background: var(--dashboard-menu-item-current-background);
-  --link-current-color: var(--dashboard-menu-item-current-color);
-  --link-current-text-decoration: var(
-    --dashboard-menu-item-current-text-decoration
-  );
+.icon {
+  --round-icon-background-color: var(--dashboard-menu-icon-background-color);
+  --icon-color: var(--dashboard-menu-icon-color);
+  --round-icon-size: var(--dashboard-menu-icon-size);
 }
 
-.link:hover,
-.link:focus {
-  --dashboard-menu-round-icon-background-color: var(
-    --dashboard-menu-round-icon-hover-background-color
-  );
-  --dashboard-menu-round-icon-color: var(
-    --dashboard-menu-round-icon-hover-color
-  );
-  --dashboard-menu-item-icon-color: var(--dashboard-menu-item-icon-hover-color);
-}
-
-.link.current,
-.link[aria-checked="true"],
-.link[aria-pressed="true"],
-.link[aria-current],
-:checked + .link.label {
-  --dashboard-menu-round-icon-background-color: var(
-    --dashboard-menu-round-icon-current-background-color
-  );
-  --dashboard-menu-round-icon-color: var(
-    --dashboard-menu-round-icon-current-color
-  );
-  --dashboard-menu-item-icon-color: var(
-    --dashboard-menu-item-icon-current-color
-  );
-}
-
-.roundIcon {
-  --round-icon-background-color: var(
-    --dashboard-menu-round-icon-background-color
-  );
-  --icon-color: var(--dashboard-menu-round-icon-color);
-  --round-icon-size: var(--dashboard-menu-round-icon-size);
-}
-
-.linkIcon {
-  --icon-color: var(--dashboard-menu-item-icon-color);
-  --icon-size: var(--dashboard-menu-item-icon-size);
+.arrow {
+  --icon-color: var(--dashboard-menu-arrow-color);
+  --icon-size: var(--dashboard-menu-arrow-size);
 }

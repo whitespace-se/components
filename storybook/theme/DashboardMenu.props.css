@@ -1,36 +1,35 @@
 :root {
   --dashboard-menu-list-gap: 0.5rem;
-  --dashboard-menu-item-background: #eff1f3;
-  --dashboard-menu-item-border-radius: 0.25rem;
-  --dashboard-menu-item-gap: 1.5rem;
-  --dashboard-menu-item-font-size: 1.25rem;
-  --dashboard-menu-item-line-height: 1;
-  --dashboard-menu-item-padding: 1rem;
-  --dashboard-menu-item-border: 1px solid #d2d5da;
-  --dashboard-menu-item-transition: all 100ms ease-in-out;
-  --dashboard-menu-item-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05),
+  --dashboard-menu-link-background: #eff1f3;
+  --dashboard-menu-link-border-radius: 0.25rem;
+  --dashboard-menu-link-gap: 1.5rem;
+  --dashboard-menu-link-font-size: 1.25rem;
+  --dashboard-menu-link-line-height: 1;
+  --dashboard-menu-link-padding: 1rem;
+  --dashboard-menu-link-border: 1px solid #d2d5da;
+  --dashboard-menu-link-transition: all 100ms ease-in-out;
+  --dashboard-menu-link-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05),
     0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --dashboard-menu-item-color: #11181e;
-  --dashboard-menu-item-hover-color: inherit;
-  --dashboard-menu-item-hover-background: #fff;
-  --dashboard-menu-item-text-decoration: none;
-  --dashboard-menu-item-hover-text-decoration: none;
-  --dashboard-menu-item-font-weight: 600;
+  --dashboard-menu-link-color: #11181e;
+  --dashboard-menu-link-text-decoration: none;
+  --dashboard-menu-link-font-weight: 600;
+  --dashboard-menu-arrow-color: #626ae9;
+  --dashboard-menu-arrow-size: 1.5rem;
+  --dashboard-menu-icon-background-color: #525ad8;
+  --dashboard-menu-icon-color: #fff;
+  --dashboard-menu-icon-size: 3rem;
 
-  --dashboard-menu-item-current-background: #626ae9;
-  --dashboard-menu-item-current-color: #fff;
-  --dashboard-menu-item-current-text-decoration: none;
-  --dashboard-menu-round-icon-current-background-color: #fff;
-  --dashboard-menu-round-icon-current-color: #525ad8;
-  --dashboard-menu-item-icon-current-color: #fff;
+  --dashboard-menu-link-current-background: #626ae9;
+  --dashboard-menu-link-current-color: #fff;
+  --dashboard-menu-link-current-text-decoration: none;
+  --dashboard-menu-icon-current-background-color: #fff;
+  --dashboard-menu-icon-current-color: #525ad8;
+  --dashboard-menu-arrow-current-color: #fff;
 
-  --dashboard-menu-round-icon-background-color: #525ad8;
-  --dashboard-menu-round-icon-color: #fff;
-  --dashboard-menu-round-icon-size: 3rem;
-  --dashboard-menu-round-icon-hover-background-color: #626ae9;
-  --dashboard-menu-round-icon-hover-color: #fff;
-  --dashboard-menu-item-icon-hover-color: #626ae9;
-
-  --dashboard-menu-item-icon-color: #626ae9;
-  --dashboard-menu-item-icon-size: 1.5rem;
+  --dashboard-menu-link-hover-background: #fff;
+  --dashboard-menu-link-hover-color: inherit;
+  --dashboard-menu-link-hover-text-decoration: none;
+  --dashboard-menu-icon-hover-background-color: #626ae9;
+  --dashboard-menu-icon-hover-color: #fff;
+  --dashboard-menu-arrow-hover-color: #626ae9;
 }
