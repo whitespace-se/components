@@ -1,0 +1,85 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import {
+  Button,
+  FormCheckboxField,
+  FormInputField,
+  FormRadioGroupField,
+  FormTextField,
+  FormSelectField,
+} from "@whitespace/components";
+import { Formik } from "formik";
+import * as yup from "yup";
+
+<Meta title="Form fields" parameters={{ actions: { argTypesRegex: null } }} />
+
+# Form fields
+
+<Canvas>
+  <Story name="Default" args={{}}>
+    {(args) => (
+      <Formik
+        initialValues={{}}
+        validationSchema={yup.object().shape({
+          input: yup.string().required(),
+        })}
+        onSubmit={async (values) => {
+          await new Promise((resolve) => setTimeout(resolve, 2000));
+        }}
+      >
+        {({
+          isSubmitting,
+          handleSubmit,
+          status: { success, failure } = {},
+        }) => (
+          <Form
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "var(--form-gutter)",
+            }}
+          >
+            <FormInputField
+              name={"input"}
+              label={"Input"}
+              type={"text"}
+              required={true}
+              description={"description"}
+            />
+            <FormCheckboxField
+              name={"checkbox"}
+              label={"Checkboxes"}
+              description={"description"}
+              options={["Foo", "Bar"]}
+            />
+            <FormRadioGroupField
+              name={"radios"}
+              label={"Radio group"}
+              description={"description"}
+              options={["Foo", "Bar"]}
+            />
+            <FormSelectField
+              name={"select"}
+              label={"Select"}
+              description={"description"}
+              options={["Foo", "Bar"]}
+            />
+            <FormTextField
+              name={"message"}
+              label={"Message"}
+              description={"description"}
+            />
+            <div>
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                onClick={handleSubmit}
+              >
+                {"Skicka"}
+              </Button>
+            </div>
+          </Form>
+        )}
+      </Formik>
+    )}
+  </Story>
+</Canvas>

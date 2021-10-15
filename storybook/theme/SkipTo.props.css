@@ -1,0 +1,18 @@
+:root {
+  --skip-to-background: #222;
+  --skip-to-border: 1px solid #111;
+  --skip-to-color: #fff;
+  --skip-to-margin: 1rem;
+  --skip-to-font-family: inherit;
+  --skip-to-font-size: 100%;
+  --skip-to-font-weight: 400;
+  --skip-to-line-height: 1;
+  --skip-to-letter-spacing: 0;
+  --skip-to-z-index: 1;
+  --skip-to-outline: inherit;
+  --skip-to-border-radius: 0.25rem;
+  --skip-to-box-shadow: 0 0 8px #0001;
+  --skip-to-padding: 1rem;
+  --skip-to-text-decoration: none;
+  --skip-to-transition: transform 0.3s;
+}

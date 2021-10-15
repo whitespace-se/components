@@ -1,0 +1,11 @@
+.component {
+  max-width: var(--form-description-max-lenght);
+  margin-top: var(--form-description-margin-top);
+  margin-bottom: var(--form-description-margin-bottom);
+  font-family: var(--form-description-font-family);
+  font-weight: var(--form-description-font-weight);
+  font-size: var(--form-description-font-size);
+  letter-spacing: var(--form-description-letter-spacing);
+  line-height: var(--form-description-line-height);
+  color: var(--form-description-color);
+}

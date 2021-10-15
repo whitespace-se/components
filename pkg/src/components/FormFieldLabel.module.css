@@ -1,0 +1,6 @@
+.component {
+  display: var(--form-label-display);
+  font-size: var(--form-label-font-size);
+  font-weight: var(--form-label-weight);
+  margin-bottom: var(--form-label-margin-bottom);
+}
