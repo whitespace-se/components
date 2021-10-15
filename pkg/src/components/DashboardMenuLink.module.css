@@ -1,0 +1,74 @@
+.component {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-gap: var(--dashboard-menu-link-gap);
+  padding: var(--dashboard-menu-link-padding);
+  align-items: center;
+  background: var(--dashboard-menu-link-background);
+  font-size: var(--dashboard-menu-link-font-size);
+  line-height: var(--dashboard-menu-link-line-height);
+  border-radius: var(--dashboard-menu-link-border-radius);
+  border: var(--dashboard-menu-link-border);
+  transition: var(--dashboard-menu-link-transition);
+  box-shadow: var(--dashboard-menu-link-box-shadow);
+
+  color: var(--dashboard-menu-link-color);
+  text-decoration: var(--dashboard-menu-link-text-decoration);
+  font-weight: var(--dashboard-menu-link-font-weight);
+}
+
+.component:hover,
+.component:focus,
+:focus + .component.label {
+  color: var(--dashboard-menu-link-hover-color);
+  text-decoration: var(--dashboard-menu-link-hover-text-decoration);
+  background: var(--dashboard-menu-link-hover-background);
+  --dashboard-menu-icon-background-color: var(
+    --dashboard-menu-icon-hover-background-color
+  );
+  --dashboard-menu-icon-color: var(--dashboard-menu-icon-hover-color);
+  --dashboard-menu-arrow-color: var(--dashboard-menu-arrow-hover-color);
+}
+
+.component:focus,
+:focus + .component.label {
+  outline: var(--link-focus-outline, none);
+  box-shadow: var(
+    --link-focus-box-shadow,
+    var(--focus-box-shadow, 0 0 0 3px black)
+  );
+}
+
+.component.current,
+.component[aria-checked="true"],
+.component[aria-pressed="true"],
+.component[aria-current],
+:checked + .component.label {
+  --dashboard-menu-icon-background-color: var(
+    --dashboard-menu-icon-current-background-color
+  );
+  --dashboard-menu-icon-color: var(--dashboard-menu-icon-current-color);
+  --dashboard-menu-arrow-color: var(--dashboard-menu-arrow-current-color);
+
+  color: var(--dashboard-menu-link-current-color);
+  text-decoration: var(--dashboard-menu-link-current-text-decoration);
+  background: var(--dashboard-menu-link-current-background);
+}
+
+.component:not(.inert):not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
+.component.inert,
+.component:disabled,
+.component[aria-disabled="true"],
+:disabled + .component.label {
+  color: var(--dashboard-menu-link-inert-color, inherit);
+  text-decoration: var(--dashboard-menu-link-text-inert-decoration, inherit);
+  background: var(--dashboard-menu-link-inert-background, transparent);
+}
+
+button.component {
+  font: inherit;
+  -webkit-appearance: none;
+}
