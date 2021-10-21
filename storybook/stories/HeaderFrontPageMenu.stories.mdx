@@ -1,0 +1,69 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { HeaderFrontPageMenu } from "@whitespace/components";
+
+<Meta
+  title="HeaderFrontPageMenu"
+  component={HeaderFrontPageMenu}
+  argTypes={{}}
+/>
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      items: [
+        {
+          url: "/",
+          label: "Home",
+          description: "Description",
+          target: "_blank",
+          icon: { name: "search" },
+        },
+        {
+          url: "/",
+          label: "Home",
+          description: "Description",
+          target: "_blank",
+          icon: { name: "search" },
+        },
+        {
+          url: "/",
+          label: "Home",
+          description: "Description",
+          target: "_blank",
+          icon: { name: "search" },
+        },
+        {
+          url: "/",
+          label: "Home",
+          description: "Description",
+          target: "_blank",
+          icon: { name: "search" },
+        },
+        {
+          url: "/",
+          label: "Home",
+          description: "Description",
+          target: "_blank",
+          icon: { name: "search" },
+        },
+        {
+          url: "/",
+          label: "Home",
+          description: "Description",
+          target: "_blank",
+          icon: { name: "search" },
+        },
+        {
+          url: "/",
+          label: "Home",
+          description: "Description",
+          target: "_blank",
+          icon: { name: "search" },
+        },
+      ],
+    }}
+  >
+    {(args) => <HeaderFrontPageMenu {...args} />}
+  </Story>
+</Canvas>
