@@ -1,8 +1,8 @@
 :root {
   --header-frontpage-menu-background-color: #efefef;
-  --header-frontpage-menu-border-bottom: 1px solid ccc;
+  --header-frontpage-menu-border-bottom: 1px solid #ccc;
   --header-frontpage-menu-padding: 2rem;
-  --header-frontpage-menu-width: 24rem;
+  --header-frontpage-menu-column-min-width: 24rem;
   --header-frontpage-menu-gap: 1.5rem;
 
   --header-frontpage-menu-link-background: linear-gradient(
@@ -25,9 +25,8 @@
   --header-frontpage-menu-link-hover-text-decoration: none;
   --header-frontpage-menu-link-hover-background: pink;
 
-  --header-frontpage-menu-icon-size: 1.5rem;
-  --header-frontpage-menu-icon-width: 2.5rem;
-  --header-frontpage-menu-icon-height: 2.5rem;
+  --header-frontpage-menu-icon-size: 2.5rem;
+  --header-frontpage-menu-icon-inner-size: 60%;
   --header-frontpage-menu-icon-color: blue;
   --header-frontpage-menu-icon-background-color: gray;
   --header-frontpage-menu-icon-border: purple;

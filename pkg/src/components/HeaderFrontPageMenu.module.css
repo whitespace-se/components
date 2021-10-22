@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(var(--header-frontpage-menu-width), 100%), 1fr)
+    minmax(min(var(--header-frontpage-menu-column-min-width), 100%), 1fr)
   );
   gap: var(--header-frontpage-menu-gap);
   list-style: none;
@@ -17,15 +17,13 @@
 }
 
 .icon {
-  --icon-size: var(--header-frontpage-menu-icon-size);
+  --round-icon-size: var(--header-frontpage-menu-icon-size);
+  --round-icon-inner-size: var(--header-frontpage-menu-icon-inner-size);
   --icon-color: var(--header-frontpage-menu-icon-color);
   --round-icon-background-color: var(
     --header-frontpage-menu-icon-background-color
   );
   --round-icon-border: var(--header-frontpage-menu-icon-border);
-
-  width: var(--header-frontpage-menu-icon-width);
-  height: var(--header-frontpage-menu-icon-height);
 }
 
 .text {
