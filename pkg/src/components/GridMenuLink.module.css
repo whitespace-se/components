@@ -8,6 +8,8 @@
   border: var(--grid-menu-link-border);
   border-radius: var(--grid-menu-link-border-radius);
   box-shadow: var(--grid-menu-link-box-shadow);
+  background: var(--grid-menu-link-background);
+  text-decoration: var(--grid-menu-link-text-decoration);
 }
 
 .component:hover,
