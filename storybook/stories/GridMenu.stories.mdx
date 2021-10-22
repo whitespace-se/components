@@ -1,0 +1,59 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { GridMenu } from "@whitespace/components";
+
+<Meta title="GridMenu" component={GridMenu} argTypes={{}} />
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      items: [
+        {
+          url: "/",
+          label: "Home",
+          description: "Description",
+          icon: { name: "search" },
+        },
+        {
+          label: "Disabled",
+          description: "Description",
+          icon: { name: "search" },
+        },
+        {
+          url: "/page1",
+          label: "Page 1",
+          description: "Description",
+          icon: { name: "search" },
+        },
+        {
+          url: "/page2",
+          label: "Page 2",
+          description: "Description",
+          icon: { name: "search" },
+        },
+        {
+          url: "/page3",
+          label: "Page 3",
+          description: "Description",
+          icon: { name: "search" },
+        },
+        {
+          url: "/page4",
+          label: "Page 4",
+          description: "Description",
+          target: "_blank",
+          icon: { name: "search" },
+        },
+        {
+          url: "/page5",
+          label: "Page 5",
+          description: "Description",
+          target: "_blank",
+          icon: { name: "search" },
+        },
+      ],
+    }}
+  >
+    {(args) => <GridMenu {...args} />}
+  </Story>
+</Canvas>

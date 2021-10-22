@@ -1,0 +1,52 @@
+.component {
+  background: var(--grid-menu-background-color);
+  border-bottom: var(--grid-menu-border-bottom);
+  padding: var(--grid-menu-padding);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--grid-menu-column-min-width), 100%), 1fr)
+  );
+  gap: var(--grid-menu-gap);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  --round-icon-size: var(--grid-menu-icon-size);
+  --round-icon-inner-size: var(--grid-menu-icon-inner-size);
+  --icon-color: var(--grid-menu-icon-color);
+  --round-icon-background-color: var(--grid-menu-icon-background-color);
+  --round-icon-border: var(--grid-menu-icon-border);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--grid-menu-text-gap);
+}
+
+.title {
+  margin: 0;
+  font-weight: var(--grid-menu-title-font-weight);
+  font-size: var(--grid-menu-title-font-size);
+  text-decoration: var(--grid-menu-title-text-decoration);
+  color: var(--grid-menu-title-color);
+  letter-spacing: var(--grid-menu-title-letter-spacing);
+  line-height: var(--grid-menu-title-line-height);
+}
+
+.description {
+  margin: 0;
+  font-weight: var(--grid-menu-description-font-weight);
+  font-size: var(--grid-menu-description-font-size);
+  text-decoration: var(--grid-menu-description-text-decoration);
+  color: var(--grid-menu-description-color);
+  letter-spacing: var(--grid-menu-description-letter-spacing);
+  line-height: var(--grid-menu-description-line-height);
+}
