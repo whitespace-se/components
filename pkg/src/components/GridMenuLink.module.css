@@ -1,0 +1,25 @@
+.component {
+  display: flex;
+  align-items: flex-start;
+  padding: var(--grid-menu-link-padding);
+  transition: var(--grid-menu-link-transition);
+  transition-property: var(--grid-menu-link-transition-property);
+  gap: var(--grid-menu-link-gap);
+  border: var(--grid-menu-link-border);
+  border-radius: var(--grid-menu-link-border-radius);
+  box-shadow: var(--grid-menu-link-box-shadow);
+}
+
+.component:hover,
+.component:focus,
+:focus + .component.label {
+  color: var(--grid-menu-link-hover-color);
+  text-decoration: var(--grid-menu-link-hover-text-decoration);
+  background: var(--grid-menu-link-hover-background);
+}
+
+.component:focus,
+:focus + .component.label {
+  outline: var(--link-focus-outline, none);
+  box-shadow: var(--link-focus-box-shadow, var(--focus-box-shadow));
+}

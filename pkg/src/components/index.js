@@ -34,7 +34,7 @@ export * from "./Pagination";
 export { default as RoundIcon } from "./RoundIcon";
 export * from "./RoundIcon";
 
-export { default as HeaderFrontPageMenu } from "./HeaderFrontPageMenu";
+export { default as GridMenu } from "./GridMenu";
 export { default as SkipTo } from "./SkipTo";
 
 export { default as ThemeProvider } from "./ThemeProvider";

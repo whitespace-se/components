@@ -1,11 +1,7 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
-import { HeaderFrontPageMenu } from "@whitespace/components";
+import { GridMenu } from "@whitespace/components";
 
-<Meta
-  title="HeaderFrontPageMenu"
-  component={HeaderFrontPageMenu}
-  argTypes={{}}
-/>
+<Meta title="GridMenu" component={GridMenu} argTypes={{}} />
 
 <Canvas>
   <Story
@@ -58,6 +54,6 @@ import { HeaderFrontPageMenu } from "@whitespace/components";
       ],
     }}
   >
-    {(args) => <HeaderFrontPageMenu {...args} />}
+    {(args) => <GridMenu {...args} />}
   </Story>
 </Canvas>

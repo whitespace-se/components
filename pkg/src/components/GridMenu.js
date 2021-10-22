@@ -1,13 +1,13 @@
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
-import HeaderFrontPageMenuLink from "./HeaderFrontPageMenuLink";
+import GridMenuLink from "./GridMenuLink";
 
 import RoundIcon from "./RoundIcon";
 
-import * as defaultStyles from "./HeaderFrontPageMenu.module.css";
+import * as defaultStyles from "./GridMenu.module.css";
 
-HeaderFrontPageMenu.propTypes = {
+GridMenu.propTypes = {
   as: PropTypes.elementType,
   className: PropTypes.string,
   components: PropTypes.objectOf(PropTypes.elementType),
@@ -21,11 +21,11 @@ HeaderFrontPageMenu.propTypes = {
   styles: PropTypes.objectOf(PropTypes.string),
 };
 
-export default function HeaderFrontPageMenu({
+export default function GridMenu({
   as: Component = "nav",
   className,
-  components: { Link = HeaderFrontPageMenuLink, Icon = RoundIcon } = {
-    Link: HeaderFrontPageMenuLink,
+  components: { Link = GridMenuLink, Icon = RoundIcon } = {
+    Link: GridMenuLink,
     Icon: RoundIcon,
   },
   items,
