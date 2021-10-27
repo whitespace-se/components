@@ -1,0 +1,71 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  CardTitle,
+  CardMeta,
+} from "@whitespace/components";
+
+<Meta title="Card" parameters={{ actions: { argTypesRegex: null } }} />
+
+<Canvas>
+  <Story name="Default" args={{}}>
+    {(args) => (
+      <Card {...args}>
+        <CardContent>
+          <CardTitle>Title</CardTitle>
+          <CardMeta>2021-12-12</CardMeta>
+          <p>Lorem ipsum</p>
+        </CardContent>
+        <CardMedia
+          image={{
+            src: "https://picsum.photos/seed/picsum/600/300",
+          }}
+        />
+      </Card>
+    )}
+  </Story>
+  <Story
+    name="Link"
+    args={{
+      link: { url: "/home" },
+    }}
+  >
+    {(args) => (
+      <Card {...args}>
+        <CardContent>
+          <CardTitle>Title</CardTitle>
+          <CardMeta>2021-12-12</CardMeta>
+          <p>Lorem ipsum</p>
+        </CardContent>
+        <CardMedia
+          image={{
+            src: "https://picsum.photos/seed/picsum/600/300",
+          }}
+        />
+      </Card>
+    )}
+  </Story>
+  <Story
+    name="Button"
+    args={{
+      link: { onClick: () => {} },
+    }}
+  >
+    {(args) => (
+      <Card {...args}>
+        <CardContent>
+          <CardTitle>Title</CardTitle>
+          <CardMeta>2021-12-12</CardMeta>
+          <p>Lorem ipsum</p>
+        </CardContent>
+        <CardMedia
+          image={{
+            src: "https://picsum.photos/seed/picsum/600/300",
+          }}
+        />
+      </Card>
+    )}
+  </Story>
+</Canvas>
