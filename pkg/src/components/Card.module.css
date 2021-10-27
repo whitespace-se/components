@@ -34,19 +34,20 @@
   position: relative;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(min(var(--card-column-min-width), 100%), 1fr)
+    minmax(min(100%, var(--card-column-min-width)), 1fr)
   );
-  grid-column-gap: var(--card-inner-gap);
+  grid-auto-rows: var(--card-grid-auto-rows);
   height: 100%;
 }
 
 .media {
   order: -1;
-}
-
-.media {
   width: 100%;
   height: 100%;
+}
+
+.dummy {
+  grid-column: 1;
 }
 
 .content {

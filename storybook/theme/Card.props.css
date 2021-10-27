@@ -9,14 +9,17 @@
   --card-padding: 0rem; /* Must be a length value (rem, em, px ...) */
   --card-box-shadow: none;
   --card-column-min-width: 20rem;
-  --card-inner-gap: 0;
+  --card-grid-auto-rows: min-content min-content 1fr;
+
   --card-content-padding: 1.5rem;
   --card-content-gap: 0.5rem;
   --card-content-align-content: center;
+
   --card-title-font-size: 1.5rem;
   --card-title-font-weight: 600;
   --card-title-line-height: 100%;
   --card-title-letter-spacing: -0.01px;
+
   --card-meta-color: var(--color-sky-800);
   --card-meta-font-size: 0.875rem;
   --card-meta-font-weight: 400;
