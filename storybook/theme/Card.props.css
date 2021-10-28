@@ -15,6 +15,7 @@
   --card-content-gap: 0.5rem;
   --card-content-align-content: center;
 
+  --card-title-color: inherit;
   --card-title-font-size: 1.5rem;
   --card-title-font-weight: 600;
   --card-title-line-height: 100%;
