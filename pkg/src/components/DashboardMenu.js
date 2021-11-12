@@ -14,26 +14,32 @@ DashboardMenu.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string,
-      label: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
       icon: PropTypes.object,
+      download: PropTypes.any,
     }),
   ).isRequired,
   as: PropTypes.elementType,
 };
 
-function DefaultArrow({ ...restProps }) {
-  return <Icon name="chevron-right" {...restProps} />;
+function DefaultSymbol({ download, ...restProps }) {
+  let iconName="chevron-right";
+  if (download) {
+    iconName="download";
+  }
+  return <Icon name={iconName} {...restProps} />;
 }
 
 export default function DashboardMenu({
   components: {
     Link = DashboardMenuLink,
     Icon = RoundIcon,
-    Arrow = DefaultArrow,
+    Symbol = DefaultSymbol,
   } = {
     Link: DashboardMenuLink,
     Icon: RoundIcon,
-    Arrow: DefaultArrow,
+    Symbol: DefaultSymbol,
   },
   className,
   items,
@@ -47,10 +53,19 @@ export default function DashboardMenu({
         {items.map((item, index) => {
           return (
             <li className={clsx(styles.item)} key={index}>
-              <Link to={item.url} className={clsx(styles.link)}>
+              <Link to={item.url} download={item.download} className={clsx(styles.link)}>
                 <Icon className={clsx(styles.icon)} {...item.icon} />
-                {item.label}
-                <Arrow className={clsx(styles.arrow)} />
+                <div className={clsx(styles.content)}>
+                  {item.title && (
+                    <p className={clsx(styles.title)}>{item.title}</p>
+                  )}
+                  {item.description && (
+                    <p className={clsx(styles.description)}>
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+                <Symbol download={item.download} className={clsx(styles.symbol)} />
               </Link>
             </li>
           );

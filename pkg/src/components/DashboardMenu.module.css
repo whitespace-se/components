@@ -12,7 +12,31 @@
   --round-icon-size: var(--dashboard-menu-icon-size);
 }
 
-.arrow {
+.symbol {
   --icon-color: var(--dashboard-menu-arrow-color);
   --icon-size: var(--dashboard-menu-arrow-size);
+}
+
+.content {
+  display: flex;
+  gap: var(--dashboard-menu-content-gap);
+  flex-direction: column;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--dashboard-menu-title-font-size);
+  color: var(--dashboard-menu-title-color);
+  font-weight: var(--dashboard-menu-title-font-weight);
+  line-height: var(--dashboard-menu-title-line-height);
+  letter-spacing: var(--dashboard-menu-title-letter-spacing);
+}
+
+.description {
+  margin: 0;
+  font-size: var(--dashboard-menu-description-font-size);
+  color: var(--dashboard-menu-description-color);
+  font-weight: var(--dashboard-menu-description-font-weight);
+  line-height: var(--dashboard-menu-description-line-height);
+  letter-spacing: var(--dashboard-menu-description-letter-spacing);
 }

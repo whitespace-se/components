@@ -23,9 +23,20 @@ import searchIcon from "../static/icons/search.svg";
     name="Default"
     args={{
       items: [
-        { label: "Home", url: "/", icon: { name: "home" } },
-        { label: "Search", url: "/search", icon: { name: "search" } },
-        { label: "Warnings", url: "/warnings", icon: { name: "alert-circle" } },
+        { title: "Home", description: "123", url: "/", icon: { name: "home" } },
+        {
+          title: "Search",
+          description: "123",
+          url: "/search",
+          icon: { name: "search" },
+        },
+        {
+          title: "Download",
+          download: "tömningschema-2021-11-11.pdf",
+          description: "123",
+          url: "/warnings",
+          icon: { name: "alert-circle" },
+        },
       ],
     }}
   >
