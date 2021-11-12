@@ -24,9 +24,9 @@ DashboardMenu.propTypes = {
 };
 
 function DefaultSymbol({ download, ...restProps }) {
-  let iconName="chevron-right";
+  let iconName = "chevron-right";
   if (download) {
-    iconName="download";
+    iconName = "download";
   }
   return <Icon name={iconName} {...restProps} />;
 }
@@ -53,7 +53,11 @@ export default function DashboardMenu({
         {items.map((item, index) => {
           return (
             <li className={clsx(styles.item)} key={index}>
-              <Link to={item.url} download={item.download} className={clsx(styles.link)}>
+              <Link
+                to={item.url}
+                download={item.download}
+                className={clsx(styles.link)}
+              >
                 <Icon className={clsx(styles.icon)} {...item.icon} />
                 <div className={clsx(styles.content)}>
                   {item.title && (
@@ -65,7 +69,10 @@ export default function DashboardMenu({
                     </p>
                   )}
                 </div>
-                <Symbol download={item.download} className={clsx(styles.symbol)} />
+                <Symbol
+                  download={item.download}
+                  className={clsx(styles.symbol)}
+                />
               </Link>
             </li>
           );
