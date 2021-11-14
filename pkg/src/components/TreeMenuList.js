@@ -8,6 +8,7 @@ TreeMenuList.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string,
+      label: PropTypes.string.isRequired,
     }),
   ).isRequired,
   parentPath: PropTypes.arrayOf(PropTypes.number),
