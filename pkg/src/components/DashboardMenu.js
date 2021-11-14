@@ -13,11 +13,13 @@ DashboardMenu.propTypes = {
   className: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
+      display: PropTypes.string,
       url: PropTypes.string,
       title: PropTypes.string,
       description: PropTypes.string,
       icon: PropTypes.object,
-      download: PropTypes.any,
+      download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+      target: PropTypes.string,
     }),
   ).isRequired,
   as: PropTypes.elementType,
@@ -52,7 +54,7 @@ export default function DashboardMenu({
       <ul className={clsx(styles.list)}>
         {items.map((item, index) => {
           return (
-            <li className={clsx(styles.item)} key={index}>
+            <li className={clsx(styles.item, styles[item.display])} key={index}>
               <Link
                 to={item.url}
                 download={item.download}

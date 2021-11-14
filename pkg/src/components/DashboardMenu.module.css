@@ -40,3 +40,8 @@
   line-height: var(--dashboard-menu-description-line-height);
   letter-spacing: var(--dashboard-menu-description-letter-spacing);
 }
+
+.compact a {
+  /* @TODO */
+  background: red;
+}
