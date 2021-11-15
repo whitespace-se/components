@@ -1,8 +1,9 @@
 import clsx from "clsx";
-import PropTypes from "prop-types";
+import PropTypes, { symbol } from "prop-types";
 import React from "react";
 
 import * as defaultStyles from "./DashboardMenu.module.css";
+import { visuallyHidden } from "../utils/styles.module.css";
 import Icon from "./Icon";
 import DashboardMenuLink from "./DashboardMenuLink";
 import RoundIcon from "./RoundIcon";
@@ -13,24 +14,35 @@ DashboardMenu.propTypes = {
   className: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      display: PropTypes.string,
       url: PropTypes.string,
       title: PropTypes.string,
       description: PropTypes.string,
       icon: PropTypes.object,
       download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
       target: PropTypes.string,
+      appearance: PropTypes.string,
+      compact: PropTypes.bool,
     }),
   ).isRequired,
   as: PropTypes.elementType,
 };
 
-function DefaultSymbol({ download, ...restProps }) {
-  let iconName = "chevron-right";
-  if (download) {
-    iconName = "download";
+DefaultSymbol.propTypes = {
+  item: PropTypes.object,
+};
+
+function DefaultSymbol({ item, ...restProps }) {
+  const isExternal = item.target === "_blank";
+  const isDownload = item.download;
+
+  let name = "chevron-right";
+  if (isDownload) {
+    name = "download";
   }
-  return <Icon name={iconName} {...restProps} />;
+  if (isExternal) {
+    name = "external";
+  }
+  return <Icon name={name} {...restProps} />;
 }
 
 export default function DashboardMenu({
@@ -54,12 +66,17 @@ export default function DashboardMenu({
       <ul className={clsx(styles.list)}>
         {items.map((item, index) => {
           return (
-            <li className={clsx(styles.item, styles[item.display])} key={index}>
+            <li className={clsx(styles.item)} key={index}>
               <Link
                 to={item.url}
-                download={item.download}
                 target={item.target}
-                className={clsx(styles.link)}
+                download={item.download}
+                showExternalIcon={false}
+                className={clsx(
+                  styles.link,
+                  styles[item.appearance],
+                  item.compact && styles.compact,
+                )}
               >
                 <Icon className={clsx(styles.icon)} {...item.icon} />
                 <div className={clsx(styles.content)}>
@@ -72,10 +89,7 @@ export default function DashboardMenu({
                     </p>
                   )}
                 </div>
-                <Symbol
-                  download={item.download}
-                  className={clsx(styles.symbol)}
-                />
+                <Symbol item={item} className={clsx(styles.symbol)} />
               </Link>
             </li>
           );

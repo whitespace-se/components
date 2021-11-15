@@ -41,7 +41,23 @@
   letter-spacing: var(--dashboard-menu-description-letter-spacing);
 }
 
-.compact a {
-  /* @TODO */
+.link {
+}
+
+/* Modifiers */
+.link.primary {
   background: red;
+}
+
+.link.secondary {
+  background: blue;
+}
+
+.link.compact {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.link.compact .icon {
+  --round-icon-size: 24px;
 }
