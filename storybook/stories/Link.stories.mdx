@@ -94,4 +94,10 @@ export const RadioTemplate = ({ text, ...args }) => (
   <Story name="Inert" args={{ text: "Example" }}>
     {Template.bind({})}
   </Story>
+  <Story
+    name="External"
+    args={{ text: "Example", href: "/", target: "_blank" }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>

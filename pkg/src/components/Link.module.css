@@ -49,3 +49,7 @@ button.component {
   font: inherit;
   -webkit-appearance: none;
 }
+
+.component .icon {
+  margin-left: 0.5em;
+}
