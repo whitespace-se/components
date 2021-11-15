@@ -58,6 +58,7 @@ export default function DashboardMenu({
               <Link
                 to={item.url}
                 download={item.download}
+                target={item.target}
                 className={clsx(styles.link)}
               >
                 <Icon className={clsx(styles.icon)} {...item.icon} />
