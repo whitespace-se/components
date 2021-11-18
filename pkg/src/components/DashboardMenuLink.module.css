@@ -28,6 +28,7 @@
   );
   --dashboard-menu-icon-color: var(--dashboard-menu-icon-hover-color);
   --dashboard-menu-arrow-color: var(--dashboard-menu-arrow-hover-color);
+  --dashboard-menu-link-border: var(--dashboard-menu-link-hover-border);
 }
 
 .component:focus,
