@@ -43,38 +43,74 @@
 
 /* Modifiers */
 .link.primary {
-  --dashboard-menu-link-background: var(--dashboard-primary-menu-link-background);
+  --dashboard-menu-link-background: var(
+    --dashboard-primary-menu-link-background
+  );
   --dashboard-menu-link-border: var(--dashboard-primary-menu-link-border);
-  --dashboard-menu-link-box-shadow: var(--dashboard-primary-menu-link-box-shadow);
+  --dashboard-menu-link-box-shadow: var(
+    --dashboard-primary-menu-link-box-shadow
+  );
   --dashboard-menu-link-color: var(--dashboard-primary-menu-link-color);
   --dashboard-menu-arrow-color: var(--dashboard-primary-menu-arrow-color);
-  --dashboard-menu-icon-background-color: var(--dashboard-primary-menu-icon-background-color);
+  --dashboard-menu-icon-background-color: var(
+    --dashboard-primary-menu-icon-background-color
+  );
   --dashboard-menu-icon-color: var(--dashboard-primary-menu-icon-color);
 
-  --dashboard-menu-link-hover-background: var(--dashboard-primary-menu-link-hover-background);
-  --dashboard-menu-link-hover-border: var(--dashboard-primary-menu-link-hover-border);
+  --dashboard-menu-link-hover-background: var(
+    --dashboard-primary-menu-link-hover-background
+  );
+  --dashboard-menu-link-hover-border: var(
+    --dashboard-primary-menu-link-hover-border
+  );
 
-  --dashboard-menu-link-hover-color: var(--dashboard-primary-menu-link-hover-color);
-  --dashboard-menu-icon-hover-background-color: var(--dashboard-primary-menu-icon-hover-background-color);
-  --dashboard-menu-icon-hover-color: var(--dashboard-primary-menu-icon-hover-color);
-  --dashboard-menu-arrow-hover-color: var(--dashboard-primary-menu-arrow-hover-color);
+  --dashboard-menu-link-hover-color: var(
+    --dashboard-primary-menu-link-hover-color
+  );
+  --dashboard-menu-icon-hover-background-color: var(
+    --dashboard-primary-menu-icon-hover-background-color
+  );
+  --dashboard-menu-icon-hover-color: var(
+    --dashboard-primary-menu-icon-hover-color
+  );
+  --dashboard-menu-arrow-hover-color: var(
+    --dashboard-primary-menu-arrow-hover-color
+  );
 }
 
 .link.secondary {
-  --dashboard-menu-link-background: var(--dashboard-secondary-menu-link-background);
+  --dashboard-menu-link-background: var(
+    --dashboard-secondary-menu-link-background
+  );
   --dashboard-menu-link-border: var(--dashboard-secondary-menu-link-border);
-  --dashboard-menu-link-box-shadow: var(--dashboard-secondary-menu-link-box-shadow);
+  --dashboard-menu-link-box-shadow: var(
+    --dashboard-secondary-menu-link-box-shadow
+  );
   --dashboard-menu-link-color: var(--dashboard-secondary-menu-link-color);
   --dashboard-menu-arrow-color: var(--dashboard-secondary-menu-arrow-color);
-  --dashboard-menu-icon-background-color: var(--dashboard-secondary-menu-icon-background-color);
+  --dashboard-menu-icon-background-color: var(
+    --dashboard-secondary-menu-icon-background-color
+  );
   --dashboard-menu-icon-color: var(--dashboard-secondary-menu-icon-color);
 
-  --dashboard-menu-link-hover-background: var(--dashboard-secondary-menu-link-hover-background);
-  --dashboard-menu-link-hover-border: var(--dashboard-secondary-menu-link-hover-border);
-  --dashboard-menu-link-hover-color: var(--dashboard-secondary-menu-link-hover-color);
-  --dashboard-menu-icon-hover-background-color: var(--dashboard-secondary-menu-icon-hover-background-color);
-  --dashboard-menu-icon-hover-color: var(--dashboard-secondary-menu-icon-hover-color);
-  --dashboard-menu-arrow-hover-color: var(--dashboard-secondary-menu-arrow-hover-color);
+  --dashboard-menu-link-hover-background: var(
+    --dashboard-secondary-menu-link-hover-background
+  );
+  --dashboard-menu-link-hover-border: var(
+    --dashboard-secondary-menu-link-hover-border
+  );
+  --dashboard-menu-link-hover-color: var(
+    --dashboard-secondary-menu-link-hover-color
+  );
+  --dashboard-menu-icon-hover-background-color: var(
+    --dashboard-secondary-menu-icon-hover-background-color
+  );
+  --dashboard-menu-icon-hover-color: var(
+    --dashboard-secondary-menu-icon-hover-color
+  );
+  --dashboard-menu-arrow-hover-color: var(
+    --dashboard-secondary-menu-arrow-hover-color
+  );
 }
 
 .link.compact {

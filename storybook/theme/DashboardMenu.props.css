@@ -34,22 +34,22 @@
   --dashboard-menu-icon-hover-color: #fff;
   --dashboard-menu-arrow-hover-color: #626ae9;
 
-    /* Compact */
+  /* Compact */
   --dashboard-compact-menu-list-gap: 0.5rem;
   --dashboard-compact-menu-link-gap: 1rem;
   --dashboard-compact-menu-link-padding: 0.75rem;
   --dashboard-compact-menu-icon-size: 2rem;
 
   /* Primary */
-  --dashboard-primary-menu-link-background: #1D5D96;
-  --dashboard-primary-menu-link-border: 1px solid #1D5D96;
+  --dashboard-primary-menu-link-background: #1d5d96;
+  --dashboard-primary-menu-link-border: 1px solid #1d5d96;
   --dashboard-primary-menu-link-box-shadow: none;
   --dashboard-primary-menu-link-color: #fff;
   --dashboard-primary-menu-arrow-color: #fff;
   --dashboard-primary-menu-icon-background-color: #fff;
-  --dashboard-primary-menu-icon-color: #1D5D96;
+  --dashboard-primary-menu-icon-color: #1d5d96;
   --dashboard-primary-menu-link-hover-background: #185285;
-  --dashboard-primary-menu-link-hover-border: 1px solid #1D5D96;
+  --dashboard-primary-menu-link-hover-border: 1px solid #1d5d96;
   --dashboard-primary-menu-link-hover-color: #fff;
   --dashboard-primary-menu-icon-hover-background-color: #fff;
   --dashboard-primary-menu-icon-hover-color: #185285;
@@ -57,16 +57,16 @@
 
   /* Secondary */
   --dashboard-secondary-menu-link-background: #fff;
-  --dashboard-secondary-menu-link-border: 1px solid #E8F0F5;
+  --dashboard-secondary-menu-link-border: 1px solid #e8f0f5;
   --dashboard-secondary-menu-link-box-shadow: none;
   --dashboard-secondary-menu-link-color: #000;
-  --dashboard-secondary-menu-arrow-color: #1D5D96;
-  --dashboard-secondary-menu-icon-background-color: #1D5D96;
+  --dashboard-secondary-menu-arrow-color: #1d5d96;
+  --dashboard-secondary-menu-icon-background-color: #1d5d96;
   --dashboard-secondary-menu-link-hover-border: 1px solid #d2d5da;
   --dashboard-secondary-menu-icon-color: #fff;
   --dashboard-secondary-menu-link-hover-background: #eff1f3;
   --dashboard-secondary-menu-link-hover-color: #000;
-  --dashboard-secondary-menu-icon-hover-background-color: #1D5D96;
+  --dashboard-secondary-menu-icon-hover-background-color: #1d5d96;
   --dashboard-secondary-menu-icon-hover-color: #fff;
-  --dashboard-secondary-menu-arrow-hover-color: #1D5D96;
+  --dashboard-secondary-menu-arrow-hover-color: #1d5d96;
 }
