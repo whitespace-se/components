@@ -3,8 +3,7 @@ import Link from "./Link";
 import Button from "./Button";
 
 import { treeMenuContext } from "../contexts";
-import React, { useCallback, useContext, useEffect, useRef } from "react";
-import Icon from "./Icon";
+import React, { useCallback, useContext } from "react";
 import TreeMenuList from "./TreeMenuList";
 import PropTypes from "prop-types";
 
@@ -12,7 +11,7 @@ TreeMenuItem.propTypes = {
   item: PropTypes.shape({
     children: PropTypes.arrayOf(PropTypes.object),
     url: PropTypes.string,
-    label: PropTypes.label,
+    label: PropTypes.string.isRequired,
   }).isRequired,
   path: PropTypes.arrayOf(PropTypes.number).isRequired,
 };

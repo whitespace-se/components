@@ -1,8 +1,9 @@
 import clsx from "clsx";
-import PropTypes from "prop-types";
+import PropTypes, { symbol } from "prop-types";
 import React from "react";
 
 import * as defaultStyles from "./DashboardMenu.module.css";
+import { visuallyHidden } from "../utils/styles.module.css";
 import Icon from "./Icon";
 import DashboardMenuLink from "./DashboardMenuLink";
 import RoundIcon from "./RoundIcon";
@@ -14,26 +15,45 @@ DashboardMenu.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string,
-      label: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
       icon: PropTypes.object,
+      download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+      target: PropTypes.string,
+      appearance: PropTypes.string,
+      compact: PropTypes.bool,
     }),
   ).isRequired,
   as: PropTypes.elementType,
 };
 
-function DefaultArrow({ ...restProps }) {
-  return <Icon name="chevron-right" {...restProps} />;
+DefaultSymbol.propTypes = {
+  item: PropTypes.object,
+};
+
+function DefaultSymbol({ item, ...restProps }) {
+  const isExternal = item.target === "_blank";
+  const isDownload = item.download;
+
+  let name = "chevron-right";
+  if (isDownload) {
+    name = "download";
+  }
+  if (isExternal) {
+    name = "external";
+  }
+  return <Icon name={name} {...restProps} />;
 }
 
 export default function DashboardMenu({
   components: {
     Link = DashboardMenuLink,
     Icon = RoundIcon,
-    Arrow = DefaultArrow,
+    Symbol = DefaultSymbol,
   } = {
     Link: DashboardMenuLink,
     Icon: RoundIcon,
-    Arrow: DefaultArrow,
+    Symbol: DefaultSymbol,
   },
   className,
   items,
@@ -47,10 +67,29 @@ export default function DashboardMenu({
         {items.map((item, index) => {
           return (
             <li className={clsx(styles.item)} key={index}>
-              <Link to={item.url} className={clsx(styles.link)}>
+              <Link
+                to={item.url}
+                target={item.target}
+                download={item.download}
+                showExternalIcon={false}
+                className={clsx(
+                  styles.link,
+                  styles[item.appearance],
+                  item.compact && styles.compact,
+                )}
+              >
                 <Icon className={clsx(styles.icon)} {...item.icon} />
-                {item.label}
-                <Arrow className={clsx(styles.arrow)} />
+                <div className={clsx(styles.content)}>
+                  {item.title && (
+                    <p className={clsx(styles.title)}>{item.title}</p>
+                  )}
+                  {item.description && (
+                    <p className={clsx(styles.description)}>
+                      {item.description}
+                    </p>
+                  )}
+                </div>
+                <Symbol item={item} className={clsx(styles.symbol)} />
               </Link>
             </li>
           );

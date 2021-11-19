@@ -18,6 +18,7 @@ TreeMenu.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string,
+      label: PropTypes.string.isRequired,
     }),
   ).isRequired,
   location: PropTypes.shape({

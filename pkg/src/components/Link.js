@@ -2,9 +2,12 @@ import React, { useEffect, memo } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
+import { visuallyHidden } from "../utils/styles.module.css";
 import * as defaultStyles from "./Link.module.css";
 import withComponentDefaults from "../utils/withComponentDefaults";
 import { useURLTransformer } from "../hooks";
+
+import Icon from "./Icon";
 
 function upperFirst(string) {
   return string[0].toUpperCase() + string.slice(1);
@@ -57,6 +60,7 @@ function Link({
   type,
   uri,
   url,
+  showExternalIcon = true,
   ...restProps
 }) {
   href =
@@ -121,6 +125,14 @@ function Link({
       ref={innerRef}
     >
       {children}
+      {target === "_blank" && (
+        <>
+          <span className={visuallyHidden}>Öppnas i nytt fönster</span>
+          {showExternalIcon && (
+            <Icon name="external" className={clsx(styles.icon)} />
+          )}
+        </>
+      )}
     </Component>
   );
 }
@@ -155,4 +167,5 @@ Link.propTypes = {
   type: PropTypes.string,
   uri: PropTypes.string,
   url: PropTypes.string,
+  showExternalIcon: PropTypes.bool,
 };
