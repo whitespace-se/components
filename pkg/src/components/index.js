@@ -18,6 +18,8 @@ export { default as Icon } from "./Icon";
 export { default as IconProvider } from "./IconProvider";
 export { default as Image } from "./Image";
 export { default as Link } from "./Link";
+export { default as PageGrid } from "./PageGrid";
+export { default as PageGridItem } from "./PageGridItem";
 export { default as Pagination } from "./Pagination";
 export { default as RoundIcon } from "./RoundIcon";
 export { default as SkipTo } from "./SkipTo";

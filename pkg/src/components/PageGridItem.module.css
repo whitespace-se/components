@@ -1,0 +1,13 @@
+.component {
+  max-width: calc(
+    8 / 12 * (var(--page-grid-wrapper-max-width) + var(--page-grid-gap)) -
+      var(--page-grid-gap)
+  );
+  width: 100%;
+  flex-grow: var(--page-grid-columns);
+  flex-shrink: var(--page-grid-columns);
+  flex-basis: calc(
+    var(--page-grid-columns) / 12 * (100% + var(--page-grid-gap)) -
+      var(--page-grid-gap)
+  );
+}

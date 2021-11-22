@@ -1,0 +1,44 @@
+:root {
+  --page-grid-item-min-width: 18rem;
+  --page-grid-wrapper-max-width: 80rem;
+  --page-grid-gap: 1rem;
+}
+
+.col3 {
+  --page-grid-columns: 3;
+}
+.col4 {
+  --page-grid-columns: 4;
+}
+.col6 {
+  --page-grid-columns: 6;
+}
+.col8 {
+  --page-grid-columns: 8;
+}
+.col9 {
+  --page-grid-columns: 9;
+}
+
+.component {
+  display: grid;
+  justify-items: center;
+  max-width: var(--page-grid-wrapper-max-width);
+  margin: auto;
+  gap: var(--page-grid-gap);
+}
+
+/* .group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+  gap: var(--page-grid-gap);
+  width: 100%;
+}
+
+.group .item {
+  min-width: var(--page-grid-item-min-width);
+  width: calc(var(--page-grid-columns) / 12 * (100% + var(--page-grid-gap)) - var(--page-grid-gap));
+  max-width: 100%;
+} */
