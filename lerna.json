@@ -11,5 +11,6 @@
     }
   },
   "npmClient": "yarn",
-  "packages": ["pkg"]
+  "packages": ["pkg"],
+  "version": "0.13.8"
 }
