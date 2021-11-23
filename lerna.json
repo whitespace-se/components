@@ -4,9 +4,7 @@
       "changelogPreset": {
         "name": "conventionalcommits",
         "issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
-        "issuePrefixes": [
-          "#"
-        ],
+        "issuePrefixes": ["#"],
         "types": [
           {
             "type": "feat",
@@ -69,15 +67,11 @@
         "userUrlFormat": "{{host}}/{{user}}"
       },
       "conventionalCommits": true,
-      "ignoreChanges": [
-        "CHANGELOG.md"
-      ],
+      "ignoreChanges": ["CHANGELOG.md"],
       "message": "chore(release): publish packages"
     }
   },
   "npmClient": "yarn",
-  "packages": [
-    "pkg"
-  ],
+  "packages": ["pkg"],
   "version": "0.13.9"
 }
