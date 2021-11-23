@@ -2,7 +2,7 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
 
-import * as defaultStyles from "./PageGridItem.module.css";
+import * as defaultStyles from "./PageGrid.module.css";
 
 PageGridItem.propTypes = {
   as: PropTypes.elementType,
@@ -19,7 +19,7 @@ export default function PageGridItem({
   ...restProps
 }) {
   return (
-    <Component className={clsx(styles.component, className)} {...restProps}>
+    <Component className={clsx(styles.item, className)} {...restProps}>
       {children}
     </Component>
   );

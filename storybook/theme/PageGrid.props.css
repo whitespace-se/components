@@ -1,5 +1,6 @@
 :root {
-  --page-grid-item-min-width: 18rem;
-  --page-grid-wrapper-max-width: 80rem;
+  --page-grid-item-min-width: 12rem;
+  --page-grid-wrapper-max-width: 60rem;
   --page-grid-gap: 1rem;
+  --page-grid-layout-gap: 1rem;
 }
