@@ -13,8 +13,10 @@
   },
   "type": "commonjs",
   "devDependencies": {
+    "conventional-changelog-conventionalcommits": "^4.6.1",
     "eslint": "^7.23.0",
     "eslint-plugin-react": "^7.23.1",
+    "lerna": "^4.0.0",
     "prettier": "^2.2.1"
   },
   "scripts": {
