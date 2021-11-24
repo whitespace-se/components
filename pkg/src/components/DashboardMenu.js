@@ -1,9 +1,8 @@
 import clsx from "clsx";
-import PropTypes, { symbol } from "prop-types";
+import PropTypes from "prop-types";
 import React from "react";
 
 import * as defaultStyles from "./DashboardMenu.module.css";
-import { visuallyHidden } from "../utils/styles.module.css";
 import Icon from "./Icon";
 import DashboardMenuLink from "./DashboardMenuLink";
 import RoundIcon from "./RoundIcon";
