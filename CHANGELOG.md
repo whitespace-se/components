@@ -1,5 +1,20 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+### [0.13.10](https://github.com/whitespace-se/components/compare/v0.13.9...v0.13.10) (2021-11-24)
+
+
+### Features
+
+* add `--card-title-text-decoration` ([dbb9379](https://github.com/whitespace-se/components/commit/dbb9379bb0161a2cdae1ae7f956d47de197de097))
+* add MaybeFragment component ([b296abd](https://github.com/whitespace-se/components/commit/b296abd0b3f3275a19497e7c4c86eb9b5d1377dd))
+
+
+
+# Change Log
+
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
