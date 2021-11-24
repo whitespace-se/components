@@ -65,12 +65,12 @@
   letter-spacing: var(--card-meta-letter-spacing);
 }
 
-.title,
-.titleLink {
+.title {
   color: var(--card-title-color);
   font-size: var(--card-title-font-size);
   font-weight: var(--card-title-font-weight);
   line-height: var(--card-title-line-height);
   letter-spacing: var(--card-title-letter-spacing);
+  text-decoration: var(--card-title-text-decoration, inherit);
   margin: 0;
 }
