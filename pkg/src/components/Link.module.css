@@ -50,7 +50,7 @@ button.component {
   -webkit-appearance: none;
 }
 
-.component .icon {
+.icon {
   margin: var(--link-icon-margin, 0 0 0 0.35em);
   width: var(--link-icon-width);
   height: var(--link-icon-height);
