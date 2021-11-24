@@ -18,6 +18,7 @@ export { default as Icon } from "./Icon";
 export { default as IconProvider } from "./IconProvider";
 export { default as Image } from "./Image";
 export { default as Link } from "./Link";
+export { default as MaybeFragment } from "./MaybeFragment";
 export { default as PageGrid } from "./PageGrid";
 export { default as PageGridItem } from "./PageGridItem";
 export { default as PageGridLayout } from "./PageGridLayout";
