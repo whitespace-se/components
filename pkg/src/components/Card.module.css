@@ -1,4 +1,5 @@
 .component {
+  position: relative;
   background: var(--card-background);
   color: var(--card-color);
   font-size: var(--card-font-size);
@@ -85,4 +86,11 @@
     --card-title-hover-text-decoration,
     var(--card-title-text-decoration)
   );
+}
+
+.badge {
+  position: absolute;
+  z-index: 1;
+  inset: var(--card-badge-inset, 0 auto auto 0);
+  margin: var(--card-badge-margin, 1rem);
 }

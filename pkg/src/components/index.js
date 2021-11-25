@@ -2,6 +2,7 @@ export { default as Accordion } from "./Accordion";
 export { default as Breadcrumbs } from "./Breadcrumbs";
 export { default as Button } from "./Button";
 export { default as Card } from "./Card";
+export { default as CardBadge } from "./CardBadge";
 export { default as CardContent } from "./CardContent";
 export { default as CardMedia } from "./CardMedia";
 export { default as CardMeta } from "./CardMeta";

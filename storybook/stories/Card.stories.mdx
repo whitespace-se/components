@@ -1,11 +1,29 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 import {
   Card,
-  CardMedia,
+  CardBadge,
   CardContent,
-  CardTitle,
+  CardMedia,
   CardMeta,
+  CardTitle,
 } from "@whitespace/components";
+import styled from "@emotion/styled";
+
+export const Badge = styled.span`
+  display: grid;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  font-size: 2rem;
+  background: var(--color-blue-500);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.25rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  text-transform: uppercase;
+`;
 
 <Meta title="Card" parameters={{ actions: { argTypesRegex: null } }} />
 
@@ -23,6 +41,9 @@ import {
             src: "https://picsum.photos/seed/picsum/600/300",
           }}
         />
+        <CardBadge>
+          <Badge>★</Badge>
+        </CardBadge>
       </Card>
     )}
   </Story>
