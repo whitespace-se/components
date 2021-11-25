@@ -27,6 +27,7 @@ export { default as PageGridRow } from "./PageGridRow";
 export { default as PageGridSection } from "./PageGridSection";
 export { default as Pagination } from "./Pagination";
 export { default as RoundIcon } from "./RoundIcon";
+export { default as RuledList } from "./RuledList";
 export { default as SkipTo } from "./SkipTo";
 export { default as ThemeProvider } from "./ThemeProvider";
 export { default as TreeMenu } from "./TreeMenu";

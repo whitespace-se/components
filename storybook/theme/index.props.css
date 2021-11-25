@@ -1,0 +1,6 @@
+:root {
+  --focus-ring-color: var(--color-blue-500);
+  --focus-outline: 0;
+  --focus-box-shadow: 0 0 0 var(--focus-ring-width, 3px)
+    var(--focus-ring-color, currentColor);
+}
