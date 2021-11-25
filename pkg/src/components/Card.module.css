@@ -74,3 +74,15 @@
   text-decoration: var(--card-title-text-decoration, inherit);
   margin: 0;
 }
+
+.inner:hover .title {
+  color: var(--card-title-hover-color, var(--card-title-color));
+  font-weight: var(
+    --card-title-hover-font-weight,
+    var(--card-title-font-weight)
+  );
+  text-decoration: var(
+    --card-title-hover-text-decoration,
+    var(--card-title-text-decoration)
+  );
+}
