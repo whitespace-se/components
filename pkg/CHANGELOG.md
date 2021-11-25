@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.12](https://github.com/whitespace-se/components/compare/v0.13.11...v0.13.12) (2021-11-25)
+
+
+### Features
+
+* Add support for `colSpan` prop in PageGridItem ([4aac688](https://github.com/whitespace-se/components/commit/4aac6885a139028e58a7dafceb86b6424bd722ce))
+
+
+### Bug Fixes
+
+* size icon correctly ([75591ae](https://github.com/whitespace-se/components/commit/75591ae242ab24ef2c9cdc561185b68ffbfd18d5))
+* Use Emotion’s jsx ([ae2d07c](https://github.com/whitespace-se/components/commit/ae2d07c69f7f0193b675fbe99ad230bdfe7e9ed3))
+
+
+
 ### [0.13.11](https://github.com/whitespace-se/components/compare/v0.13.10...v0.13.11) (2021-11-25)
 
 
