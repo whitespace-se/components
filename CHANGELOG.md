@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.11](https://github.com/whitespace-se/components/compare/v0.13.10...v0.13.11) (2021-11-25)
+
+
+### Features
+
+* Add CardBadge component ([285f0f9](https://github.com/whitespace-se/components/commit/285f0f974d53e349ee4b9a6beebd9af1db0cfd14))
+* add css props for title in hovered card ([fe6a33c](https://github.com/whitespace-se/components/commit/fe6a33c5188707757a4180ab99f0b8dcc14361f6))
+* Add RuledList component ([66734b4](https://github.com/whitespace-se/components/commit/66734b488400aec318c93ce05e7c54a303d3fa80))
+* Add Teaser component ([e385da4](https://github.com/whitespace-se/components/commit/e385da41416f7016bd72ff3ebb9753ea9c6720f1))
+
+
+### Bug Fixes
+
+* add theme props to external icon ([e05b216](https://github.com/whitespace-se/components/commit/e05b21626a0f44aece1a934f56ac7a5520dd4d1d))
+* remove parent specificity to avoid issue when <Button> is used ([3a58e2e](https://github.com/whitespace-se/components/commit/3a58e2ea4d8f55678b82a46b34613cc8004bea4c))
+* remove unused imports ([56ab41b](https://github.com/whitespace-se/components/commit/56ab41b81b08b0295896f4570968b547c04eab2f))
+
+
+
 ### [0.13.10](https://github.com/whitespace-se/components/compare/v0.13.9...v0.13.10) (2021-11-24)
 
 

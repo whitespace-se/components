@@ -114,3 +114,8 @@ button.component {
   font: inherit;
   -webkit-appearance: none;
 }
+
+.icon {
+  margin: var(--link-icon-margin, 0 0 0 0.35em);
+  --icon-size: var(--link-icon-size, 1em);
+}
