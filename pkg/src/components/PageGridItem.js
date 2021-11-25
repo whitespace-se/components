@@ -13,13 +13,21 @@ PageGridItem.propTypes = {
 
 export default function PageGridItem({
   as: Component = "div",
+  colSpan,
   children,
   className,
   styles = defaultStyles,
   ...restProps
 }) {
   return (
-    <Component className={clsx(styles.item, className)} {...restProps}>
+    <Component
+      className={clsx(
+        styles.item,
+        colSpan && styles[`col${colSpan}`],
+        className,
+      )}
+      {...restProps}
+    >
       {children}
     </Component>
   );
