@@ -52,6 +52,5 @@ button.component {
 
 .icon {
   margin: var(--link-icon-margin, 0 0 0 0.35em);
-  width: var(--link-icon-width);
-  height: var(--link-icon-height);
+  --icon-size: var(--link-icon-size, 1em);
 }
