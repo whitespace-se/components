@@ -1,0 +1,33 @@
+.component {
+  text-decoration: inherit;
+  color: inherit;
+  outline: none;
+}
+
+.component:hover {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.component:not(.inert):not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
+.component.inert,
+.component:disabled,
+.component[aria-disabled="true"] {
+  color: var(--teaser-link-inert-color, inherit);
+  text-decoration: var(--teaser-link-text-inert-decoration, inherit);
+  background: var(--teaser-link-inert-background, transparent);
+}
+
+button.component {
+  font: inherit;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  text-align: inherit;
+  color: inherit;
+}
