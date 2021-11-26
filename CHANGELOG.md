@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.13](https://github.com/whitespace-se/components/compare/v0.13.12...v0.13.13) (2021-11-26)
+
+
+### Features
+
+* Add `PageGridGroup` component ([f9771f1](https://github.com/whitespace-se/components/commit/f9771f115539229af31b082719ff6ba780dc627d))
+
+
+
 ### [0.13.12](https://github.com/whitespace-se/components/compare/v0.13.11...v0.13.12) (2021-11-25)
 
 
