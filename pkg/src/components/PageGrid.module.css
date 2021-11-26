@@ -56,7 +56,7 @@
   );
 }
 
-/* .group {
+.group {
   display: flex;
   flex-wrap: wrap;
   justify-items: center;
@@ -65,8 +65,11 @@
   width: 100%;
 }
 
-.group .item {
+.group > .item {
   min-width: var(--page-grid-item-min-width);
-  width: calc(var(--page-grid-columns) / 12 * (100% + var(--page-grid-gap)) - var(--page-grid-gap));
+  width: calc(
+    var(--page-grid-columns) / 12 * (100% + var(--page-grid-gap)) -
+      var(--page-grid-gap)
+  );
   max-width: 100%;
-} */
+}

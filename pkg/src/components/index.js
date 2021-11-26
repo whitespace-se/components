@@ -21,6 +21,7 @@ export { default as Image } from "./Image";
 export { default as Link } from "./Link";
 export { default as MaybeFragment } from "./MaybeFragment";
 export { default as PageGrid } from "./PageGrid";
+export { default as PageGridGroup } from "./PageGridGroup";
 export { default as PageGridItem } from "./PageGridItem";
 export { default as PageGridLayout } from "./PageGridLayout";
 export { default as PageGridRow } from "./PageGridRow";

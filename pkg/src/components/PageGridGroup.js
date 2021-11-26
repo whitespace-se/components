@@ -7,29 +7,22 @@ import React from "react";
 
 import * as defaultStyles from "./PageGrid.module.css";
 
-PageGridItem.propTypes = {
+PageGridGroup.propTypes = {
   as: PropTypes.elementType,
   children: PropTypes.node,
   className: PropTypes.string,
   styles: PropTypes.objectOf(PropTypes.string),
 };
 
-export default function PageGridItem({
+export default function PageGridGroup({
   as: Component = "div",
-  colSpan,
   children,
   className,
   styles = defaultStyles,
   ...restProps
 }) {
   return (
-    <Component
-      css={css`
-        --page-grid-columns: ${colSpan || null};
-      `}
-      className={clsx(styles.item, className)}
-      {...restProps}
-    >
+    <Component className={clsx(styles.group, className)} {...restProps}>
       {children}
     </Component>
   );
