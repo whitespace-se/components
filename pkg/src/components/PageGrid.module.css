@@ -21,6 +21,7 @@
 .component {
   display: grid;
   justify-items: center;
+  gap: var(--page-grid-row-gap, var(--page-grid-gap)) var(--page-grid-gap);
   /* max-width: var(--page-grid-wrapper-max-width);
   margin: auto; */
 }
