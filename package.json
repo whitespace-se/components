@@ -13,6 +13,7 @@
   },
   "type": "commonjs",
   "devDependencies": {
+    "@emotion/eslint-plugin": "^11.5",
     "conventional-changelog-conventionalcommits": "^4.6.1",
     "eslint": "^7.23.0",
     "eslint-plugin-react": "^7.23.1",
