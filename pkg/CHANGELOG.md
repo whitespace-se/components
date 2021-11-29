@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.14](https://github.com/whitespace-se/components/compare/v0.13.13...v0.13.14) (2021-11-26)
+
+
+### Features
+
+* add gap in PageGrid component ([305dd34](https://github.com/whitespace-se/components/commit/305dd34b4b340a0f0a7c17340f993ec3a332ee65))
+
+
+
 ### [0.13.13](https://github.com/whitespace-se/components/compare/v0.13.12...v0.13.13) (2021-11-26)
 
 
