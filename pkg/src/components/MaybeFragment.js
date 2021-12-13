@@ -7,7 +7,6 @@ MaybeFragment.propTypes = {
 };
 
 export default function MaybeFragment({ as: Component, children, ...props }) {
-  console.log(Object.values(props), Object.values(props).map(Boolean));
   if (!Object.values(props).some(Boolean)) {
     Component = React.Fragment;
     props = {};
