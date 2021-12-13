@@ -1,0 +1,58 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { CalendarBadge } from "@whitespace/components";
+import * as CalendarBadgeStyles from "../theme/CalendarBadge.props.module.css";
+
+<Meta
+  title="Calendar badge"
+  parameters={{ actions: { argTypesRegex: null } }}
+/>
+
+# Calendar badge
+
+<Canvas>
+  <Story
+    name="Border Top"
+    args={{
+      locale: "sv",
+      date: new Date(),
+    }}
+  >
+    {(args) => (
+      <CalendarBadge
+        {...args}
+        aria-hidden={true}
+        className={CalendarBadgeStyles.borderTop}
+      />
+    )}
+  </Story>
+  <Story
+    name="No Border top"
+    args={{
+      locale: "sv",
+      date: new Date(),
+    }}
+  >
+    {(args) => (
+      <CalendarBadge
+        {...args}
+        aria-hidden={true}
+        className={CalendarBadgeStyles.noBorderTop}
+      />
+    )}
+  </Story>
+  <Story
+    name="Round"
+    args={{
+      locale: "sv",
+      date: new Date(),
+    }}
+  >
+    {(args) => (
+      <CalendarBadge
+        {...args}
+        aria-hidden={true}
+        className={CalendarBadgeStyles.round}
+      />
+    )}
+  </Story>
+</Canvas>
