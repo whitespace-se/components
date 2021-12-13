@@ -1,0 +1,110 @@
+.borderTop {
+  --calendar-badge-background: var(--color-gray-200);
+  --calendar-badge-border-radius: 4px;
+  --calendar-badge-border: 1px solid transparent;
+  --calendar-badge-border-top: 12px solid var(--color-black);
+  --calendar-badge-display: flex;
+  --calendar-badge-flex-direction: column;
+  --calendar-badge-text-align: center;
+  --calendar-badge-width: 3.5rem;
+  --calendar-badge-height: auto;
+  --calendar-badge-margin: 0;
+  --calendar-badge-font-family: inherit;
+  --calendar-badge-justify-content: center;
+
+  --calendar-badge-day-background: transparent;
+  --calendar-badge-day-color: var(--color-black);
+  --calendar-badge-day-padding: 0;
+  --calendar-badge-day-font-size: 1.25rem;
+  --calendar-badge-day-font-weight: 600;
+  --calendar-badge-day-line-height: 1.25;
+  --calendar-badge-day-text-transform: none;
+  --calendar-badge-day-order: 1;
+  --calendar-badge-day-width: 100%;
+  --calendar-badge-day-border-radius: 4px 4px 0 0;
+
+  --calendar-badge-month-background: transparent;
+  --calendar-badge-month-color: var(--color-black);
+  --calendar-badge-month-font-size: 0.75rem;
+  --calendar-badge-month-font-weight: 400;
+  --calendar-badge-month-line-height: 1;
+  --calendar-badge-month-text-tranfsorm: none;
+  --calendar-badge-month-padding: 0 0.5rem 0.5rem 0.5rem;
+  --calendar-badge-month-order: 2;
+  --calendar-badge-month-border-radius: 0;
+}
+
+/* Round Calendar badge */
+.round {
+  --calendar-badge-background: var(--color-black);
+  --calendar-badge-border-radius: 100%;
+  --calendar-badge-border: 1px solid transparent;
+  --calendar-badge-border-top: none;
+  --calendar-badge-color: var(--color-white);
+  --calendar-badge-display: flex;
+  --calendar-badge-flex-direction: column;
+  --calendar-badge-text-align: center;
+  --calendar-badge-width: 3.5rem;
+  --calendar-badge-height: 3.5rem;
+  --calendar-badge-margin: 0;
+  --calendar-badge-font-family: inherit;
+  --calendar-badge-justify-content: center;
+
+  --calendar-badge-day-background: transparent;
+  --calendar-badge-day-color: var(--color-white);
+  --calendar-badge-day-padding: 0;
+  --calendar-badge-day-font-size: 1.5rem;
+  --calendar-badge-day-font-weight: 600;
+  --calendar-badge-day-line-height: 1;
+  --calendar-badge-day-text-transform: none;
+  --calendar-badge-day-order: 1;
+  --calendar-badge-day-width: 100%;
+  --calendar-badge-day-border-radius: 4px 4px 0 0;
+
+  --calendar-badge-month-background: transparent;
+  --calendar-badge-month-color: var(--color-white);
+  --calendar-badge-month-font-size: 0.75rem;
+  --calendar-badge-month-font-weight: 400;
+  --calendar-badge-month-line-height: 1;
+  --calendar-badge-month-text-tranfsorm: none;
+  --calendar-badge-month-padding: 0;
+  --calendar-badge-month-order: 2;
+  --calendar-badge-month-border-radius: 0;
+}
+
+/* Square Calendar badge with no border top*/
+.noBorderTop {
+  --calendar-badge-background: var(--color-white);
+  --calendar-badge-border-radius: 4px;
+  --calendar-badge-border: 1px solid var(--color-gray-200);
+  --calendar-badge-border-top: none;
+  --calendar-badge-display: flex;
+  --calendar-badge-flex-direction: column;
+  --calendar-badge-text-align: center;
+  --calendar-badge-width: 3.5rem;
+  --calendar-badge-height: auto;
+  --calendar-badge-margin: 0;
+  --calendar-badge-font-family: inherit;
+  --calendar-badge-justify-content: center;
+
+  --calendar-badge-day-background: transparent;
+  --calendar-badge-day-color: var(--color-black);
+  --calendar-badge-day-padding: 0.5rem 0;
+  --calendar-badge-day-font-size: 1.25rem;
+  --calendar-badge-day-font-weight: 600;
+  --calendar-badge-day-line-height: 1.25;
+  --calendar-badge-day-text-transform: none;
+  --calendar-badge-day-order: 2;
+  --calendar-badge-day-width: 100%;
+  --calendar-badge-day-border-radius: 0 0 4px 4px;
+
+  --calendar-badge-month-background: var(--color-black);
+  --calendar-badge-month-color: var(--color-white);
+  --calendar-badge-month-font-size: 0.75rem;
+  --calendar-badge-month-font-weight: 400;
+  --calendar-badge-month-line-height: 1;
+  --calendar-badge-month-text-tranfsorm: uppercase;
+  --calendar-badge-month-padding: 0.25rem;
+  --calendar-badge-month-order: 1;
+  --calendar-badge-month-border-radius: 4px 4px 0 0;
+}

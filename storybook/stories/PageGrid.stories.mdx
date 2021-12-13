@@ -1,0 +1,72 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import {
+  PageGrid,
+  PageGridItem,
+  PageGridLayout,
+  PageGridSection,
+} from "@whitespace/components";
+import styled from "@emotion/styled";
+
+<Meta
+  title="PageGrid"
+  component={PageGrid}
+  argTypes={{}}
+  parameters={{ layout: "fullscreen" }}
+/>
+
+export const StyledPageGridLayout = styled(PageGridLayout)`
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    max-width: var(--page-grid-wrapper-max-width);
+    margin: auto;
+    z-index: -1;
+    left: calc(50% - var(--page-grid-wrapper-max-width) / 2);
+    background: repeating-linear-gradient(
+      to right,
+      #eee,
+      #eee calc(1 / 12 * (100% + var(--page-grid-gap)) - var(--page-grid-gap)),
+      #fff calc(1 / 12 * (100% + var(--page-grid-gap)) - var(--page-grid-gap)),
+      #fff calc(1 / 12 * (100% + var(--page-grid-gap)))
+    );
+  }
+`;
+
+export const StyledPageGridSection = styled(PageGridSection)`
+  border-bottom: 2px dotted #0008;
+`;
+
+export const Block = styled.div`
+  background: pink;
+  border: 1px dashed #0003;
+`;
+
+export const Template = () => {
+  return (
+    <StyledPageGridLayout>
+      <StyledPageGridSection width="full">
+        <PageGridLayout>
+          <Block>Breadcrumbs</Block>
+        </PageGridLayout>
+      </StyledPageGridSection>
+      <Block>Stray block</Block>
+      <PageGrid>
+        <PageGridItem>
+          <Block>Heading</Block>
+        </PageGridItem>
+      </PageGrid>
+    </StyledPageGridLayout>
+  );
+};
+
+# Page Grid
+
+<Canvas>
+  <Story name="Default" args={{}}>
+    {(args) => <Template {...args} />}
+  </Story>
+</Canvas>

@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@whitespace/components": "*",
-    "gatsby": "^3.4.1",
+    "gatsby": "^3.14.3",
     "gatsby-plugin-image": "^1.6.0",
     "gatsby-plugin-postcss": "^4.6.0",
     "gatsby-plugin-sharp": "^3.6.0",

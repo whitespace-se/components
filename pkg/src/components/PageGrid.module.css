@@ -1,0 +1,60 @@
+.layout {
+  display: grid;
+  grid-template-columns:
+    1fr min(
+      calc(100% - 2 * var(--page-grid-layout-gap)),
+      var(--page-grid-wrapper-max-width)
+    )
+    1fr;
+  gap: 0 var(--page-grid-layout-gap);
+}
+
+.layout > *,
+.section {
+  grid-column: 2 / -2;
+}
+
+.section.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.component {
+  display: grid;
+  justify-items: center;
+  gap: var(--page-grid-row-gap, var(--page-grid-gap)) var(--page-grid-gap);
+  /* max-width: var(--page-grid-wrapper-max-width);
+  margin: auto; */
+}
+
+.item {
+  box-sizing: border-box;
+  max-width: calc(
+    8 / 12 * (var(--page-grid-wrapper-max-width) + var(--page-grid-gap)) -
+      var(--page-grid-gap)
+  );
+  width: 100%;
+  flex-grow: var(--page-grid-columns);
+  flex-shrink: var(--page-grid-columns);
+  flex-basis: calc(
+    var(--page-grid-columns) / 12 * (100% + var(--page-grid-gap)) -
+      var(--page-grid-gap)
+  );
+}
+
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+  gap: var(--page-grid-gap);
+  width: 100%;
+}
+
+.group > .item {
+  min-width: var(--page-grid-item-min-width);
+  width: calc(
+    var(--page-grid-columns) / 12 * (100% + var(--page-grid-gap)) -
+      var(--page-grid-gap)
+  );
+  max-width: 100%;
+}

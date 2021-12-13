@@ -1,0 +1,136 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import {
+  RuledList,
+  Teaser,
+  TeaserBadge,
+  TeaserMedia,
+  TeaserContent,
+  TeaserTitle,
+  TeaserMeta,
+} from "@whitespace/components";
+
+import styled from "@emotion/styled";
+
+export const Badge = styled.span`
+  display: grid;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  font-size: 2rem;
+  background: var(--color-blue-500);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.25rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  text-transform: uppercase;
+`;
+
+<Meta title="Teaser" parameters={{ actions: { argTypesRegex: null } }} />
+
+<Canvas>
+  <Story name="Default" args={{}}>
+    {(args) => (
+      <Teaser {...args}>
+        <TeaserBadge>
+          <Badge>★</Badge>
+        </TeaserBadge>
+        <TeaserContent>
+          <TeaserTitle>Title</TeaserTitle>
+          <TeaserMeta>2021-12-12</TeaserMeta>
+          <p>Lorem ipsum</p>
+        </TeaserContent>
+        <TeaserMedia
+          image={{
+            src: "https://picsum.photos/seed/picsum/600/300",
+          }}
+        />
+      </Teaser>
+    )}
+  </Story>
+  <Story
+    name="Link"
+    args={{
+      link: { url: "/home" },
+    }}
+  >
+    {(args) => (
+      <Teaser {...args}>
+        <TeaserContent>
+          <TeaserTitle>Title</TeaserTitle>
+          <TeaserMeta>2021-12-12</TeaserMeta>
+          <p>Lorem ipsum</p>
+        </TeaserContent>
+        <TeaserMedia
+          image={{
+            src: "https://picsum.photos/seed/picsum/600/300",
+          }}
+        />
+      </Teaser>
+    )}
+  </Story>
+  <Story
+    name="Button"
+    args={{
+      link: { onClick: () => {} },
+    }}
+  >
+    {(args) => (
+      <Teaser {...args}>
+        <TeaserContent>
+          <TeaserTitle>Title</TeaserTitle>
+          <TeaserMeta>2021-12-12</TeaserMeta>
+          <p>Lorem ipsum</p>
+        </TeaserContent>
+        <TeaserMedia
+          image={{
+            src: "https://picsum.photos/seed/picsum/600/300",
+          }}
+        />
+      </Teaser>
+    )}
+  </Story>
+  <Story name="Inside RuledList" args={{}}>
+    {(args) => (
+      <RuledList>
+        <Teaser link={{ url: "/home" }} {...args}>
+          <TeaserContent>
+            <TeaserTitle>Title</TeaserTitle>
+            <TeaserMeta>2021-12-12</TeaserMeta>
+            <p>Lorem ipsum</p>
+          </TeaserContent>
+          <TeaserMedia
+            image={{
+              src: "https://picsum.photos/seed/picsum/600/300",
+            }}
+          />
+        </Teaser>
+        <Teaser link={{ url: "/home" }} {...args}>
+          <TeaserContent>
+            <TeaserTitle>Title</TeaserTitle>
+            <TeaserMeta>2021-12-12</TeaserMeta>
+            <p>Lorem ipsum</p>
+          </TeaserContent>
+          <TeaserMedia
+            image={{
+              src: "https://picsum.photos/seed/picsum/600/300",
+            }}
+          />
+        </Teaser>
+        <Teaser link={{ url: "/home" }} {...args}>
+          <TeaserContent>
+            <TeaserTitle>Title</TeaserTitle>
+            <TeaserMeta>2021-12-12</TeaserMeta>
+            <p>Lorem ipsum</p>
+          </TeaserContent>
+          <TeaserMedia
+            image={{
+              src: "https://picsum.photos/seed/picsum/600/300",
+            }}
+          />
+        </Teaser>
+      </RuledList>
+    )}
+  </Story>
+</Canvas>
