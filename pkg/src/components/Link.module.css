@@ -1,24 +1,31 @@
 .component {
-  color: var(--link-color, inherit);
-  text-decoration: var(--link-text-decoration, underline);
+  color: var(--link-color);
+  text-decoration: var(--link-text-decoration);
   padding: 0;
   border: none;
-  background: transparent;
+  background: var(--link-background);
+  text-underline-offset: var(--link-text-underline-offset);
+  text-decoration-thickness: var(--link-text-decoration-thickness);
+  transition: all 200ms ease-in;
 }
 
 .component:hover {
-  color: var(--link-hover-color, inherit);
-  text-decoration: var(--link-hover-text-decoration, none);
-  background: var(--link-hover-background, transparent);
+  color: var(--link-hover-color);
+  text-decoration: var(--link-hover-text-decoration);
+  background: var(--link-hover-background);
+
+  --link-text-underline-offset: var(--link-hover-text-underline-offset);
+  --link-text-decoration-thickness: var(--link-hover-text-decoration-thickness);
 }
 
 .component:focus,
 :focus + .component.label {
-  outline: var(--link-focus-outline, none);
-  box-shadow: var(
-    --link-focus-box-shadow,
-    var(--focus-box-shadow, 0 0 0 3px black)
-  );
+  outline: var(--link-focus-outline);
+}
+
+.component:focus-visible,
+:focus-visible + .component.label {
+  outline: var(--link-focus-visible-outline);
 }
 
 .component.current,
@@ -26,10 +33,12 @@
 .component[aria-pressed="true"],
 .component[aria-current],
 :checked + .component.label {
-  color: var(--link-current-color, inherit);
-  text-decoration: var(--link-current-text-decoration, underline);
-  background: var(--link-current-background, transparent);
-  font-weight: var(--link-current-font-weight, normal);
+  color: var(--link-current-color);
+  text-decoration: var(--link-current-text-decoration);
+  background: var(--link-current-background);
+  font-weight: var(--link-current-font-weight);
+  text-underline-offset: auto;
+  text-decoration-thickness: 4px;
 }
 
 .component:not(.inert):not([aria-disabled="true"]) {
@@ -41,8 +50,8 @@
 .component[aria-disabled="true"],
 :disabled + .component.label {
   color: var(--link-inert-color, inherit);
-  text-decoration: var(--link-text-inert-decoration, inherit);
-  background: var(--link-inert-background, transparent);
+  text-decoration: var(--link-text-inert-decoration);
+  background: var(--link-inert-background);
 }
 
 button.component {
@@ -51,6 +60,6 @@ button.component {
 }
 
 .icon {
-  margin: var(--link-icon-margin, 0 0 0 0.35em);
-  --icon-size: var(--link-icon-size, 1em);
+  margin: var(--link-icon-margin);
+  --icon-size: var(--link-icon-size);
 }

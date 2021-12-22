@@ -1,0 +1,23 @@
+:root {
+  --link-color: inherit;
+  --link-background: transparent;
+  --link-text-decoration: underline;
+  --link-text-underline-offset: 20px;
+  --link-text-decoration-thickness: 4px;
+  --link-transition: all 200ms ease-in;
+  --link-hover-color: blue;
+  --link-hover-text-decoration: underline;
+  --link-hover-text-underline-offset: 10px;
+  --link-hover-text-decoration-thickness: 2px;
+  --link-hover-background: transparent;
+  --link-focus-outline: 4px solid transparent;
+  --link-focus-visible-outline:  4px solid blue;
+  --link-current-color: orange;
+  --link-current-text-decoration: none;
+  --link-current-background: transparent;
+  --link-current-font-weight: 700;
+  --link-text-inert-decoration: inherit;
+  --link-inert-background: transparent;
+  --link-icon-margin: 0 0 0 0.35em;
+  --link-icon-size: 1em;
+}
