@@ -2,6 +2,7 @@ export { default as Accordion } from "./Accordion";
 export { default as Breadcrumbs } from "./Breadcrumbs";
 export { default as Button } from "./Button";
 export { default as Box } from "./Box";
+export { default as CalendarBadge } from "./CalendarBadge";
 export { default as Card } from "./Card";
 export { default as CardBadge } from "./CardBadge";
 export { default as CardContent } from "./CardContent";

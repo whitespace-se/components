@@ -1,0 +1,40 @@
+.component {
+  background: var(--calendar-badge-background);
+  border-radius: var(--calendar-badge-border-radius);
+  border: var(--calendar-badge-border);
+  border-top: var(--calendar-badge-border-top);
+  color: var(--calendar-badge-color);
+  display: var(--calendar-badge-display);
+  flex-direction: var(--calendar-badge-flex-direction);
+  text-align: var(--calendar-badge-text-align);
+  width: var(--calendar-badge-width);
+  height: var(--calendar-badge-height);
+  margin: var(--calendar-badge-margin);
+  font-family: var(--calendar-badge-font-family);
+  justify-content: var(--calendar-badge-justify-content);
+}
+
+.day {
+  background: var(--calendar-badge-day-background);
+  color: var(--calendar-badge-day-color);
+
+  padding: var(--calendar-badge-day-padding);
+  font-size: var(--calendar-badge-day-font-size);
+  font-weight: var(--calendar-badge-day-font-weight);
+  line-height: var(--calendar-badge-day-line-height);
+  text-transform: var(--calendar-badge-day-text-transform);
+  order: var(--calendar-badge-day-order);
+  width: var(--calendar-badge-day-width);
+  border-radius: var(--calendar-badge-day-border-radius);
+}
+.month {
+  background: var(--calendar-badge-month-background);
+  color: var(--calendar-badge-month-color);
+  font-size: var(--calendar-badge-month-font-size);
+  font-weight: var(--calendar-badge-month-font-weight);
+  line-height: var(--calendar-badge-month-line-height);
+  text-transform: var(--calendar-badge-month-text-tranfsorm);
+  padding: var(--calendar-badge-month-padding);
+  order: var(--calendar-badge-month-order);
+  border-radius: var(--calendar-badge-month-border-radius);
+}
