@@ -1,6 +1,7 @@
 export { default as Accordion } from "./Accordion";
 export { default as Breadcrumbs } from "./Breadcrumbs";
 export { default as Button } from "./Button";
+export { default as Box } from "./Box";
 export { default as Card } from "./Card";
 export { default as CardBadge } from "./CardBadge";
 export { default as CardContent } from "./CardContent";
@@ -18,6 +19,7 @@ export { default as GridMenu } from "./GridMenu";
 export { default as Icon } from "./Icon";
 export { default as IconProvider } from "./IconProvider";
 export { default as Image } from "./Image";
+export { default as InlineList } from "./InlineList";
 export { default as Link } from "./Link";
 export { default as MaybeFragment } from "./MaybeFragment";
 export { default as PageGrid } from "./PageGrid";
