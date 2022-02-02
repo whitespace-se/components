@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
 import * as defaultStyles from "./Box.module.css";
 
@@ -14,10 +14,15 @@ Box.propTypes = {
 
 export default withComponentDefaults(Box, "box");
 
-function Box({ styles = defaultStyles, children, ...restProps }) {
+function Box({
+  as: Component = "div",
+  styles = defaultStyles,
+  children,
+  ...restProps
+}) {
   return (
-    <div className={clsx(styles.component)} {...restProps}>
+    <Component className={clsx(styles.component)} {...restProps}>
       {children}
-    </div>
+    </Component>
   );
 }
