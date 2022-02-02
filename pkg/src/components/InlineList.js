@@ -4,9 +4,10 @@ import React from "react";
 
 import * as defaultStyles from "./InlineList.module.css";
 
+import withComponentDefaults from "../utils/withComponentDefaults";
+
 InlineList.propTypes = {
   components: PropTypes.objectOf(PropTypes.elementType),
-
   as: PropTypes.elementType,
   children: PropTypes.node,
   className: PropTypes.string,
@@ -14,7 +15,9 @@ InlineList.propTypes = {
   styles: PropTypes.objectOf(PropTypes.string),
 };
 
-export default function InlineList({
+export default withComponentDefaults(InlineList, "inlineList");
+
+function InlineList({
   as: Component = "ul",
   children,
   className,
