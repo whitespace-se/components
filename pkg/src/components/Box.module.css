@@ -1,0 +1,6 @@
+.component {
+  background: var(--box-background);
+  padding: var(--box-padding);
+  border-radius: var(--box-border-radius);
+  border: var(--box-border);
+}

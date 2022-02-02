@@ -1,0 +1,9 @@
+.component {
+  list-style: var(--inline-list-list-style);
+  display: var(--inline-list-display);
+  flex-direction: var(--inline-list-flex-direction);
+  flex-wrap: var(--inline-list-flex-wrap);
+  padding: var(--inline-list-padding);
+  margin: var(--inline-list-margin);
+  gap: var(--inline-list-gap);
+}

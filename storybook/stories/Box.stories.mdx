@@ -1,0 +1,12 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import { Box } from "@whitespace/components";
+
+<Meta title="Box" parameters={{ actions: { argTypesRegex: null } }} />
+
+# Box
+
+<Canvas>
+  <Story name="Default" args={{}}>
+    {(args) => <Box {...args} />}
+  </Story>
+</Canvas>

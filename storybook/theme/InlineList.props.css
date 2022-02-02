@@ -1,0 +1,9 @@
+:root {
+  --inline-list-list-style: none;
+  --inline-list-display: flex;
+  --inline-list-flex-direction: row;
+  --inline-list-flex-wrap: wrap;
+  --inline-list-padding: 0;
+  --inline-list-margin: 1rem 0;
+  --inline-list-gap: 0.5rem;
+}

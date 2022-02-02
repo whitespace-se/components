@@ -1,0 +1,6 @@
+:root {
+  --box-background: var(--color-gray-200);
+  --box-padding: 1rem;
+  --box-border-radius: 1rem;
+  --box-border: none;
+}
