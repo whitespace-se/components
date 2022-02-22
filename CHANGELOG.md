@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.15](https://github.com/whitespace-se/components/compare/v0.13.14...v0.13.15) (2022-02-22)
+
+
+### Features
+
+* create calendar badge component ([2090529](https://github.com/whitespace-se/components/commit/2090529511e4bbcca3c330428b2e3ee266f22efa))
+* create inline list and box components ([c991af2](https://github.com/whitespace-se/components/commit/c991af2e23e5deae1846e08d6939814ff6722186))
+
+
+### Bug Fixes
+
+* add ability override base element name on <Box/> ([1fd825a](https://github.com/whitespace-se/components/commit/1fd825aa8ee43dab351ce733ab59e9d12fd54ba9))
+* add cardTitleFontFamily prop to <Card/> ([426c5d3](https://github.com/whitespace-se/components/commit/426c5d345c4ea7102793b39bb879781c54b4a220))
+* add withComponentDefaults to <InlineList/> ([61df9e6](https://github.com/whitespace-se/components/commit/61df9e62fbca1611bd53626e4d8679663df4d0f5))
+* **deps:** Use same Gatbsy version range as other packages ([31b23bb](https://github.com/whitespace-se/components/commit/31b23bb162277de93e12b8368bcc5c9b4117f8e1))
+* remove debug code ([3a16ebe](https://github.com/whitespace-se/components/commit/3a16ebe2d1df3bf30931d742790ae2154b559a92))
+
+
+
 ### [0.13.14](https://github.com/whitespace-se/components/compare/v0.13.13...v0.13.14) (2021-11-26)
 
 
