@@ -1,4 +1,7 @@
+import { treeMenuContext } from "@whitespace/components/src/contexts";
+import { useSet } from "@whitespace/components/src/hooks";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 import React, {
   useCallback,
   useEffect,
@@ -6,12 +9,9 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { useSet } from "../hooks";
-import { treeMenuContext } from "../contexts";
-import PropTypes from "prop-types";
-import TreeMenuList from "./TreeMenuList";
 
 import * as defaultStyles from "./TreeMenu.module.css";
+import TreeMenuList from "./TreeMenuList";
 
 TreeMenu.propTypes = {
   className: PropTypes.string,
@@ -101,10 +101,19 @@ export default function TreeMenu({
     [focusedPath],
   );
 
-  const findItemPath = useCallback(
-    (condition) => {
-      const item = items.findIndex(condition);
-      return ~item ? [item] : null;
+  const getAllItemPaths = useCallback(
+    (items, parentPath = []) => {
+      return items.reduce((acc, item, index) => {
+        const path = [...parentPath, index];
+        acc.push({
+          path,
+          url: item.url,
+        });
+        if (item.children) {
+          acc.push(...getAllItemPaths(item.children, path));
+        }
+        return acc;
+      }, []);
     },
     [items],
   );
@@ -129,12 +138,25 @@ export default function TreeMenu({
     [location.pathname],
   );
 
+  const itemPaths = useMemo(() => getAllItemPaths(items), [items]);
+
+  const findItemPath = useCallback(
+    (condition) => {
+      return itemPaths.find(condition)?.path || null;
+    },
+    [items],
+  );
+
   const currentItemPath = useMemo(() => findItemPath(isCurrentItem), [
     isCurrentItem,
     findItemPath,
   ]);
 
   useEffect(() => {
+    // Clear all expanded items
+    expandedItems.forEach((item) => collapseItem(item));
+
+    // Open tree
     (currentItemPath || []).reduce((path, index) => {
       path = [...path, index];
       expandItem(path);
@@ -327,7 +349,7 @@ export default function TreeMenu({
           }
         }}
       >
-        <span tabIndex={-1} ref={focusDummyRef}></span>
+        <span tabIndex={-1} ref={focusDummyRef} />
         <TreeMenuList items={items} />
       </nav>
     </treeMenuContext.Provider>

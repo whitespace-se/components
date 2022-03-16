@@ -1,14 +1,14 @@
+import { Button, Link } from "@whitespace/components";
+import { treeMenuContext } from "@whitespace/components/src/contexts";
 import clsx from "clsx";
-import Link from "./Link";
-import Button from "./Button";
-
-import { treeMenuContext } from "../contexts";
-import React, { useCallback, useContext } from "react";
-import TreeMenuList from "./TreeMenuList";
 import PropTypes from "prop-types";
+import React, { useCallback, useContext } from "react";
+
+import TreeMenuList from "./TreeMenuList";
 
 TreeMenuItem.propTypes = {
   item: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     children: PropTypes.arrayOf(PropTypes.object),
     url: PropTypes.string,
     label: PropTypes.string.isRequired,
@@ -17,7 +17,7 @@ TreeMenuItem.propTypes = {
 };
 
 export default function TreeMenuItem({ item, path, ...restProps }) {
-  const { children = [], url, label } = item;
+  const { id, children = [], url, label } = item;
 
   const {
     isCurrentItem,
@@ -38,6 +38,7 @@ export default function TreeMenuItem({ item, path, ...restProps }) {
   }, []);
 
   let isExpanded = isItemExpanded(path);
+  let isCurrent = isCurrentItem(item);
 
   let linkProps = {
     innerRef: refCallback,
@@ -56,7 +57,7 @@ export default function TreeMenuItem({ item, path, ...restProps }) {
   return (
     <li
       {...restProps}
-      className={clsx(styles.item, isCurrentItem(item) && styles.current)}
+      className={clsx(styles.item, isCurrent && styles.current)}
     >
       <div className={styles.row}>
         <Link {...linkProps}> {label}</Link>
@@ -69,18 +70,25 @@ export default function TreeMenuItem({ item, path, ...restProps }) {
               setFocusedPath(path);
             }}
             key="toggle"
-            as="span"
+            as="button"
             styles={{}}
             className={clsx(
               styles.toggle,
               isExpanded ? styles.expanded : styles.collapsed,
             )}
             tabIndex={-1}
-          ></Button>
+            aria-expanded={isExpanded}
+            aria-controls={id}
+          />
         )}
       </div>
-      {!!children.length && isExpanded && (
-        <TreeMenuList items={children} parentPath={path} />
+      {!!children.length && (
+        <TreeMenuList
+          id={id}
+          expanded={isExpanded}
+          items={children}
+          parentPath={path}
+        />
       )}
     </li>
   );

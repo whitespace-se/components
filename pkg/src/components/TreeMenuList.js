@@ -1,10 +1,12 @@
+import { treeMenuContext } from "@whitespace/components/src/contexts";
 import clsx from "clsx";
-import React, { useContext } from "react";
-import TreeMenuItem from "./TreeMenuItem";
 import PropTypes from "prop-types";
-import { treeMenuContext } from "../contexts";
+import React, { useContext } from "react";
+
+import TreeMenuItem from "./TreeMenuItem";
 
 TreeMenuList.propTypes = {
+  expanded: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       url: PropTypes.string,
@@ -14,7 +16,12 @@ TreeMenuList.propTypes = {
   parentPath: PropTypes.arrayOf(PropTypes.number),
 };
 
-export default function TreeMenuList({ items, parentPath = [], ...restProps }) {
+export default function TreeMenuList({
+  expanded = true,
+  items,
+  parentPath = [],
+  ...restProps
+}) {
   const { styles } = useContext(treeMenuContext);
 
   if (items.length === 0) {
@@ -24,6 +31,7 @@ export default function TreeMenuList({ items, parentPath = [], ...restProps }) {
   return (
     <ul
       className={clsx(styles.list, parentPath.length > 0 && styles.sublist)}
+      hidden={!expanded}
       {...restProps}
     >
       {items.map((item, index) => {
