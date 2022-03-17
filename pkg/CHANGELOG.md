@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.16](https://github.com/whitespace-se/components/compare/v0.13.15...v0.13.16) (2022-03-17)
+
+
+### Features
+
+* automatically expand/contract tree on navigation ([b422275](https://github.com/whitespace-se/components/commit/b422275fcda8173f92b64ba7777076b50b5d379a))
+
+
+
 ### [0.13.15](https://github.com/whitespace-se/components/compare/v0.13.14...v0.13.15) (2022-02-22)
 
 
