@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.17](https://github.com/whitespace-se/components/compare/v0.13.16...v0.13.17) (2022-03-17)
+
+
+### Bug Fixes
+
+* update styles to support new elements ([e1c1da5](https://github.com/whitespace-se/components/commit/e1c1da588202bdb896f086b9f4f80088d1e4949d))
+
+
+
 ### [0.13.16](https://github.com/whitespace-se/components/compare/v0.13.15...v0.13.16) (2022-03-17)
 
 
