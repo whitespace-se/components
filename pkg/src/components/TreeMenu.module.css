@@ -7,6 +7,10 @@
   margin: 0;
   display: grid;
   gap: var(--tree-menu-list-gap, 1px);
+
+  &[hidden] {
+    display: none;
+  }
 }
 
 .sublist {
@@ -49,6 +53,12 @@
   justify-content: center;
   font-size: 0.5em;
   color: var(--tree-menu-icon-color, inherit);
+}
+
+button.toggle {
+  border: 0;
+  background: none;
+  padding: 0;
 }
 
 .toggle.collapsed:after {
