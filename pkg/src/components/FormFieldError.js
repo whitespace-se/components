@@ -18,10 +18,7 @@ export default function FormFieldError({
   styles = defaultStyles,
   ...restProps
 }) {
-  const { meta, description, id, label } = useFormField();
-  if (!description) {
-    return null;
-  }
+  const { meta, id, label } = useFormField();
   return (
     <Component
       className={clsx(styles.component, className)}
