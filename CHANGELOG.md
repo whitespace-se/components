@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.18](https://github.com/whitespace-se/components/compare/v0.13.17...v0.13.18) (2022-05-04)
+
+
+### Bug Fixes
+
+* Layout error with PageGrid ([7512a24](https://github.com/whitespace-se/components/commit/7512a241522ac439df908c18aef496541b4ce0c1))
+* remove `description` dep from FormFieldError ([5cb764c](https://github.com/whitespace-se/components/commit/5cb764c0f7c872daea21d63887175acb1a3a1243))
+
+
+
 ### [0.13.17](https://github.com/whitespace-se/components/compare/v0.13.16...v0.13.17) (2022-03-17)
 
 
