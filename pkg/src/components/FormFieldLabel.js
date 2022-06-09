@@ -22,7 +22,7 @@ export default function FormFieldLabel({
   return (
     <Component
       className={clsx(styles.component, required && styles.required, className)}
-      htmlFor={Component === "label" && id(name)}
+      htmlFor={Component === "label" ? id(name) : undefined}
       {...restProps}
     >
       {label}
