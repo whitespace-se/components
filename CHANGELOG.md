@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.19](https://github.com/whitespace-se/components/compare/v0.13.18...v0.13.19) (2022-09-28)
+
+
+### Bug Fixes
+
+* GridMenuLink align-items property ([3cc4803](https://github.com/whitespace-se/components/commit/3cc480378bb3232ab216e06706cf3194e7e1bee4))
+* properly conditionally omit `for` attr when not a label ([eed9ddc](https://github.com/whitespace-se/components/commit/eed9ddcdee9de11d7ee0dcee05e95b7a4212892b))
+
+
+
 ### [0.13.18](https://github.com/whitespace-se/components/compare/v0.13.17...v0.13.18) (2022-05-04)
 
 
