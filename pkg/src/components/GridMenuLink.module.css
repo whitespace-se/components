@@ -1,6 +1,6 @@
 .component {
   display: flex;
-  align-items: flex-start;
+  align-items: var(--grid-menu-link-align-items, flex-start);
   padding: var(--grid-menu-link-padding);
   transition: var(--grid-menu-link-transition);
   transition-property: var(--grid-menu-link-transition-property);
