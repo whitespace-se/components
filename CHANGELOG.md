@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.20](https://github.com/whitespace-se/components/compare/v0.13.19...v0.13.20) (2022-09-30)
+
+
+### Features
+
+* Add `hideLabel` prop ([da35eb6](https://github.com/whitespace-se/components/commit/da35eb67f45a29f96779ec1b68060dfdf743f250))
+
+
+
 ### [0.13.19](https://github.com/whitespace-se/components/compare/v0.13.18...v0.13.19) (2022-09-28)
 
 
