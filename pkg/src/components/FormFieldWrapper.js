@@ -13,6 +13,7 @@ FormFieldWrapper.propTypes = {
   children: PropTypes.func.isRequired,
   className: PropTypes.string,
   description: PropTypes.node,
+  hideLabel: PropTypes.bool,
   label: PropTypes.string,
   name: PropTypes.string.isRequired,
   required: PropTypes.bool,
@@ -24,6 +25,7 @@ export default function FormFieldWrapper({
   children,
   className,
   description,
+  hideLabel = false,
   label,
   name,
   required,
@@ -36,6 +38,7 @@ export default function FormFieldWrapper({
   const context = {
     description,
     helpers,
+    hideLabel,
     id,
     input,
     label,

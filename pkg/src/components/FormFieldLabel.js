@@ -6,6 +6,8 @@ import useFormField from "../hooks/useFormField";
 
 import * as defaultStyles from "./FormFieldLabel.module.css";
 
+import { visuallyHidden } from "../utils/styles.module.css";
+
 FormFieldLabel.propTypes = {
   as: PropTypes.elementType,
   className: PropTypes.string,
@@ -18,10 +20,15 @@ export default function FormFieldLabel({
   styles = defaultStyles,
   ...restProps
 }) {
-  const { id, label, name, required } = useFormField();
+  const { id, label, name, required, hideLabel } = useFormField();
   return (
     <Component
-      className={clsx(styles.component, required && styles.required, className)}
+      className={clsx(
+        styles.component,
+        required && styles.required,
+        hideLabel && visuallyHidden,
+        className,
+      )}
       htmlFor={Component === "label" ? id(name) : undefined}
       {...restProps}
     >
