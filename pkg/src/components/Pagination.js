@@ -49,12 +49,16 @@ export default function Pagination({
   return (
     <nav className={cx(styles.component, className)} {...restProps}>
       <ul className={styles.list}>
-        <li className={cx(styles.item, styles.previous)}>
+        <li
+          className={cx(styles.item, styles.previous)}
+          ariaLabel={t("Previous page")}
+        >
           <Button
             className={styles.button}
             url={!isFirstPage ? buttonUrl && buttonUrl(page - 1) : undefined}
             disabled={isFirstPage}
             components={{ InertElement: "span" }}
+            ariaLabel={t("Previous page")}
             onClick={
               onButtonClick &&
               (() => {
@@ -69,6 +73,7 @@ export default function Pagination({
           </Button>
         </li>
         {pagesToDisplay.map((pageIndex, index) => {
+          const pageButtonAriaLabel = `${t("Page")} ${pageIndex + 1}`;
           return (
             <li
               className={cx(
@@ -78,11 +83,13 @@ export default function Pagination({
                 index + 1 === pagesToDisplay.length && styles.lastInRange,
               )}
               key={pageIndex}
+              ariaLabel={pageButtonAriaLabel}
             >
               <Button
                 className={styles.button}
                 url={buttonUrl && buttonUrl(pageIndex)}
                 aria-current={pageIndex == page ? "page" : null}
+                ariaLabel={pageButtonAriaLabel}
                 onClick={
                   onButtonClick &&
                   (() => {
@@ -96,12 +103,13 @@ export default function Pagination({
             </li>
           );
         })}
-        <li className={cx(styles.item, styles.next)}>
+        <li className={cx(styles.item, styles.next)} ariaLabel={t("Next page")}>
           <Button
             className={styles.button}
             url={!isLastPage ? buttonUrl && buttonUrl(page + 1) : undefined}
             disabled={isLastPage}
             components={{ InertElement: "span" }}
+            ariaLabel={t("Next page")}
             onClick={
               onButtonClick &&
               (() => {
