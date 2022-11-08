@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import useFormField from "../hooks/useFormField";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./FormFieldError.module.css";
 
@@ -19,6 +20,8 @@ export default function FormFieldError({
   ...restProps
 }) {
   const { meta, id, label } = useFormField();
+  let attributes =
+    typeof Component === "string" ? filterAttributes(restProps) : restProps;
   return (
     <Component
       className={clsx(styles.component, className)}
@@ -26,7 +29,7 @@ export default function FormFieldError({
       id={id(`errors`)}
       aria-label={`Felmeddelanden för ${label}`}
       aria-live="polite"
-      {...restProps}
+      {...attributes}
     >
       {meta.error && meta.touched && (
         <p className={styles.message}>{meta.error}</p>

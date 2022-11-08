@@ -5,6 +5,7 @@ import * as defaultStyles from "./CoverLink.module.css";
 
 import DefaultLink from "./Link";
 import withComponentDefaults from "../utils/withComponentDefaults";
+import { filterAttributes } from "../utils";
 
 CoverLink.propTypes = {
   children: PropTypes.node,
@@ -20,8 +21,9 @@ function CoverLink({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   return (
-    <Link styles={styles} components={components} {...restProps}>
+    <Link styles={styles} components={components} {...attributes}>
       {children}
     </Link>
   );

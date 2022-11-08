@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./TeaserLink.module.css";
 
@@ -20,8 +21,9 @@ function TeaserLink({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   return (
-    <Link styles={styles} components={components} {...restProps}>
+    <Link styles={styles} components={components} {...attributes}>
       {children}
     </Link>
   );

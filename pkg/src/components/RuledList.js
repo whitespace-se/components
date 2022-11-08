@@ -4,6 +4,7 @@ import { css, jsx } from "@emotion/react";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./RuledList.module.css";
 
@@ -25,6 +26,7 @@ export default function RuledList({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   let childCount = React.Children.count(children);
   return (
     <ul
@@ -37,7 +39,7 @@ export default function RuledList({
         ruleBottom && styles.ruleBottom,
         className,
       )}
-      {...restProps}
+      {...attributes}
     >
       {React.Children.map(children, (child, index) => {
         return (

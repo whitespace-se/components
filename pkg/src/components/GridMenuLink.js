@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import * as defaultStyles from "./GridMenuLink.module.css";
+import { filterAttributes } from "../utils";
 
 import DefaultLink from "./Link";
 import withComponentDefaults from "../utils/withComponentDefaults";
@@ -20,8 +21,10 @@ function GridMenuLink({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes =
+    typeof Link === "string" ? filterAttributes(restProps) : restProps;
   return (
-    <Link styles={styles} components={components} {...restProps}>
+    <Link styles={styles} components={components} {...attributes}>
       {children}
     </Link>
   );

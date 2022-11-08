@@ -4,6 +4,7 @@ import React from "react";
 import GridMenuLink from "./GridMenuLink";
 
 import RoundIcon from "./RoundIcon";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./GridMenu.module.css";
 
@@ -32,8 +33,10 @@ export default function GridMenu({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes =
+    typeof Component === "string" ? filterAttributes(restProps) : restProps;
   return (
-    <Component className={clsx(styles.component, className)} {...restProps}>
+    <Component className={clsx(styles.component, className)} {...attributes}>
       <ul className={clsx(styles.list)}>
         {items.map((item, index) => {
           const { icon, label, description, ...itemProps } = item;

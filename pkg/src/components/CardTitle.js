@@ -2,6 +2,7 @@ import { H } from "@jfrk/react-heading-levels";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./Card.module.css";
 
@@ -17,8 +18,9 @@ export default function CardTitle({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   return (
-    <H className={clsx(styles.title, className)} {...restProps}>
+    <H className={clsx(styles.title, className)} {...attributes}>
       {children}
     </H>
   );

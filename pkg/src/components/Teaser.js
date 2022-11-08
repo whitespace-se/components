@@ -2,6 +2,7 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
 import TeaserLink from "./TeaserLink";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./Teaser.module.css";
 import { withComponentDefaults } from "../utils";
@@ -28,6 +29,8 @@ function Teaser({
   link = {},
   ...restProps
 }) {
+  let attributes =
+    typeof Component === "string" ? filterAttributes(restProps) : restProps;
   return (
     <Component
       className={clsx(
@@ -36,7 +39,7 @@ function Teaser({
         // focusWithinStyles.outset,
         className,
       )}
-      {...restProps}
+      {...attributes}
     >
       <Link className={styles.inner} {...link}>
         {children}

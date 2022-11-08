@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import * as defaultStyles from "./CalendarBadge.module.css";
 
 import withComponentDefaults from "../utils/withComponentDefaults";
+import { filterAttributes } from "../utils";
 
 CalendarBadge.propTypes = {
   children: PropTypes.node,
@@ -23,11 +24,12 @@ function CalendarBadge({
   date,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   const month = date.toLocaleDateString(locale, { month: "short" });
   const day = date.toLocaleDateString(locale, { day: "numeric" });
 
   return (
-    <div className={clsx(styles.component, className)} {...restProps}>
+    <div className={clsx(styles.component, className)} {...attributes}>
       <div className={clsx(styles.day)} aria-hidden>
         {day}
       </div>

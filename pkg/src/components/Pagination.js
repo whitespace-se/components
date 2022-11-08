@@ -1,6 +1,7 @@
 import cx from "classnames";
 import React from "react";
 import PropTypes from "prop-types";
+import { filterAttributes } from "../utils";
 
 import Icon from "./Icon";
 import DefaultButton from "./Button";
@@ -33,6 +34,7 @@ export default function Pagination({
   totalPages,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   const isFirstPage = page === 0;
   const isLastPage = page === totalPages - 1;
   let pagesToDisplay;
@@ -47,7 +49,7 @@ export default function Pagination({
   }
 
   return (
-    <nav className={cx(styles.component, className)} {...restProps}>
+    <nav className={cx(styles.component, className)} {...attributes}>
       <ul className={styles.list}>
         <li className={cx(styles.item, styles.previous)}>
           <Button

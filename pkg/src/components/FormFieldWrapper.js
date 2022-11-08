@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import formFieldContext from "../contexts/formFieldContext";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./FormFieldWrapper.module.css";
 
@@ -34,6 +35,8 @@ export default function FormFieldWrapper({
 }) {
   const id = useID();
   const [input, meta, helpers] = useField({ name, multiple: true });
+  let attributes =
+    typeof Component === "string" ? filterAttributes(restProps) : restProps;
 
   const context = {
     description,
@@ -62,7 +65,7 @@ export default function FormFieldWrapper({
         meta.error && meta.touched && styles.error,
         className,
       )}
-      {...restProps}
+      {...attributes}
     >
       <formFieldContext.Provider value={context}>
         {children(context)}

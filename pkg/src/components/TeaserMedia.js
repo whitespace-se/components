@@ -3,6 +3,7 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
 import { withComponentDefaults } from "../utils";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./Teaser.module.css";
 
@@ -27,11 +28,13 @@ function TeaserMedia({
   if (!image) {
     return null;
   }
+  let attributes =
+    typeof Image === "string" ? filterAttributes(restProps) : restProps;
   return (
     <Image
       {...image}
       className={clsx(styles.media, className)}
-      {...restProps}
+      {...attributes}
       caption={null}
       credit={null}
       aspectRatio={aspectRatio}

@@ -6,6 +6,7 @@ import withComponentDefaults from "../utils/withComponentDefaults";
 import clsx from "clsx";
 import { css, jsx } from "@emotion/react";
 import PropTypes from "prop-types";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./RoundIcon.module.css";
 
@@ -33,6 +34,7 @@ function RoundIcon({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   return (
     <span
       className={clsx(styles.component, className)}
@@ -40,7 +42,7 @@ function RoundIcon({
         "--round-icon-background-color": backgroundColor,
         "--round-icon-size": size,
       })}
-      {...restProps}
+      {...attributes}
     >
       <Icon name={name} src={src} color={color} {...iconProps} />
     </span>

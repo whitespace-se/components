@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import React from "react";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./Image.module.css";
 
@@ -24,12 +25,13 @@ export default function Image({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   return (
     <img
       className={clsx(styles.component, className)}
       src={src}
       alt=""
-      {...restProps}
+      {...attributes}
     />
   );
 }

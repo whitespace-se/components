@@ -2,6 +2,7 @@ import { treeMenuContext } from "@whitespace/components/src/contexts";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import React, { useContext } from "react";
+import { filterAttributes } from "../utils";
 
 import TreeMenuItem from "./TreeMenuItem";
 
@@ -28,11 +29,13 @@ export default function TreeMenuList({
     return null;
   }
 
+  let attributes = filterAttributes(restProps);
+
   return (
     <ul
       className={clsx(styles.list, parentPath.length > 0 && styles.sublist)}
       hidden={!expanded}
-      {...restProps}
+      {...attributes}
     >
       {items.map((item, index) => {
         return (

@@ -3,6 +3,7 @@ import { treeMenuContext } from "@whitespace/components/src/contexts";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import React, { useCallback, useContext } from "react";
+import { filterAttributes } from "../utils";
 
 import TreeMenuList from "./TreeMenuList";
 
@@ -17,6 +18,7 @@ TreeMenuItem.propTypes = {
 };
 
 export default function TreeMenuItem({ item, path, ...restProps }) {
+  let attributes = filterAttributes(restProps);
   const { id, children = [], url, label } = item;
 
   const {
@@ -56,7 +58,7 @@ export default function TreeMenuItem({ item, path, ...restProps }) {
 
   return (
     <li
-      {...restProps}
+      {...attributes}
       className={clsx(styles.item, isCurrent && styles.current)}
     >
       <div className={styles.row}>

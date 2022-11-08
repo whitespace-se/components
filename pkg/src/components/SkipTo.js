@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./SkipTo.module.css";
 
@@ -19,8 +20,10 @@ function SkipTo({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes =
+    typeof Link === "string" ? filterAttributes(restProps) : restProps;
   return (
-    <Link styles={styles} href="#main" components={components} {...restProps}>
+    <Link styles={styles} href="#main" components={components} {...attributes}>
       Hoppa till huvudinnehåll
     </Link>
   );

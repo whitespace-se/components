@@ -6,6 +6,7 @@ import * as defaultStyles from "./DashboardMenu.module.css";
 import Icon from "./Icon";
 import DashboardMenuLink from "./DashboardMenuLink";
 import RoundIcon from "./RoundIcon";
+import { filterAttributes } from "../utils";
 
 DashboardMenu.propTypes = {
   components: PropTypes.objectOf(PropTypes.elementType),
@@ -60,8 +61,10 @@ export default function DashboardMenu({
   as: Component = "nav",
   ...restProps
 }) {
+  let attributes =
+    typeof Component === "string" ? filterAttributes(restProps) : restProps;
   return (
-    <Component className={clsx(styles.component, className)} {...restProps}>
+    <Component className={clsx(styles.component, className)} {...attributes}>
       <ul className={clsx(styles.list)}>
         {items.map((item, index) => {
           return (

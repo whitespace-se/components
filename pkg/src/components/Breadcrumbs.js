@@ -6,6 +6,7 @@ import DefaultLink from "./Link";
 
 import * as defaultStyles from "./Breadcrumbs.module.css";
 import withComponentDefaults from "../utils/withComponentDefaults";
+import { filterAttributes } from "../utils";
 
 Breadcrumbs.propTypes = {
   components: PropTypes.objectOf(PropTypes.elementType),
@@ -36,6 +37,7 @@ function Breadcrumbs({
   className,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   return (
     <nav
       aria-label={label}
@@ -44,7 +46,7 @@ function Breadcrumbs({
         // styles.displayAsList,
         className,
       )}
-      {...restProps}
+      {...attributes}
     >
       <p className={clsx(styles.description, hideDescription && styles.sronly)}>
         {description}

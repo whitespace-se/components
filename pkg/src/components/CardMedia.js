@@ -3,6 +3,7 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
 import { withComponentDefaults } from "../utils";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./Card.module.css";
 
@@ -27,12 +28,13 @@ function CardMedia({
   if (!image) {
     return null;
   }
+  let attributes = filterAttributes(restProps);
   return (
     <>
       <Image
         {...image}
         className={clsx(styles.media, className)}
-        {...restProps}
+        {...attributes}
         caption={null}
         credit={null}
         aspectRatio={aspectRatio}

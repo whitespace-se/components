@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import useFormField from "../hooks/useFormField";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./FormFieldLabel.module.css";
 
@@ -21,6 +22,8 @@ export default function FormFieldLabel({
   ...restProps
 }) {
   const { id, label, name, required, hideLabel } = useFormField();
+  let attributes =
+    typeof Component === "string" ? filterAttributes(restProps) : restProps;
   return (
     <Component
       className={clsx(
@@ -30,7 +33,7 @@ export default function FormFieldLabel({
         className,
       )}
       htmlFor={Component === "label" ? id(name) : undefined}
-      {...restProps}
+      {...attributes}
     >
       {label}
     </Component>

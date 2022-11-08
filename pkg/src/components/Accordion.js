@@ -11,6 +11,7 @@ import { useID } from "../hooks";
 
 import * as defaultStyles from "./Accordion.module.css";
 import withComponentDefaults from "../utils/withComponentDefaults";
+import { filterAttributes } from "../utils";
 
 Accordion.propTypes = {
   components: PropTypes.objectOf(PropTypes.elementType),
@@ -45,6 +46,7 @@ function Accordion({
   showExpandAll,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   const [expandedRowIndexes, setExpandedRowIndexes] = useState([]);
   const id = useID();
 
@@ -63,7 +65,7 @@ function Accordion({
   };
 
   return (
-    <div className={clsx(styles.component, className)} {...restProps}>
+    <div className={clsx(styles.component, className)} {...attributes}>
       {showExpandAll && (
         <button onClick={onExpandAllButtonClick}>
           {expandedRowIndexes.length ? <>STÄNG</> : <>ÖPPNA</>}

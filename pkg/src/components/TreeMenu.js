@@ -9,6 +9,7 @@ import React, {
   useRef,
   useState,
 } from "react";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./TreeMenu.module.css";
 import TreeMenuList from "./TreeMenuList";
@@ -303,11 +304,13 @@ export default function TreeMenu({
     toggleExpandedItem,
   };
 
+  let attributes = filterAttributes(restProps);
+
   return (
     <treeMenuContext.Provider value={treeMenuContextValue}>
       <nav
         className={clsx(className, styles.component)}
-        {...restProps}
+        {...attributes}
         ref={ref}
         onFocus={() => {
           updateFocus();

@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import * as defaultStyles from "./Icon.module.css";
 import { useIconContext } from "./IconProvider";
 import withComponentDefaults from "../utils/withComponentDefaults";
+import { filterAttributes } from "../utils";
 
 export default withComponentDefaults(Icon, "icon");
 
@@ -39,6 +40,8 @@ function Icon({
     }
   }
 
+  let attributes = filterAttributes(restProps);
+
   return (
     <span
       className={clsx(styles.component, className)}
@@ -47,7 +50,7 @@ function Icon({
         --icon-size: ${size};
         mask-image: url(${src});
       `}
-      {...restProps}
+      {...attributes}
     />
   );
 }

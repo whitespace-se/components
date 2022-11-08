@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import useFormField from "../hooks/useFormField";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./FormFieldDescription.module.css";
 
@@ -22,11 +23,13 @@ export default function FormFieldDescription({
   if (!description) {
     return null;
   }
+  let attributes =
+    typeof Component === "string" ? filterAttributes(restProps) : restProps;
   return (
     <Component
       className={clsx(styles.component, className)}
       id={id(`description`)}
-      {...restProps}
+      {...attributes}
     >
       {description}
     </Component>

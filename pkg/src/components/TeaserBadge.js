@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./Teaser.module.css";
 
@@ -16,8 +17,9 @@ export default function TeaserBadge({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes = filterAttributes(restProps);
   return (
-    <div className={clsx(styles.badge, className)} {...restProps}>
+    <div className={clsx(styles.badge, className)} {...attributes}>
       {children}
     </div>
   );

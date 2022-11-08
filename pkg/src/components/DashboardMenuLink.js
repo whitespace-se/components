@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./DashboardMenuLink.module.css";
 
@@ -22,12 +23,14 @@ function DashboardMenuLink({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes =
+    typeof Link === "string" ? filterAttributes(restProps) : restProps;
   return (
     <Link
       styles={styles}
       components={components}
       className={className}
-      {...restProps}
+      {...attributes}
     >
       {children}
     </Link>
