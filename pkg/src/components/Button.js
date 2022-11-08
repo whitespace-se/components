@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./Button.module.css";
 
@@ -20,8 +21,10 @@ function Button({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes =
+    typeof Link === "string" ? filterAttributes(restProps) : restProps;
   return (
-    <Link styles={styles} components={components} {...restProps}>
+    <Link styles={styles} components={components} {...attributes}>
       {children}
     </Link>
   );

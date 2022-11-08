@@ -4,6 +4,7 @@ import { css, jsx } from "@emotion/react";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
+import { filterAttributes } from "../utils";
 
 import * as defaultStyles from "./PageGrid.module.css";
 
@@ -22,13 +23,15 @@ export default function PageGridItem({
   styles = defaultStyles,
   ...restProps
 }) {
+  let attributes =
+    typeof Component === "string" ? filterAttributes(restProps) : restProps;
   return (
     <Component
       css={css`
         --page-grid-columns: ${colSpan || null};
       `}
       className={clsx(styles.item, className)}
-      {...restProps}
+      {...attributes}
     >
       {children}
     </Component>

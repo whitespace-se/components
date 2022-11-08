@@ -6,6 +6,7 @@ import { visuallyHidden } from "../utils/styles.module.css";
 import * as defaultStyles from "./Link.module.css";
 import withComponentDefaults from "../utils/withComponentDefaults";
 import { useURLTransformer } from "../hooks";
+import { filterAttributes } from "../utils";
 
 import Icon from "./Icon";
 
@@ -108,6 +109,9 @@ function Link({
     ].join(" ");
   }
 
+  let attributes =
+    typeof Component === "string" ? filterAttributes(restProps) : restProps;
+
   return (
     <Component
       href={href}
@@ -121,7 +125,7 @@ function Link({
           ? type
           : undefined
       }
-      {...restProps}
+      {...attributes}
       ref={innerRef}
     >
       {children}
