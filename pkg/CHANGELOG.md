@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.21](https://github.com/whitespace-se/components/compare/v0.13.20...v0.13.21) (2022-11-08)
+
+
+### Bug Fixes
+
+* Filter invalid html attributes ([2427daf](https://github.com/whitespace-se/components/commit/2427daf75c0c181eb7ed136a0d48590ee39a230b))
+
+
+
 ### [0.13.20](https://github.com/whitespace-se/components/compare/v0.13.19...v0.13.20) (2022-09-30)
 
 
