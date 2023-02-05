@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.23](https://github.com/whitespace-se/components/compare/v0.13.22...v0.13.23) (2023-02-05)
+
+
+### Features
+
+* Add `--card-gap` ([73ce9e9](https://github.com/whitespace-se/components/commit/73ce9e9fa8931af9b25ce78a3a3ba8c1c2202732))
+
+
+
 ### [0.13.22](https://github.com/whitespace-se/components/compare/v0.13.21...v0.13.22) (2022-11-08)
 
 
