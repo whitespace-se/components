@@ -38,6 +38,7 @@
     minmax(min(100%, var(--card-column-min-width)), 1fr)
   );
   grid-auto-rows: var(--card-grid-auto-rows);
+  gap: var(--card-gap, 0);
   height: 100%;
 }
 
