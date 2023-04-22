@@ -1,4 +1,4 @@
-import cx from "classnames";
+import clsx from "clsx";
 import React from "react";
 import PropTypes from "prop-types";
 import { filterAttributes } from "../utils";
@@ -49,9 +49,9 @@ export default function Pagination({
   }
 
   return (
-    <nav className={cx(styles.component, className)} {...attributes}>
+    <nav className={clsx(styles.component, className)} {...attributes}>
       <ul className={styles.list}>
-        <li className={cx(styles.item, styles.previous)}>
+        <li className={clsx(styles.item, styles.previous)}>
           <Button
             className={styles.button}
             url={!isFirstPage ? buttonUrl && buttonUrl(page - 1) : undefined}
@@ -73,7 +73,7 @@ export default function Pagination({
         {pagesToDisplay.map((pageIndex, index) => {
           return (
             <li
-              className={cx(
+              className={clsx(
                 styles.item,
                 pageIndex === page && styles.current,
                 index === 0 && styles.firstInRange,
@@ -98,7 +98,7 @@ export default function Pagination({
             </li>
           );
         })}
-        <li className={cx(styles.item, styles.next)}>
+        <li className={clsx(styles.item, styles.next)}>
           <Button
             className={styles.button}
             url={!isLastPage ? buttonUrl && buttonUrl(page + 1) : undefined}
