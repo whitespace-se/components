@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.24](https://github.com/whitespace-se/components/compare/v0.13.23...v0.13.24) (2023-04-22)
+
+
+### Bug Fixes
+
+* Replace classnames with clsx ([b4284dd](https://github.com/whitespace-se/components/commit/b4284dde3c6bf5aff067b68cee08ae9c34f85e17))
+
+
+
 ### [0.13.23](https://github.com/whitespace-se/components/compare/v0.13.22...v0.13.23) (2023-02-05)
 
 
