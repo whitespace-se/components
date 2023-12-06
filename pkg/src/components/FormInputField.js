@@ -28,7 +28,7 @@ export default function FormInputField({
       className={clsx(styles.component, className)}
       {...restProps}
     >
-      {({ name, controlProps }) => (
+      {({ name, controlProps, id }) => (
         <>
           <FormFieldLabel className={styles.label} />
           <FormFieldDescription className={styles.description} />
@@ -38,6 +38,7 @@ export default function FormInputField({
               type={type}
               className={styles.input}
               name={name}
+              id={id}
               {...controlProps}
               {...inputProps}
             />
