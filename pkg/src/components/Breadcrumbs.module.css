@@ -29,6 +29,7 @@
   color: var(--breadcrumbs-color, "#000");
   text-decoration: var(--breadcrumbs-text-decoration, none);
   font-weight: var(--breadcrumbs-font-weight, inherit);
+  font-size: var(--breadcrumbs-font-size, 0.875rem);
 }
 
 .link[aria-current] {
