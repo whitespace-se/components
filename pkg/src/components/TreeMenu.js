@@ -148,10 +148,10 @@ export default function TreeMenu({
     [items],
   );
 
-  const currentItemPath = useMemo(
-    () => findItemPath(isCurrentItem),
-    [isCurrentItem, findItemPath],
-  );
+  const currentItemPath = useMemo(() => findItemPath(isCurrentItem), [
+    isCurrentItem,
+    findItemPath,
+  ]);
 
   useEffect(() => {
     // Clear all expanded items
