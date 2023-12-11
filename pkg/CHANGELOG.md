@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.27](https://github.com/whitespace-se/components/compare/v0.13.26...v0.13.27) (2023-12-11)
+
+
+### Bug Fixes
+
+* Form input field id was not set correctly ([1ae40fb](https://github.com/whitespace-se/components/commit/1ae40fbd0623f92a13d80dcfd541e2183d17b4e0))
+
+
+
 ### [0.13.26](https://github.com/whitespace-se/components/compare/v0.13.25...v0.13.26) (2023-12-11)
 
 
