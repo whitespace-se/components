@@ -1,4 +1,4 @@
-import React, { useEffect, memo } from "react";
+import React, { memo } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
@@ -112,6 +112,11 @@ function Link({
   let attributes =
     typeof Component === "string" ? filterAttributes(restProps) : restProps;
 
+  const refAttribute =
+    typeof Component === "function" && Component.name === "InternalLinkElement"
+      ? { innerRef: innerRef }
+      : { ref: innerRef };
+
   return (
     <Component
       href={href}
@@ -126,7 +131,7 @@ function Link({
           : undefined
       }
       {...attributes}
-      ref={innerRef}
+      {...refAttribute}
     >
       {children}
       {target === "_blank" && (

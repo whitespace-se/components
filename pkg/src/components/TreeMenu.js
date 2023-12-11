@@ -29,11 +29,11 @@ TreeMenu.propTypes = {
 };
 
 function encodePath(path) {
-  return JSON.stringify(path);
+  return path && JSON.stringify(path);
 }
 
 function decodePath(path) {
-  return JSON.parse(path);
+  return path && JSON.parse(path);
 }
 
 function documentPositionComparator(a, b) {
@@ -167,11 +167,11 @@ export default function TreeMenu({
 
   const registerItemElement = useCallback((path, element) => {
     if (element == null) {
-      let prevElement = itemsRef.current[encodePath(path)];
+      let prevElement = itemsRef.current?.[encodePath(path)];
       if (prevElement === document.activeElement) {
-        focusDummyRef.current.focus();
+        focusDummyRef.current?.focus();
       }
-      delete itemsRef.current[encodePath(path)];
+      delete itemsRef.current?.[encodePath(path)];
     } else {
       itemsRef.current[encodePath(path)] = element;
       updateFocus();
