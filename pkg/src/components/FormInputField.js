@@ -38,7 +38,7 @@ export default function FormInputField({
               type={type}
               className={styles.input}
               name={name}
-              id={id}
+              id={id(name)}
               {...controlProps}
               {...inputProps}
             />
