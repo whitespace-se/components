@@ -36,6 +36,9 @@ export default function FormInputField({
           <div className={styles.control}>
             <Field
               type={type}
+              onKeyDown={(e) => {
+                e.key === "Enter" && e.preventDefault();
+              }}
               className={styles.input}
               name={name}
               {...controlProps}
