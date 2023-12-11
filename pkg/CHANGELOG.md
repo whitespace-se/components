@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.26](https://github.com/whitespace-se/components/compare/v0.13.25...v0.13.26) (2023-12-11)
+
+
+### Features
+
+* Setting innerRef on InternalLinkElement instead of ref ([280a9b9](https://github.com/whitespace-se/components/commit/280a9b902440ee70ef9db796d90278c8ee1ebe5e))
+* Setting innerRef on InternalLinkElement instead of ref ([592306b](https://github.com/whitespace-se/components/commit/592306bf5365bbb34f608d13f7d91d8192b559ca))
+
+
+### Bug Fixes
+
+* Adding nullchecks ([4d61e13](https://github.com/whitespace-se/components/commit/4d61e13c36c0f393a745af9e982577434fe44732))
+
+
+
 ### [0.13.25](https://github.com/whitespace-se/components/compare/v0.13.24...v0.13.25) (2023-12-07)
 
 **Note:** Version bump only for package @whitespace/components
