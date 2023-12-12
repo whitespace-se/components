@@ -2,8 +2,6 @@
   border: var(--form-error-border);
   border-radius: var(--form-error-border-radius);
   background: var(--form-error-background);
-  padding: var(--form-error-padding);
-  margin: var(--form-error-margin);
 }
 
 .component:empty {
