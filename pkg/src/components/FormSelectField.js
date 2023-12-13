@@ -25,6 +25,7 @@ FormSelectField.propTypes = {
       src: PropTypes.string.isRequired,
     }),
   ]),
+  fieldProps: PropTypes.any,
 };
 
 export default function FormSelectField({
@@ -33,6 +34,7 @@ export default function FormSelectField({
   styles = defaultStyles,
 
   icon = { name: "chevron-down" },
+  fieldProps = {},
   ...restProps
 }) {
   const { getIconSrc } = useIconContext();
@@ -54,6 +56,7 @@ export default function FormSelectField({
               as="select"
               className={styles.select}
               name={name}
+              {...fieldProps}
               {...controlProps}
             >
               <option value="">Välj ett alternativ</option>
