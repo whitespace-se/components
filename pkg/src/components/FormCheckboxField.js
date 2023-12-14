@@ -23,6 +23,7 @@ FormCheckboxField.propTypes = {
       src: PropTypes.string.isRequired,
     }),
   ]),
+  inputProps: PropTypes.any,
 };
 
 export default function FormCheckboxField({
@@ -30,6 +31,7 @@ export default function FormCheckboxField({
   options,
   styles = defaultStyles,
   icon = { name: "checkmark" },
+  inputProps = {},
   ...restProps
 }) {
   const { getIconSrc } = useIconContext();
@@ -55,6 +57,7 @@ export default function FormCheckboxField({
                     type="checkbox"
                     name={name}
                     value={option}
+                    {...inputProps}
                   />
                   {option}
                 </label>
