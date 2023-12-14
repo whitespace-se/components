@@ -13,14 +13,14 @@ FormRadioGroupField.propTypes = {
   className: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.string),
   styles: PropTypes.objectOf(PropTypes.string),
-  fieldProps: PropTypes.any,
+  inputProps: PropTypes.any,
 };
 
 export default function FormRadioGroupField({
   className,
   options,
   styles = defaultStyles,
-  fieldProps = {},
+  inputProps = {},
   ...restProps
 }) {
   return (
@@ -42,7 +42,7 @@ export default function FormRadioGroupField({
                     type="radio"
                     name={name}
                     value={option}
-                    {...fieldProps}
+                    {...inputProps}
                   />
                   {option}
                 </label>

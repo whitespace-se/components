@@ -23,7 +23,7 @@ FormCheckboxField.propTypes = {
       src: PropTypes.string.isRequired,
     }),
   ]),
-  fieldProps: PropTypes.any,
+  inputProps: PropTypes.any,
 };
 
 export default function FormCheckboxField({
@@ -31,11 +31,10 @@ export default function FormCheckboxField({
   options,
   styles = defaultStyles,
   icon = { name: "checkmark" },
-  fieldProps = {},
+  inputProps = {},
   ...restProps
 }) {
   const { getIconSrc } = useIconContext();
-  console.log("wsui checkbox");
   return (
     <FormFieldWrapper
       className={clsx(styles.component, className)}
@@ -58,7 +57,7 @@ export default function FormCheckboxField({
                     type="checkbox"
                     name={name}
                     value={option}
-                    {...fieldProps}
+                    {...inputProps}
                   />
                   {option}
                 </label>
