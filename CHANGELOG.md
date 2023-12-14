@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.28](https://github.com/whitespace-se/components/compare/v0.13.27...v0.13.28) (2023-12-14)
+
+
+### Features
+
+* Adding prop fieldProps to form input elements ([#25](https://github.com/whitespace-se/components/issues/25)) ([51475ef](https://github.com/whitespace-se/components/commit/51475efbd696a74e783aeb87c98a547e3b6f813a))
+
+
+
 ### [0.13.27](https://github.com/whitespace-se/components/compare/v0.13.26...v0.13.27) (2023-12-11)
 
 
