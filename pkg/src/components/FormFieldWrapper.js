@@ -19,6 +19,7 @@ FormFieldWrapper.propTypes = {
   name: PropTypes.string.isRequired,
   required: PropTypes.bool,
   styles: PropTypes.objectOf(PropTypes.string),
+  id: PropTypes.string,
 };
 
 export default function FormFieldWrapper({
@@ -31,9 +32,10 @@ export default function FormFieldWrapper({
   name,
   required,
   styles = defaultStyles,
+  id: idProp,
   ...restProps
 }) {
-  const id = useID();
+  const id = useID(idProp || name);
   const [input, meta, helpers] = useField({ name, multiple: true });
   let attributes =
     typeof Component === "string" ? filterAttributes(restProps) : restProps;
