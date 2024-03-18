@@ -20,6 +20,7 @@ FormFieldWrapper.propTypes = {
   required: PropTypes.bool,
   styles: PropTypes.objectOf(PropTypes.string),
   id: PropTypes.string,
+  inputProps: PropTypes.objectOf(PropTypes.any),
 };
 
 export default function FormFieldWrapper({
@@ -32,6 +33,7 @@ export default function FormFieldWrapper({
   name,
   required,
   styles = defaultStyles,
+  inputProps,
   id: idProp,
   ...restProps
 }) {
@@ -57,6 +59,10 @@ export default function FormFieldWrapper({
       "aria-invalid": meta.touched && meta.error,
       "aria-describedby": description && id(`description`),
     },
+    inputProps: {
+      id: id(`input`),
+      ...inputProps,
+    },
   };
 
   return (
@@ -67,6 +73,7 @@ export default function FormFieldWrapper({
         meta.error && meta.touched && styles.error,
         className,
       )}
+      id={idProp}
       {...attributes}
     >
       <formFieldContext.Provider value={context}>

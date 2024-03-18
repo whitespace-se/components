@@ -21,7 +21,7 @@ export default function FormFieldLabel({
   styles = defaultStyles,
   ...restProps
 }) {
-  const { id, label, name, required, hideLabel } = useFormField();
+  const { id, label, required, hideLabel } = useFormField();
   let attributes =
     typeof Component === "string" ? filterAttributes(restProps) : restProps;
   return (
@@ -32,7 +32,7 @@ export default function FormFieldLabel({
         hideLabel && visuallyHidden,
         className,
       )}
-      htmlFor={Component === "label" ? id(name) : undefined}
+      htmlFor={Component === "label" ? id("input") : undefined}
       {...attributes}
     >
       {label}

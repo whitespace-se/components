@@ -11,14 +11,12 @@ import * as defaultStyles from "./FormInputField.module.css";
 
 FormInputField.propTypes = {
   className: PropTypes.string,
-  inputProps: PropTypes.object,
   styles: PropTypes.objectOf(PropTypes.string),
   type: PropTypes.string,
 };
 
 export default function FormInputField({
   className,
-  inputProps,
   styles = defaultStyles,
   type,
   ...restProps
@@ -28,7 +26,7 @@ export default function FormInputField({
       className={clsx(styles.component, className)}
       {...restProps}
     >
-      {({ name, controlProps, id }) => (
+      {({ name, controlProps, inputProps }) => (
         <>
           <FormFieldLabel className={styles.label} />
           <FormFieldDescription className={styles.description} />
@@ -38,7 +36,6 @@ export default function FormInputField({
               type={type}
               className={styles.input}
               name={name}
-              id={id(name)}
               {...controlProps}
               {...inputProps}
             />
