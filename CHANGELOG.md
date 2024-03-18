@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.30](https://github.com/whitespace-se/components/compare/v0.13.29...v0.13.30) (2024-03-18)
+
+
+### Bug Fixes
+
+* Assign correct ids for input fields ([356b8fe](https://github.com/whitespace-se/components/commit/356b8febaa61dfce4cadae468a66774cd995ba6f))
+
+
+
 ### [0.13.29](https://github.com/whitespace-se/components/compare/v0.13.28...v0.13.29) (2024-03-18)
 
 
