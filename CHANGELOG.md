@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+### [0.13.29](https://github.com/whitespace-se/components/compare/v0.13.28...v0.13.29) (2024-03-18)
+
+
+### Features
+
+* Add `ns` arg to `useID` ([c635bbe](https://github.com/whitespace-se/components/commit/c635bbe9cfe88acd13d78bb78c7b127babc4dd69))
+
+
+
 ### [0.13.28](https://github.com/whitespace-se/components/compare/v0.13.27...v0.13.28) (2023-12-14)
 
 
